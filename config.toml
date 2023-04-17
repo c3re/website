@@ -1,4 +1,4 @@
-baseURL = 'http:s//hugo-test.c3re.de/master/'
+baseURL = 'https://hugo-test.c3re.de/master/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'ananke'
