@@ -1,4 +1,62 @@
-baseURL = 'https://hugo-test.c3re.de/master/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke'
+baseURL = "https://hugo-test.c3re.de/master/"
+languageCode = "en-us"
+title = "c3RE"
+theme = "hugo-theme-flat"
+# themeDir = '../..'
+defaultContentLanguage = "de"
+relativeURLs = true
+#style = "pink"
+
+# Hauptmenue
+[[menus.main]]
+name = "Hallo beim c3RE"
+url = "/hallo"
+weight = 30
+[[menus.main]]
+parent = "Hallo beim c3RE"
+name = "Sommerfest"
+url = "#"
+[[menus.main]]
+parent = "Hallo beim c3RE"
+name = "Philosophie"
+url = "#"
+[[menus.main]]
+parent = "Hallo beim c3RE"
+name = "Codeweek"
+url = "#"
+
+[[menus.main]]
+name = "Über uns"
+url = "/about/"
+weight = 50
+
+[[menus.main]]
+name = "Gallery"
+url = "/gallery/"
+weight = 70
+
+[[menus.main]]
+name = "Werkzeuge"
+url = "/tools/"
+weight = 90
+
+[[menus.main]]
+name = "Downloads"
+url = "/about/"
+weight = 110
+
+# Footer Menue
+[[params.footer_rows]]
+[[params.footer_rows.items]]
+name = "Kontakt"
+url = "/kontakt"
+
+[[params.footer_rows]]
+[[params.footer_rows.items]]
+name = "Impressum"
+url = "/impressum"
+
+[[params.footer_rows.items]]
+name = "Datenschutzerklärung"
+url = "/datenschutz"
+

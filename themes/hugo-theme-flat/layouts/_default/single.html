@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<section class="single">
+    <h1 class="title">{{ .Title }}</h1>
+
+    <div class="tip">
+        <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
+        <span class="split">·</span>
+        <span> {{ .WordCount }} words </span>
+        <span class="split">·</span>
+        <span>
+            {{ .ReadingTime }} minutes to read
+        </span>
+    </div>
+
+    <div class="taxonomies">
+        {{ with .Params.categories }}
+        <div>
+            Categories:
+            {{ range . }}
+                <a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.tags }}
+            <div>
+                Tags:
+                {{ range . }}
+                    <a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+
+    <hr />
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+    {{ with and .Site.Params.remark42 .Params.show_comments }}
+        <hr />
+        {{ partial "comment.html" . }}
+    {{ end }}
+</section>
+
+{{ end }}
