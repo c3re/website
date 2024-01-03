@@ -1,11 +1,11 @@
-baseURL = "https://hugo-test.c3re.de/master/"
+baseURL = "https://hugo-test.c3re.de/"
 languageCode = "en-us"
 title = "c3RE"
 theme = "hugo-theme-flat"
 # themeDir = '../..'
 defaultContentLanguage = "de"
 relativeURLs = true
-#style = "pink"
+style = "pink"
 
 # Hauptmenue
 [[menus.main]]
