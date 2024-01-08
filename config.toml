@@ -15,7 +15,7 @@ weight = 30
 [[menus.main]]
 parent = "Hallo beim c3RE"
 name = "Philosophie"
-url = "/philosophie"
+url = "/unsere-philosophie"
 [[menus.main]]
 parent = "Hallo beim c3RE"
 name = "Codeweek"
