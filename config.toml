@@ -37,7 +37,7 @@ weight = 110
 name = "Kontakt"
 url = "/kontakt"
 
-[[params.footer_rows]]
+#[[params.footer_rows]]
 [[params.footer_rows.items]]
 name = "Impressum"
 url = "/impressum"
@@ -46,3 +46,15 @@ url = "/impressum"
 name = "Datenschutzerklärung"
 url = "/datenschutz"
 
+[[params.footer_rows]]
+[[params.footer_rows.items]]
+pre ="FRIENDS & FAMILY"
+[[params.footer_rows.items]]
+name ="Blumenthal 7 e.V."
+url="https://www.blumenthal7.de/"
+[[params.footer_rows.items]]
+name ="Freifunk Emscherland"
+url="https://freifunk-emscherland.de/"
+[[params.footer_rows.items]]
+name ="Linux User Group Marl"
+url="https://www.lug-marl.de/"
