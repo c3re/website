@@ -284,7 +284,7 @@ body {
   font-weight: bold;
 }
 
-.header a       { color: var(--color-fg-font-normal); text-decoration: none; }
+.header a       { color: var(--color-dark-fg-font-normal); text-decoration: none; } /*always dark since backgroundimage is dark */
 .header a:hover { color: var(--color-fg-font-hover); }
 
 /************************/
