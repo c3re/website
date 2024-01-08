@@ -161,7 +161,10 @@ body {
 .main,
 .side-recent,
 .side-categories,
-.side-tags
+.side-tags,
+.side-calendar,
+.side-door-status,
+.side-contact
 {
   background-color: var(--color-bg-content);
 }
@@ -178,6 +181,9 @@ body {
   margin-bottom: 0;
 }
 
+#calendar span{
+  display: block;
+}
 
 /********** set up break point **********/
 
@@ -380,7 +386,7 @@ body {
 .side a:hover { color: var(--color-fg-hyperlink); }
 
 /* horizontally place tags */
-.side .side-tags li { display: inline-block; margin: var(--len-1) var(--len-1); }
+.side .side-tags li {  margin: var(--len-1) var(--len-1); }
 
 /*****************************/
 /* set up single post layout */
@@ -714,4 +720,9 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+}
+
+#ds-img{
+  /* make image fit in div */
+    width: 100%;
 }
