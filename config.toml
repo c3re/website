@@ -14,35 +14,28 @@ url = "/hallo"
 weight = 30
 [[menus.main]]
 parent = "Hallo beim c3RE"
-name = "Sommerfest"
-url = "#"
-[[menus.main]]
-parent = "Hallo beim c3RE"
 name = "Philosophie"
-url = "#"
+url = "/philosophie"
 [[menus.main]]
 parent = "Hallo beim c3RE"
 name = "Codeweek"
-url = "#"
+url = "/codeweek"
 
 [[menus.main]]
 name = "Über uns"
 url = "/about/"
 weight = 50
 
-[[menus.main]]
-name = "Gallery"
-url = "/gallery/"
-weight = 70
+
 
 [[menus.main]]
 name = "Werkzeuge"
-url = "/tools/"
+url = "https://dienste.c3re.de"
 weight = 90
 
 [[menus.main]]
 name = "Downloads"
-url = "/about/"
+url = "/downloads/"
 weight = 110
 
 # Footer Menue
