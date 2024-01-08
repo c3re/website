@@ -2,7 +2,7 @@
 
 <section class="single">
     <h1 class="title">{{ .Title }}</h1>
-
+{{/*
     <div class="tip">
         <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
         <span class="split">·</span>
@@ -12,6 +12,7 @@
             {{ .ReadingTime }} minutes to read
         </span>
     </div>
+    */}}
 
     <div class="taxonomies">
         {{ with .Params.categories }}
@@ -33,7 +34,6 @@
         {{ end }}
     </div>
 
-    <hr />
 
     <div class="content">
         {{ .Content }}

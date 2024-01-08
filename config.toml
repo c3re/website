@@ -5,26 +5,19 @@ theme = "hugo-theme-flat"
 # themeDir = '../..'
 defaultContentLanguage = "de"
 relativeURLs = true
-style = "pink"
+style = "green"
 
-# Hauptmenue
+
+[params]
+mainSections = ["."]
+
 [[menus.main]]
-name = "Hallo beim c3RE"
-url = "/hallo"
-weight = 30
-[[menus.main]]
-parent = "Hallo beim c3RE"
 name = "Philosophie"
 url = "/unsere-philosophie"
 [[menus.main]]
-parent = "Hallo beim c3RE"
 name = "Codeweek"
 url = "/codeweek"
 
-[[menus.main]]
-name = "Über uns"
-url = "/about/"
-weight = 50
 
 
 
