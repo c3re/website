@@ -1,4 +1,14 @@
-# Unsere Philosophie
+---
+title: "Unsere Philosophie"
+date:
+tags: []
+categories: []
+weight: 50
+show_comments: false
+katex: false
+draft: false
+description: ""
+---
 
 Computer, Algorithmen und technische Systeme im Allgemeinen haben für das Leben und Zusammenleben in unserer Gesellschaft einen sehr hohen Stellenwert erreicht. Durch den hohen und weiter ansteigenden Grad der Vernetzung solcher Systeme ist heute das Leben der Mehrheit aller Menschen von diesen Systemen beeinflusst und oft auch abhängig.
 

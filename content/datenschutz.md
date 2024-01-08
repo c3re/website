@@ -1,6 +1,16 @@
-# DATENSCHUTZERKLÄRUNG
+---
+title: "Datenschutzerklärung"
+date:
+tags: []
+categories: []
+weight: 50
+show_comments: false
+katex: false
+draft: false
+description: ""
+---
 
-## Datenschutzerklärung
+# Datenschutzerklärung
 
 Der Schutz und die Sicherheit von persönlichen Daten hat bei uns eine hohe Priorität. Daher halten wir uns strikt an die Regeln des deutschen Bundesdatenschutzgesetzes (BDSG) und die Datenschutzgrundverordnung (DSGVO). Nachfolgend werden Sie darüber informiert, welche Art von Daten erfasst und zu welchem Zweck sie erhoben werden:
 

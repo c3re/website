@@ -1,4 +1,15 @@
-# HALLO BEIM C3RE
+---
+title: "Hallo beim c3RE"
+date:
+tags: []
+categories: []
+weight: 50
+show_comments: false
+katex: false
+draft: false
+description: ""
+---
+
 Seit Januar 2015 haben sich erstmalig technisch und netzpolitisch Interessierte zu einem eigenen [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen zusammengefunden. Als Chaostreff sind wir eine lockere Runde von Menschen, die sich mit dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club) verbunden fühlen.
 
 Wir setzten uns zusammen und Quatschen über unsere Projekte, darüber was man mit Technik alles machen kann und manchmal auch, was die Konsequenzen davon sind. Wir haben gemeinsam viel Spaß am Gerät und helfen uns gegenseitig mit Tipps und Tools.
