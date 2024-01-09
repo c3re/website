@@ -41,7 +41,6 @@ xmlHttp.onreadystatechange = function() {
 
             li.attr('title',item.description)
             li.appendTo(box)
-            console.log(item)
         }
         $(".location",box).click(function(){
             navigator.clipboard.writeText($(this).attr('data-loc'))
