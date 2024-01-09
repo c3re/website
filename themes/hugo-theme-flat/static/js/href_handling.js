@@ -11,8 +11,10 @@ document.querySelectorAll('a').forEach(function(element) {
         link.setAttribute('href', prefetchUrl);
         link.setAttribute('as', 'document');
         document.head.appendChild(link);
+        element.classList.add("internal");
     }else {
         element.setAttribute("target", "_blank");
+        element.classList.add("external");
     }
 })
 });
