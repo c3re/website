@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
         fetch("https://spaceapi.c3re.de/").then(function(response) {
             return( response.json());
         }).then(function(data) {
-            console.log(data)
             document.getElementById("ds-img").setAttribute("src",data.state.open?data.state.icon.open:data.state.icon.closed);
             document.getElementById("ds-status").innerHTML=data.state.open?"Geöffnet":"Geschlossen";
 
