@@ -1,6 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
-
+<meta name="githash" content="{{ .Page.GitInfo.Hash }}">
+<meta name="gitdate" content="{{ .Page.GitInfo.CommitDate }}">
+<meta name="gitmsg" content="{{ .Page.GitInfo.Subject }}">
 
 {{ $title := .Site.Title -}}
 {{ if .Params.Title -}}
