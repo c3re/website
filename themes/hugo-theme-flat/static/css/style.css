@@ -536,7 +536,7 @@ a.external:after {
 }
 
 .side a {
-  color: var(--color-fg-font-normal);
+  color: var(--color-dark-fg-font-hyper-hover);
   text-decoration: none;
 }
 .side a:hover {
