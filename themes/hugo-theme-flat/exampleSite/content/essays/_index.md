@@ -9,4 +9,4 @@ draft: false
 
 <!--more-->
 
-*There are some short articles.*
+_There are some short articles._

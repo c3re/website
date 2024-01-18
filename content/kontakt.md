@@ -9,16 +9,17 @@ katex: false
 draft: false
 description: ""
 ---
-E-Mail:	kontakt(ät)c3re.de
 
-Hüttentelefon:	02361 / 8488096
+E-Mail: kontakt(ät)c3re.de
+
+Hüttentelefon: 02361 / 8488096
 
 # Anreise
 
 ## Anreise mit dem PKW
 
 Westcharweg 101 in 45659 Recklinghausen. Das Gelände liegt direkt an der Kreuzung B225 / A43.
-Von Marl aus kommend einfach hinter der Autobahnbrücke die erste links (Westcharweg) und dann sofort an der Schranke wieder links  fahren auf das Gelände der Zeche.
+Von Marl aus kommend einfach hinter der Autobahnbrücke die erste links (Westcharweg) und dann sofort an der Schranke wieder links fahren auf das Gelände der Zeche.
 
 Von Recklinghausen bzw. der Recklinghäuser A43 Ausfahrt aus fährt man auf die B225 Richtung Marl und dann vor der Autobahnbrücke in den Westcharweg und dann sofort an der Schranke links auf das Gelände der Zeche fahren.
 

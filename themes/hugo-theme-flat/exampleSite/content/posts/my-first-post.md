@@ -1,7 +1,7 @@
 ---
 title: "My First Post"
 date: 2023-04-17T20:28:56+02:00
-draft: false 
+draft: false
 ---
 
 # Maschinenraum - Hands-On Server
@@ -64,6 +64,7 @@ draft: false
 - Bitwarden/Vaultwarden -> Talk/Workshop?!
 
 ## pad
+
 <https://pads.c3re.de/c3redocker>
 
 ## man müsste Mal/Ideensammlung
@@ -88,4 +89,4 @@ chronyd ->
 <https://vikunja.io/> - To-Do App
 mailjet
 
-* Hugo
+- Hugo
