@@ -1,8 +1,7 @@
-baseURL = "https://hugo-test.c3re.de/"
-languageCode = "en-us"
+baseURL = "https://www.c3re.de"
+languageCode = "de-de"
 title = "c3RE"
 theme = "hugo-theme-flat"
-# themeDir = '../..'
 defaultContentLanguage = "de"
 relativeURLs = true
 style = "green"
@@ -23,7 +22,7 @@ url = "/codeweek"
 
 [[menus.main]]
 name = "Werkzeuge"
-url = "https://dienste.c3re.de"
+url = "https://dienste.c3re.de/"
 weight = 90
 
 [[menus.main]]
