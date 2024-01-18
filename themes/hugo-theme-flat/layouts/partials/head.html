@@ -73,11 +73,22 @@
     </script>
 {{ end }}
 
-<link rel="stylesheet" href="{{ "lib/icofont/icofont.min.css" | relURL }}" />
-<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+
 <link rel="shortcut icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon" />
+<style>
+    body{
+        background-color: #202124;
+        display: none;
+    }
+</style>
+
+<link rel="preload" as="stlesheet" href="{{ "lib/icofont/icofont.min.css" | relURL }}" />
+<link rel="preload" as="stlesheet" href="{{ "css/syntax.css" | relURL }}" />
+<link rel="preload" as="stlesheet" href="{{ "css/style.css" | relURL }}" />
+
 <script src="/js/jquery-3.7.1.min.js"></script>
 <script src="/js/href_handling.js"></script>
 <script src="/js/door-status.js"></script>
 <script src="/js/calendar.js"></script>
+
+<link rel="preload" fetchpriority="high" as="image" href="/img/banner.png" type="image/png">
