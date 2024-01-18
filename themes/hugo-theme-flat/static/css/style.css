@@ -37,7 +37,7 @@
   --color-dark-bg-pager-current: #3a3a3e;
   --color-dark-bg-pager-hover: #444446;
 }
-
+/*
 :root {
   --color-bg-page: var(--color-light-bg-page);
   --color-bg-content: var(--color-light-bg-content);
@@ -57,7 +57,7 @@
   --color-bg-pager-hover: var(--color-light-bg-pager-hover);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {*/
   :root {
     --color-bg-page: var(--color-dark-bg-page);
     --color-bg-content: var(--color-dark-bg-content);
@@ -76,7 +76,7 @@
     --color-bg-pager-current: var(--color-dark-bg-pager-current);
     --color-bg-pager-hover: var(--color-dark-bg-pager-hover);
   }
-}
+/*}*/
 
 :root {
   --fonts-sans-en: "Noto Sans", "Droid Sans", "Calibri", "Arial";
