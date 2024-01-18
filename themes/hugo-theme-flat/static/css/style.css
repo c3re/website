@@ -141,7 +141,8 @@ body {
 
 a.external:after {
   /*edd external icon to external link as :after with unicode symbol*/
-  content: "⮺";
+  /* content: "⮺";*/
+
 }
 
 .main-wrapper {
