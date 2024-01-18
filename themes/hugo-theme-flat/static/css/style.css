@@ -201,6 +201,12 @@ a.external:after{
 /* size the element who has breakpoint limitation */
 /* .header, .main-wrapper, .main { width: 100vw; } */
 /* .header-wrapper, .footer { width: 100vw; } */
+.header-wrapper {
+  background-image: url("/img/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center;
+}
 .header-wrapper, .footer { width: 100vw;}
 .main-wrapper { width: calc(100vw - 2 * var(--len-3));}
 
@@ -211,11 +217,9 @@ a.external:after{
 .header {
   padding: 0 var(--len-3);
   width: 100%;
-  background-image: url("/img/banner.png");
+
   background-position: center;
   min-height: 240px;
-  min-width: 1260px;
-
   text-shadow: 0px 0px 6px #0D0D0D, 0px 0px 14px #0D0D0D;
 }
 
