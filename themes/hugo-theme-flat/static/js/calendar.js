@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         li.attr("title", item.description);
         li.appendTo(box);
       }
+      document.querySelector("#calendar .loading").remove();
       $(".location", box).click(function () {
         navigator.clipboard.writeText($(this).attr("data-loc"));
       });
