@@ -20,5 +20,5 @@ dist:
 	mkdir dist
 
 deploy_test:
-	make BASEURL=https://c3retest.shnbk.de release
+	$(MAKE) BASEURL=https://c3retest.shnbk.de release
 	rsync -rv --delete dist/* shnbk.de:domains/c3retest.shnbk.de/htdocs
