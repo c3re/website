@@ -274,7 +274,7 @@ a.external:after {
 
   background-position: center;
   min-height: 240px;
-  text-shadow: 0px 0px 6px #0d0d0d, 0px 0px 14px #0d0d0d;
+  text-shadow: 0px 0px 6px #0d0d0d, 0px 0px 14px #0d0d0d, 0px 0px 14px #0d0d0d;
 }
 
 /* place title and menus horizonally */
