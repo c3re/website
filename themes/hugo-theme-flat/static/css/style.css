@@ -250,7 +250,7 @@ a.external:after {
 /* size the element who has breakpoint limitation */
 /* .header, .main-wrapper, .main { width: 100vw; } */
 /* .header-wrapper, .footer { width: 100vw; } */
-.header-wrapper {
+.header {
   background-image: url("/img/banner.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -258,7 +258,7 @@ a.external:after {
 }
 .header-wrapper,
 .footer {
-  width: 100vw;
+  width: 90vw;
 }
 .main-wrapper {
   width: calc(100vw - 2 * var(--len-3));
