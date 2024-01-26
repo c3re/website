@@ -23,7 +23,7 @@ Wir tun dies aber auch vor dem Hintergrund, unsere Freiheit und unsere demokrati
 Be excellent to each other!
 
 
-**Hackerethik**
+# **Hackerethik**  
 Die ethischen Grundsätze des Hackens – Motivation und Grenzen:
 
 * Der Zugang zu Computern und allem, was einem zeigen kann, wie diese Welt funktioniert, sollte unbegrenzt und vollständig sein.
