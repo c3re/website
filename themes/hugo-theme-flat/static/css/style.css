@@ -928,3 +928,25 @@ a.external:after {
   /* make image fit in div */
   width: 50%;
 }
+
+
+
+.content p img[src$="#left"] {
+  float: left;
+  margin: 0 var(--len-3) var(--len-3) 0;
+}
+
+.content p img[src$="#right"] {
+  float: right;
+  margin: 0 var(--len-3) var(--len-3) 0;
+}
+
+.content p img[src$="#right_sa"] {
+  margin: 0 0 0 auto ;
+}
+.content p img[src$="#left_sa"] {
+  margin: 0 auto 0 0  ;
+}
+
+
+
