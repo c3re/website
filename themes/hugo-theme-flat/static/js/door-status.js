@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(function (data) {
+        let body=document.getElementsByTagName("body")[0];
+        if (data.state.open) {
+          body.classList.remove("door_closed");
+          body.classList.add("door_open");
+        } else {
+          body.classList.remove("door_open");
+          body.classList.add("door_closed");
+        }
         document
           .getElementById("ds-img")
           .setAttribute(

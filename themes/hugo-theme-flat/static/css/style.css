@@ -258,6 +258,9 @@ a.external:after {
   background-position-x: center ;
     background-position-y: top ;
 }
+.header.door_open{
+    background-image: url("/img/banner_open.jpg");
+}
 .header-wrapper,
 .footer {
   width: 90vw;
