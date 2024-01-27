@@ -406,10 +406,13 @@ a.external:after {
 .footer .footer-row {
   display: flex;
   justify-content: center;
+
 }
+
 
 .footer .footer-item {
   margin-right: var(--len-3);
+  margin-left: var(--len-3);
 }
 .footer .footer-item:last-child {
   margin-right: 0;
