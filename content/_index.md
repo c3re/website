@@ -23,6 +23,9 @@ Der regelmäßige Chaostreff an jedem Mittwoch ab ca. 18.00 Uhr läuft weiter un
 Komm doch mal vorbei!
 
 ![Captain Crunch](/img/crunch.webp){height=100px, class="right} 
+1  
 <img src="/img/crunch.webp" width="200" alt="Gravel Calls" class="right" >  
+2  
 {{< figure src="/img/crunch.webp" width="200" alt="Gravel Calls" class="center" >}}  
+3  
 {{< figure src="/img/crunch.webp" width="200" alt="Gravel Calls" class="left" >}}  
