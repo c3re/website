@@ -21,7 +21,7 @@ Bei unseren offenen Treffen sind wir beim Programmieren und Compilieren, beim En
 Der regelmäßige Chaostreff an jedem Mittwoch ab ca. 18.00 Uhr läuft weiter unter dem Motto „Open Chaos – All Creatures Welcome“ und steht allen Interessierten offen. Wir freuen uns auf jeden Besuch! Neben kurzen Vorträgen zu verschiedenen, meist technischen Themen wird viel an einzelnen Projekten geplant und gelötet.
 
 Komm doch mal vorbei!
-crunch.webp
-![Captain Crunch](/static/img/crunch.webp)
- ![Banner](/static/img/banner.jpg]
- [Banner](/static/img/banner.jpg]
+
+![Captain Crunch](/img/crunch.webp)  
+ ![Banner](/img/banner.jpg]  
+ [Banner](/img/banner.jpg]  
