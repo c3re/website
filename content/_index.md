@@ -23,3 +23,5 @@ Der regelmäßige Chaostreff an jedem Mittwoch ab ca. 18.00 Uhr läuft weiter un
 Komm doch mal vorbei!
 crunch.webp
 ![Captain Crunch](/static/img/crunch.webp)
+ ![Banner](/static/img/banner.jpg]
+ [Banner](/static/img/banner.jpg]
