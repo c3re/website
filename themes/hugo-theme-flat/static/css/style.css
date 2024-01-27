@@ -258,7 +258,7 @@ a.external:after {
   background-position-x: center ;
     background-position-y: top ;
 }
-.header.door_open{
+.door_open .header{
     background-image: url("/img/banner_open.jpg");
 }
 .header-wrapper,
