@@ -36,7 +36,6 @@ Der regelmäßige Chaostreff an jedem Mittwoch ab ca. 18.00 Uhr läuft weiter un
 
 Komm doch mal vorbei!
 
-
 ![Gravel Calls](/img/crunch.webp#left_sa)
 Seit Januar 2015 haben sich erstmalig technisch und netzpolitisch Interessierte zu einem eigenen [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen zusammengefunden. Als Chaostreff sind wir eine lockere Runde von Menschen, die sich mit dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club) verbunden fühlen.
 
@@ -63,15 +62,3 @@ Bei unseren offenen Treffen sind wir beim Programmieren und Compilieren, beim En
 Der regelmäßige Chaostreff an jedem Mittwoch ab ca. 18.00 Uhr läuft weiter unter dem Motto „Open Chaos – All Creatures Welcome“ und steht allen Interessierten offen. Wir freuen uns auf jeden Besuch! Neben kurzen Vorträgen zu verschiedenen, meist technischen Themen wird viel an einzelnen Projekten geplant und gelötet.
 
 Komm doch mal vorbei!
-
-
-
-
-
-
-
-
-
-
-  
- 
