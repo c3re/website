@@ -6,12 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(function (data) {
         let body=document.getElementsByTagName("body")[0];
+        let fav=document.querySelector("head link[rel='icon']");
         if (data.state.open) {
           body.classList.remove("door_closed");
           body.classList.add("door_open");
+          fav.setAttribute("href", "img/favopen.png")
         } else {
           body.classList.remove("door_open");
           body.classList.add("door_closed");
+          fav.setAttribute("href", "img/favclosed.png")
+
         }
         document
           .getElementById("ds-img")

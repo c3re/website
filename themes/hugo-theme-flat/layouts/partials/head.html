@@ -4,6 +4,7 @@
 <meta name="gitdate" content="{{ .Page.GitInfo.CommitDate }}">
 <meta name="gitmsg" content="{{ .Page.GitInfo.Subject }}">
 <meta name="buildtime" content="{{ time.Now }}">
+<link rel="icon" type="image/png" href="{{ "img/fav.png" | relURL }}">
 {{ $title := .Site.Title -}}
 {{ if .Params.Title -}}
     {{ $title = printf "%s | %s" .Params.Title $title -}}
@@ -76,7 +77,6 @@
 {{ end }}
 
 
-<link rel="shortcut icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon" />
 <style>
     body{
         background-color: #202124;
