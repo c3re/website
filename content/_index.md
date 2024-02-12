@@ -15,7 +15,7 @@ Seit Januar 2015 haben sich erstmalig technisch und netzpolitisch Interessierte 
 Wir setzten uns zusammen und Quatschen über unsere Projekte, darüber was man mit Technik alles machen kann und manchmal auch, was die Konsequenzen davon sind. Wir haben gemeinsam viel Spaß am Gerät und helfen uns gegenseitig mit Tipps und Tools.
 
 Durch eine Begebenheit, die wie der Anfang von einem interessanten Witz klingt (Kommen ein Punker und ein Elektroingenieur in eine Bar…) haben wir inzwischen einen eigenen Hackerspace in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace).
-{{< figure src="/img/hackerhuette.webp" width="400" alt="Hackerhuette" class="center" >}}
+![](/img/hackerhuette_400.webp#center_sa)
 
 Bei unseren offenen Treffen sind wir beim Programmieren und Compilieren, beim Entwerfen und Löten und beim Austausch unserer Erfahrungen und unseres Wissens zu dem Schluss gekommen, dass wir dem ganzen eine gewisse Beständigkeit verleihen wollen. Am 07.9.2016 haben wir auf der Gründungsversammlung eine Satzung beschlossen und den c3RE e.V. gegründet.
 
@@ -23,5 +23,5 @@ Der regelmäßige Chaostreff an jedem Mittwoch ab ca. 18.00 Uhr läuft weiter un
 
 Komm doch mal vorbei!
 
-{{< figure src="/img/crunch.webp" width="400" alt="Captain Crunch" class="left" >}}  
+![Captain Crunch](/img/crunch_400.webp#center_sa)
 
