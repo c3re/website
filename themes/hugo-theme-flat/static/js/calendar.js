@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let li = $("<li/>");
         //li.text(item.summary)
         let startDate = new Date(item.start * 1000);
-        let date = $("<span class='date'/>");
+        let date = $("<span class='date row'/>");
         date.text(
           zeropad(startDate.getDate()) +
             "." +
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             zeropad(startDate.getMinutes())
         );
         date.appendTo(li);
-        let summary = $("<span class='summary'/>");
+        let summary = $("<span class='summary row'/>");
         summary.text(item.summary);
         if (item.url) {
           let a = $("<a/>");
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           loc.attr("data-loc", item.location);
           loc.attr("title", "Click to copy: " + item.location);
-          loc.appendTo(li);
+          loc.appendTo(date);
         }
 
         li.attr("title", item.description);
