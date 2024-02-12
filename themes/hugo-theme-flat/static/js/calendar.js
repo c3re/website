@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let cal = JSON.parse(xmlHttp.responseText);
       let $ = jQuery;
       let box = $("#calendar");
+      
+        box.removeClass("loading");
       for (let item of cal) {
         let li = $("<li/>");
         //li.text(item.summary)

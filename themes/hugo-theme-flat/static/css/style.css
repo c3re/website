@@ -215,12 +215,17 @@ a.external:after {
   margin-bottom: 0;
 }
 
+#calendar.loading{
+  height: 100em;
+}
+
 #calendar .row {
   display: block;
 }
 
 #calendar .location{
   margin-left: 0.25em;
+  cursor: pointer; 
 }
 
 /********** set up break point **********/
