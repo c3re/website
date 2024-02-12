@@ -212,6 +212,10 @@ a.external:after {
   margin-bottom: 0;
 }
 
+#calendar.loading{
+  height: 100em;
+}
+
 #calendar .row {
   display: block;
 }
