@@ -199,6 +199,9 @@ a.external:after {
 .side-contact {
   background-color: var(--color-bg-content);
 }
+.side-contact .icon {
+  margin-right: 1em;
+}
 
 /* place header in the center of header-wrapper */
 .header-wrapper {
