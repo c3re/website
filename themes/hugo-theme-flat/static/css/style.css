@@ -216,6 +216,10 @@ a.external:after {
   display: block;
 }
 
+#calendar .location{
+  margin-left: 0.25em;
+}
+
 /********** set up break point **********/
 
 .main-wrapper,
