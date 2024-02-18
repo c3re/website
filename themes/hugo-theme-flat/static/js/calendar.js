@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+const calRefresh=function () {
   let url =
-    "https://ical2json.c3re.de/api/?url=https%3A%2F%2Fcloud.c3re.de%2Fremote.php%2Fdav%2Fpublic-calendars%2FRLKKkdjNYgXH8yEz%3Fexport&start=today&end=next+month&maxitems=10";
+      "https://ical2json.c3re.de/api/?url=https%3A%2F%2Fcloud.c3re.de%2Fremote.php%2Fdav%2Fpublic-calendars%2FRLKKkdjNYgXH8yEz%3Fexport&start=today&end=next+month&maxitems=10";
   let xmlHttp = new XMLHttpRequest();
   let zeropad = function (i) {
     let o = "";
@@ -13,15 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
       let cal = JSON.parse(xmlHttp.responseText);
       let $ = jQuery;
       let box = $("#calendar");
-      
-        box.removeClass("loading");
+
+      box.removeClass("loading");
+      try{
+        for( el of document.querySelectorAll("#calendar li")){
+          el.remove()
+        }
+      }catch(e){}
       for (let item of cal) {
         let li = $("<li/>");
         //li.text(item.summary)
         let startDate = new Date(item.start * 1000);
         let date = $("<span class='date row'/>");
         date.text(
-          zeropad(startDate.getDate()) +
+            zeropad(startDate.getDate()) +
             "." +
             zeropad(1 + startDate.getMonth()) +
             "." +
@@ -54,7 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
         li.attr("title", item.description);
         li.appendTo(box);
       }
+      try{
       document.querySelector("#calendar .loading").remove();
+        }catch(e){}
+
       $(".location", box).click(function () {
         navigator.clipboard.writeText($(this).attr("data-loc"));
       });
@@ -62,4 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   xmlHttp.open("GET", url, true); // true for asynchronous
   xmlHttp.send();
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  calRefresh();
+  setInterval(calRefresh, 1000*60*15);
 });
