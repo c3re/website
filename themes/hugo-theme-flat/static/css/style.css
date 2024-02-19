@@ -228,6 +228,10 @@ a.external:after {
   cursor: pointer; 
 }
 
+#calendar .today{
+  color: var(--color-dark-fg-font-hyper-hover);
+}
+
 /********** set up break point **********/
 
 .main-wrapper,

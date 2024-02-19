@@ -24,7 +24,16 @@ const calRefresh=function () {
         let li = $("<li/>");
         //li.text(item.summary)
         let startDate = new Date(item.start * 1000);
-        let date = $("<span class='date row'/>");
+
+        //check if the date is within today, not tomorrow, not yesterday
+        let today = new Date();
+        let todayString = today.getFullYear() + "-" + zeropad(today.getMonth() + 1) + "-" + zeropad(today.getDate());
+        let startDateString = startDate.getFullYear() + "-" + zeropad(startDate.getMonth() + 1) + "-" + zeropad(startDate.getDate());
+        let todayClass=""
+        if (todayString === startDateString) todayClass=" today";
+
+
+        let date = $("<span class='date row"+todayClass+"'/>");
         date.text(
             zeropad(startDate.getDate()) +
             "." +
