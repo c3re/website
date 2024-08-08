@@ -34,8 +34,13 @@ Unser Hackerspace verfügt über eine eigene Bushaltestelle „Westcharweg“. D
 ## Anreise für Individualisten
 
 [Openstreetmap](https://www.openstreetmap.org/node/4115120510#map=17/51.62431/7.17115)
+
 [Google Maps](https://maps.app.goo.gl/jopY5gYHLvLP8yA5A)
+
 [Apple Maps](https://maps.apple.com/?address=Westcharweg%20103,%20Bockholt,%2045659%20Recklinghausen,%20Deutschland&auid=6929088596292009743&ll=51.624526,7.170036&lsp=9902&q=c3RE%20e.V.)
+
 Dezimalgrad:	N 51.62435 E 7.169125
+
 Grad Minuten:	N 51° 37.461000 E 7° 10.147500
+
 What 3 Words:	erprobt.gedöns.voll
