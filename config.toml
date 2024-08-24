@@ -9,7 +9,9 @@ style = "green"
 
 [params]
 mainSections = ["."]
-
+[[menus.main]]
+name = "Termine"
+url = "https://cloud.c3re.de/apps/calendar/p/RLKKkdjNYgXH8yEz/dayGridMonth/now"
 [[menus.main]]
 name = "Philosophie"
 url = "/unsere-philosophie"
