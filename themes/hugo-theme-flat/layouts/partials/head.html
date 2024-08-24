@@ -4,7 +4,9 @@
 <meta name="gitdate" content="{{ .Page.GitInfo.CommitDate }}">
 <meta name="gitmsg" content="{{ .Page.GitInfo.Subject }}">
 <meta name="buildtime" content="{{ time.Now }}">
-<link rel="icon" type="image/png" href="{{ "img/fav.png" | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "img/apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "img/favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "img/favicon-16x16.png" | relURL }}">
 {{ $title := .Site.Title -}}
 {{ if .Params.Title -}}
     {{ $title = printf "%s | %s" .Params.Title $title -}}
