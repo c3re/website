@@ -10,6 +10,5 @@ draft: false
 description: ""
 ---
 
-- [Mitgliedsantrag](/dl/Mitgliedsantrag.pdf)
 - [Satzung](/dl/Satzung.pdf)
 - [Beitragsordnung](/dl/Beitragsordnung.pdf)

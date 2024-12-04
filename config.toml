@@ -45,6 +45,10 @@ url = "/impressum"
 name = "Datenschutzerklärung"
 url = "/datenschutz"
 
+[[params.footer_rows.items]]
+name = "Mitglied werden"
+url = "https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Mitgliedwerden"
+
 [[params.footer_rows]]
 [[params.footer_rows.items]]
 pre ="FRIENDS & FAMILY"
