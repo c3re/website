@@ -20,6 +20,9 @@ const calRefresh=function () {
           el.remove()
         }
       }catch(e){}
+
+      let weekDayNames = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
       for (let item of cal) {
         let li = $("<li/>");
         //li.text(item.summary)
@@ -35,6 +38,8 @@ const calRefresh=function () {
 
         let date = $("<span class='date row"+todayClass+"'/>");
         date.text(
+            weekDayNames[startDate.getDay()] +
+            "., " +
             zeropad(startDate.getDate()) +
             "." +
             zeropad(1 + startDate.getMonth()) +
