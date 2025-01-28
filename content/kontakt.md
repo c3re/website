@@ -10,6 +10,13 @@ draft: false
 description: ""
 ---
 
+#Vorbeikommen
+Komm gerne einfach an unserem [Open Chaos](https://cloud.c3re.de/apps/calendar/p/RLKKkdjNYgXH8yEz/dayGridMonth/now) Mittwochs vorbei! Oder schreib uns direkt in unserem [Chat](https://matrix.to/#/#hackerhuette:matrix.c3re.de) an.
+
+Ob die Hackerhuette gerade offen oder zu ist, kannst du am Space-Status Logo hier auf der Seite erkennen.
+
+# Kontakt
+
 E-Mail: kontakt(ät)c3re.de
 
 Hüttentelefon: 02361 / 8488096
