@@ -29,6 +29,10 @@ weight = 90
 name = "Downloads"
 url = "/downloads/"
 weight = 110
+[[menus.main]]
+name = "Vorbeikommen"
+url = "/kontakt/"
+weight = 110
 
 # Footer Menue
 [[params.footer_rows]]
