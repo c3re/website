@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: golang:1.24
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install minify
+      run: go install github.com/tdewolff/minify/v2/cmd/minify@latest
+    - name: Install hugo
+      run: go install github.com/gohugoio/hugo@latest
+    - name: Run make
+      run: make

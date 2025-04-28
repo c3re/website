@@ -10,15 +10,21 @@ style = "green"
 [params]
 mainSections = ["."]
 
+[pagination]
+pagerSize = 4
+
 [[menus.main]]
 name = "Philosophie"
 url = "/unsere-philosophie"
+
 [[menus.main]]
 name = "Codeweek"
 url = "/codeweek"
 
-
-
+# [[menus.main]]
+# name = "News"
+# url = "/news/"
+# weight = 80
 
 [[menus.main]]
 name = "Werkzeuge"
