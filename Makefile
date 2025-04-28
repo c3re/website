@@ -1,6 +1,11 @@
-.PHONY: build  clean release deploy_test pretty minify
+.PHONY: build  clean release deploy_test pretty minify check
 
 BASEURL ?= https://c3re.de
+
+check: build-check minify
+
+build-check: clean
+	hugo --gc --minify --cleanDestinationDir -b "${BASEURL}" --panicOnWarning
 
 release: build minify
 
