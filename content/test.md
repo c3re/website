@@ -1,5 +1,5 @@
 ---
-title: "Hallo beim c3RE"
+title: "Hallo beim c3RE!"
 date:
 tags: []
 categories: []
