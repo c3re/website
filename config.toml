@@ -36,7 +36,7 @@ name = "Downloads"
 url = "/downloads/"
 weight = 110
 [[menus.main]]
-name = "Vorbeikommen"
+name = "Kontakt"
 url = "/kontakt/"
 weight = 110
 
