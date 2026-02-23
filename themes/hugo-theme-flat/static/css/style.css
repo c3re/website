@@ -133,6 +133,14 @@ body {
   background-color: var(--color-bg-page);
 }
 
+.list-item h1.title>a{
+  color: var(--color-fg-hyperlink);
+}
+.list-item h1.title>a:hover {
+  color: var(--color-fg-hyperlink-hover);
+}
+
+
 /* set up padding and margin of some main elements */
 .main-wrapper {
   margin-top: var(--len-5);
