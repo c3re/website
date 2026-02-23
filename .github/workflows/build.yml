@@ -13,11 +13,11 @@ jobs:
       image: golang:1.24
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Install minify
-      run: go install github.com/tdewolff/minify/v2/cmd/minify@latest
-    - name: Install hugo
-      run: go install github.com/gohugoio/hugo@v0.111.3
-    - name: Run make
-      run: make
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install minify
+        run: go install github.com/tdewolff/minify/v2/cmd/minify@latest
+      - name: Install hugo
+        run: go install github.com/gohugoio/hugo@v0.156.0
+      - name: Run make
+        run: make
