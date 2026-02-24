@@ -15,14 +15,7 @@
     */}}
 
     <div class="taxonomies">
-        {{ with .Params.categories }}
-        <div>
-            Categories:
-            {{ range . }}
-                <a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
+
 
         {{ with .Params.tags }}
             <div>
