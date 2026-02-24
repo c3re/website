@@ -13,15 +13,6 @@
                         <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
                     </div>
 
-                    {{ with .Params.Categories }}
-                        <div class="categories">
-                            <span>Categories:</span>
-                            {{ range first 2 . }}
-                                <a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-                            {{ end }}
-                        </div>
-                    {{ end }}
-
                     {{ with .Params.Tags }}
                         <div class="tags">
                             <span>Tags:</span>
