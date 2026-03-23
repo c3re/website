@@ -12,3 +12,4 @@ description: ""
 
 - [Satzung](/dl/Satzung.pdf)
 - [Beitragsordnung](/dl/Beitragsordnung.pdf)
+- [Unvereinbarkeitserklärung](/dl/Unvereinbarkeitserklärung.pdf)
