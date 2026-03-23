@@ -18,6 +18,10 @@ name = "Philosophie"
 url = "/unsere-philosophie"
 
 [[menus.main]]
+name = "Unvereinbarkeitserklärung"
+url = "/unvereinbarkeitserklaerung"
+
+[[menus.main]]
 name = "Codeweek"
 url = "/codeweek"
 
