@@ -1,3 +1,15 @@
+---
+title: "Unvereinbarkeitserklärung"
+date:
+tags: []
+categories: []
+weight: 50
+show_comments: false
+katex: false
+draft: false
+description: ""
+---
+
 Im Jahr 2005 hat der Chaos Computer Club e.V. die Erklärung [Farbe bekennen gegen Rechts](https://www.ccc.de/de/updates/2005/unvereinbarkeitserklaerung) veröffentlicht und durch die CCC e.V. Mitgliederversammlung 2025 [aktualisiert](https://www.ccc.de/de/club/unvereinbarkeitserklaerung-des-ccc).
 Die folgende Erklärung basiert auf der des Chaos Computer Club e.V. sowie dem Chaos Computer Club München e.V. und dem CCC Salzburg.
 
