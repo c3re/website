@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de"{{ if eq .Lang "de-leicht" }} data-leichte-sprache="true"{{ end }}>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+
+    <body{{ if eq .Lang "de-leicht" }} class="leichte-sprache"{{ end }}>
+        {{ partial "header.html" . }}
+        <main class="main-wrapper">
+            <div class="main">
+                {{ block "main" . }}{{ end }}
+            </div>
+            <div class="side">
+                {{ partial "side-calendar.html" . }}
+                {{ partial "side-door-status.html" . }}
+                {{ partial "side-contact.html" . }}
+            </div>
+        </main>
+        {{ partial "footer.html" . }}
+        {{ partial "html-end.html" . }}
+    </body>
+</html>

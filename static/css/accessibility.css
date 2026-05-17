@@ -1,0 +1,101 @@
+/* ------------------------------------------------------------------------- */
+/* Sprachschalter (Standard / Leichte Sprache) im Header.                    */
+/* Sichtbar auf allen Seiten, Tastatur-zugänglich, ausreichende Kontraste.   */
+/* ------------------------------------------------------------------------- */
+
+.header .menu-item.lang-switch {
+    margin-left: auto;
+}
+
+.header .lang-switch-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--len-2);
+
+    padding: var(--len-1) var(--len-3);
+    border: 2px solid var(--color-dark-fg-hyperlink);
+    border-radius: 999px;
+
+    background-color: rgba(0, 0, 0, 0.45);
+    color: var(--color-dark-fg-font-normal);
+
+    font-family: var(--fonts-sans);
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.header .lang-switch-link:hover,
+.header .lang-switch-link:focus {
+    background-color: var(--color-dark-fg-hyperlink);
+    color: #0d0d0d;
+    border-color: var(--color-dark-fg-hyperlink);
+    outline: none;
+    text-shadow: none;
+}
+
+.header .lang-switch-link:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.header .lang-switch-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 1.6em;
+    height: 1.6em;
+    padding: 0 0.35em;
+    border-radius: 50%;
+
+    background-color: var(--color-dark-fg-hyperlink);
+    color: #0d0d0d;
+
+    font-family: var(--fonts-sans);
+    font-size: var(--font-size-1);
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: none;
+}
+
+.header .lang-switch-link:hover .lang-switch-icon,
+.header .lang-switch-link:focus .lang-switch-icon {
+    background-color: #0d0d0d;
+    color: var(--color-dark-fg-hyperlink);
+}
+
+/* Auf mobilen Layouts klappt das Hauptmenü um. Der Sprachschalter steht
+   dort sinnvollerweise links statt rechts. */
+@media (max-width: 767px) {
+    .header .menu-item.lang-switch {
+        margin-left: 0;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+/* Hinweis-Banner auf Seiten in Leichter Sprache, wenn keine Übersetzung    */
+/* der konkreten Unterseite vorhanden ist und auf die Startseite verwiesen  */
+/* wird.                                                                    */
+/* ------------------------------------------------------------------------- */
+
+.leichte-sprache-hinweis {
+    margin: 0 0 var(--len-4) 0;
+    padding: var(--len-3) var(--len-4);
+    border-left: 4px solid var(--color-dark-fg-hyperlink);
+    border-radius: 4px;
+
+    background-color: var(--color-bg-block);
+    color: var(--color-fg-font-normal);
+
+    font-family: var(--fonts-sans);
+    font-size: var(--font-size-2);
+    line-height: 1.5;
+}
+
+.leichte-sprache-hinweis strong {
+    display: block;
+    margin-bottom: var(--len-1);
+}

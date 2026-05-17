@@ -1,8 +1,8 @@
 baseURL = "https://www.c3re.de"
-languageCode = "de-de"
 title = "c3RE"
 theme = "hugo-theme-flat"
 defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
 relativeURLs = true
 style = "green"
 
@@ -13,44 +13,71 @@ mainSections = ["."]
 [pagination]
 pagerSize = 4
 
-[[menus.main]]
-name = "Philosophie"
-url = "/unsere-philosophie"
+# ---------------------------------------------------------------------------
+# Sprachen: Standard-Deutsch und "Leichte Sprache" (Barrierefreiheit gemäß
+# BFSG / EAA). Inhalte der Leichten Sprache liegen als Dateien mit Suffix
+# ".de-leicht.md" neben den Standardseiten (z. B. _index.de-leicht.md).
+# ---------------------------------------------------------------------------
 
-[[menus.main]]
-name = "Unvereinbarkeitserklärung"
-url = "/unvereinbarkeitserklaerung"
+[languages]
+  [languages.de]
+    languageCode = "de-DE"
+    languageName = "Standard-Sprache"
+    weight = 1
+    title = "c3RE"
 
-[[menus.main]]
-name = "Codeweek"
-url = "/codeweek"
+    [[languages.de.menus.main]]
+    name = "Philosophie"
+    url = "/unsere-philosophie"
 
-# [[menus.main]]
-# name = "News"
-# url = "/news/"
-# weight = 80
+    [[languages.de.menus.main]]
+    name = "Unvereinbarkeitserklärung"
+    url = "/unvereinbarkeitserklaerung"
 
-[[menus.main]]
-name = "Werkzeuge"
-url = "https://dienste.c3re.de/"
-weight = 90
+    [[languages.de.menus.main]]
+    name = "Codeweek"
+    url = "/codeweek"
 
-[[menus.main]]
-name = "Downloads"
-url = "/downloads/"
-weight = 110
-[[menus.main]]
-name = "Kontakt"
-url = "/kontakt/"
-weight = 110
+    [[languages.de.menus.main]]
+    name = "Werkzeuge"
+    url = "https://dienste.c3re.de/"
+    weight = 90
 
-# Footer Menue
+    [[languages.de.menus.main]]
+    name = "Downloads"
+    url = "/downloads/"
+    weight = 110
+
+    [[languages.de.menus.main]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 110
+
+  [languages.de-leicht]
+    languageCode = "de-DE"
+    languageName = "Leichte Sprache"
+    weight = 2
+    title = "c3RE – in Leichter Sprache"
+
+    [[languages.de-leicht.menus.main]]
+    name = "Über uns"
+    url = "/unsere-philosophie/"
+    weight = 10
+
+    [[languages.de-leicht.menus.main]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 20
+
+# ---------------------------------------------------------------------------
+# Footer-Menü
+# ---------------------------------------------------------------------------
+
 [[params.footer_rows]]
 [[params.footer_rows.items]]
 name = "Kontakt"
 url = "/kontakt"
 
-#[[params.footer_rows]]
 [[params.footer_rows.items]]
 name = "Impressum"
 url = "/impressum"

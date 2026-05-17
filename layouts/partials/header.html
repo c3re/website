@@ -1,0 +1,72 @@
+{{/*
+    Header mit Sprachschalter zwischen Standard-Sprache und Leichter Sprache.
+    Wenn die aktuelle Seite keine Übersetzung hat, verweist der Schalter auf
+    die Startseite der jeweils anderen Sprache.
+*/}}
+
+{{ $currentLang := .Lang }}
+{{ $altLang := cond (eq $currentLang "de-leicht") "de" "de-leicht" }}
+
+{{ $altURL := "" }}
+{{ $altIsHome := true }}
+{{ range .Translations }}
+    {{ if eq .Lang $altLang }}
+        {{ $altURL = .RelPermalink }}
+        {{ $altIsHome = false }}
+    {{ end }}
+{{ end }}
+{{ if not $altURL }}
+    {{ range .Sites }}
+        {{ if eq .Language.Lang $altLang }}
+            {{ $altURL = .Home.RelPermalink }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ $altLabel := cond (eq $altLang "de-leicht") "Leichte Sprache" "Standard-Sprache" }}
+{{ $altTitle := cond (eq $altLang "de-leicht")
+    "Zur Version dieser Seite in Leichter Sprache wechseln"
+    "Zur Version dieser Seite in Standard-Sprache wechseln" }}
+{{ if $altIsHome }}
+    {{ $altTitle = cond (eq $altLang "de-leicht")
+        "Diese Seite gibt es noch nicht in Leichter Sprache. Zur Startseite in Leichter Sprache wechseln."
+        "Zur Startseite in Standard-Sprache wechseln." }}
+{{ end }}
+
+<header class="header-wrapper">
+    <div class="header">
+        <a class="site-title" href="{{ .Site.Home.RelPermalink }}">Home</a>
+
+        <nav class="menu">
+            {{ range .Site.Menus.main }}
+                <div class="menu-item">
+                    {{ if not .Children }}
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    {{ else }}
+                        <a>{{ .Name }}↓</a>
+                        <nav class="sub-menu">
+                            {{ range .Children }}
+                            <div class="menu-item"><a href="{{ .URL }}">{{ .Name }}</a></div>
+                            {{ end }}
+                        </nav>
+                    {{ end }}
+                </div>
+            {{ end }}
+
+            <div class="menu-item lang-switch">
+                <a href="{{ $altURL }}"
+                   class="lang-switch-link{{ if $altIsHome }} lang-switch-fallback{{ end }}"
+                   hreflang="de"
+                   title="{{ $altTitle }}"
+                   aria-label="{{ $altTitle }}">
+                    {{ if eq $altLang "de-leicht" }}
+                        <span class="lang-switch-icon" aria-hidden="true">A</span>
+                    {{ else }}
+                        <span class="lang-switch-icon" aria-hidden="true">Aa</span>
+                    {{ end }}
+                    <span class="lang-switch-label">{{ $altLabel }}</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
