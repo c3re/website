@@ -18,18 +18,18 @@ Dieses Impressum gilt auch für die Profile unseres Vereins auf den folgenden so
 # Angaben gemäß § 5 TMG:
 
 c3RE e.V.  
-c/o Christoph Büllesbach  
-Hochstr. 19 a  
-45661 Recklinghausen
+c/o Christian Keßen
+Graf-Bernadotte-Str. 4
+45699 Herten
 
-Telefon: +49 (0) 2361 8901721  
+Telefon: +49 (0) 2361 8488096
 E-Mail: kontakt (ät) c3re.de
 
 # Vertretungsberechtigte Personen:
 
-Tobias von Hebel, Vorstandsvorsitzender  
-Andre Schoder stellvertretender Vorsitzender  
-Christoph Büllesbach, Schatzmeister
+Alexander	Hubl, Vorstandsvorsitzender  
+Christian Keßen, stellvertretender Vorsitzender  
+Martin Herweg, Schatzmeister
 
 # Eintragung in das Vereinsregister
 
