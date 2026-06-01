@@ -18,9 +18,9 @@ Dieses Impressum gilt auch für die Profile unseres Vereins auf den folgenden so
 # Angaben gemäß § 5 TMG:
 
 c3RE e.V.  
-c/o Christian Keßen
-Graf-Bernadotte-Str. 4
-45699 Herten
+c/o Christian Keßen  
+Graf-Bernadotte-Str. 4  
+45699 Herten  
 
 Telefon: +49 (0) 2361 8488096
 E-Mail: kontakt (ät) c3re.de
