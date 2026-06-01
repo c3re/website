@@ -38,9 +38,9 @@ Registernummer: VR 2840
 
 # V.i.S.d § 55 Abs. 2 RStV:
 
-Tobias von Hebel  
-Konradstr. 61  
-45661 Recklinghausen
+Christian Keßen
+Graf-Bernadotte-Str. 4
+45699 Herten
 
 # Bankverbindung
 
