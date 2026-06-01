@@ -38,8 +38,8 @@ Registernummer: VR 2840
 
 # V.i.S.d § 55 Abs. 2 RStV:
 
-Christian Keßen
-Graf-Bernadotte-Str. 4
+Christian Keßen  
+Graf-Bernadotte-Str. 4  
 45699 Herten
 
 # Bankverbindung
