@@ -22,7 +22,7 @@ c/o Christian Keßen
 Graf-Bernadotte-Str. 4  
 45699 Herten  
 
-Telefon: +49 (0) 2361 8488096
+Telefon: +49 (0) 2361 8488096  
 E-Mail: kontakt (ät) c3re.de
 
 # Vertretungsberechtigte Personen:
@@ -44,6 +44,6 @@ Graf-Bernadotte-Str. 4
 
 # Bankverbindung
 
-Konto DE22 4016 4528 0260 2961 00  
-BIC GENODEM1LHN bei der Volksbank Südmünsterland-Mitte e.G.  
+Konto DE66 4286 1387 0260 2961 00  
+BIC GENODEM1BOB Volksbank Westmünsterland eG  
 Gerne nehmen wir hier auch Spenden zur Unterstützung unserer Tätigkeit entgegen.
