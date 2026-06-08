@@ -1,6 +1,5 @@
 const calRefresh=function () {
-  let url =
-      "https://ical2json.c3re.de/api/?url=https%3A%2F%2Fcloud.c3re.de%2Fremote.php%2Fdav%2Fpublic-calendars%2FRLKKkdjNYgXH8yEz%3Fexport&start=today&end=next+month&maxitems=10";
+  let url = "https://ical2json.c3re.de/api/?url=https%3A%2F%2Fklaut.c3re.de%2Fremote.php%2Fdav%2Fpublic-calendars%2FA7sGSxRJdzsHBJea%3Fexport&start=today+&end=last+day+of+next+month&maxitems=10"
   let xmlHttp = new XMLHttpRequest();
   let zeropad = function (i) {
     let o = "";
