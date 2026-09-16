@@ -1,0 +1,13 @@
+{{/* Simple Markdown lives beside the original in each page's front matter. */}}
+<div class="content"{{ with .Params.simple.content }} data-language="standard"{{ end }}>
+    {{ .Content }}
+</div>
+{{ with .Params.simple.content }}
+    {{/* Prefix anchors so both rendered versions have unique IDs. */}}
+    {{ $content := $.RenderString (dict "display" "block") . }}
+    {{ $content = replaceRE `id="([^"]+)"` `id="simple-$1"` $content }}
+    {{ $content = replaceRE `href="#([^"]+)"` `href="#simple-$1"` $content }}
+    <div class="content" data-language="simple">
+        {{ $content | safeHTML }}
+    </div>
+{{ end }}

@@ -54,28 +54,17 @@
         onload="renderMathInElement(document.body);"></script>
 {{ end }}
 
-<style>
-    body{
-        background-color: #202124;
-        display: none;
-    }
-</style>
-
-<link rel="preload" as="style" href="{{ "lib/icofont/icofont.min.css" | relURL }}" />
-<link rel="preload" as="style" href="{{ "css/syntax.css" | relURL }}" />
-<link rel="preload" as="style" href="{{ "css/style.css" | relURL }}" />
+{{/* Restore preferences before styles load to avoid a flash of the wrong theme. */}}
+<script src="{{ "js/preferences.js" | relURL }}"></script>
+<link rel="stylesheet" href="{{ "lib/icofont/icofont.min.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />
 
 <link rel="preload" as="image" href="{{ "img/banner_unknown.jpg" | relURL }}" />
-<link rel="preload" as="image" href="{{ "img/banner_open.jpg" | relURL }}" />
-<link rel="preload" as="image" href="{{ "img/banner_closed.jpg" | relURL }}" />
-<link rel="preload" as="image" href="{{ "doorstatus/open.png" | relURL }}" />
-<link rel="preload" as="image" href="{{ "doorstatus/closed.png" | relURL }}" />
 
 
 
-<script defer src="/js/jquery-3.7.1.min.js"></script>
-<script defer src="/js/href_handling.js"></script>
-<script defer src="/js/door-status.js"></script>
-<script defer src="/js/calendar.js"></script>
-
-<link rel="preload" fetchpriority="high" as="image" href="/img/banner.png" type="image/png">
+<script defer src="{{ "js/href_handling.js" | relURL }}"></script>
+<script defer src="{{ "js/door-status.js" | relURL }}"></script>
+<script defer src="{{ "js/calendar.js" | relURL }}"></script>

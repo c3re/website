@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark" data-simple="false">
     <head>
         {{ partial "head.html" . }}
     </head>
 
-    <body>
+    <body class="door_unknown">
+        <a class="skip-link" href="#main-content">Zum Inhalt</a>
         {{ partial "header.html" . }}
-        <main class="main-wrapper">
-            <div class="main">
+        {{ partial "banner.html" . }}
+        <div class="main-wrapper">
+            <main id="main-content" class="main" tabindex="-1">
                 {{ block "main" . }}{{ end }}
-            </div>
-            <div class="side">
+            </main>
+            <aside class="side" aria-label="Termine, Öffnungszeiten und Kontakt">
                 {{/*{{ range .Site.Sections }}
                     {{ partial "side-recent.html" . }}
                 {{ end }}
@@ -21,8 +23,8 @@
                 {{ partial "side-door-status.html" . }}
                 {{ partial "side-contact.html" . }}
 
-            </div>
-        </main>
+            </aside>
+        </div>
         {{ partial "footer.html" . }}
         {{ partial "html-end.html" . }}
     </body>

@@ -1,0 +1,6 @@
+{{/* Keep short interface texts together with their simple wording. */}}
+{{- if and .simple (ne .standard .simple) -}}
+    <span data-language="standard">{{ .standard }}</span><span data-language="simple">{{ .simple }}</span>
+{{- else -}}
+    {{ .standard }}
+{{- end -}}
