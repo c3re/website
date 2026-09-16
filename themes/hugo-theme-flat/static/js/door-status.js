@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const icon = panel.querySelector("[data-door-icon-image]");
     const unknownIcon = panel.querySelector("[data-door-icon-unknown]");
     const bannerLabel = document.getElementById("banner-status-label");
+    const bannerDetails = document.getElementById("banner-status-details");
+    const bannerSince = document.getElementById("banner-status-since");
+    const bannerTemperature = document.getElementById("banner-status-temperature");
     const favicon = document.querySelector("head link[rel~='icon']");
     const dateFormat = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", dateStyle: "medium" });
     const timeFormat = new Intl.DateTimeFormat("de-DE", { timeZone: "Europe/Berlin", hour: "2-digit", minute: "2-digit" });
@@ -39,12 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         icon.hidden = !known;
         unknownIcon.hidden = known;
+        if (bannerSince) {
+            bannerSince.hidden = true;
+            bannerSince.textContent = "";
+            bannerSince.removeAttribute("datetime");
+        }
         if (known) {
             const src = open ? panel.dataset.doorOpenIcon : panel.dataset.doorClosedIcon;
             if (icon.getAttribute("src") !== src) icon.setAttribute("src", src);
             const changed = data.state.lastchange;
             const since = typeof changed === "number" && Number.isFinite(changed) && changed > 0 && changed * 1000 <= Date.now() ? new Date(changed * 1000) : null;
             date.textContent = since && Number.isFinite(since.getTime()) ? text("Seit ", "Das ist so seit ") + dateFormat.format(since) + ", " + timeFormat.format(since) + " Uhr" : text("Zeitpunkt der letzten \u00c4nderung unbekannt.", "Wir wissen nicht, seit wann.");
+            if (bannerSince && since && Number.isFinite(since.getTime())) {
+                bannerSince.textContent = date.textContent;
+                bannerSince.dateTime = since.toISOString();
+                bannerSince.hidden = false;
+            }
         } else {
             icon.removeAttribute("src");
             const messages = {
@@ -59,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         temperatureRow.hidden = true;
         temperature.textContent = "";
+        if (bannerTemperature) {
+            bannerTemperature.hidden = true;
+            bannerTemperature.textContent = "";
+        }
         const sensors = known && data.sensors && data.sensors.temperature;
         // Do not label a different room's sensor as the club room.
         const sensor = Array.isArray(sensors) ? sensors.find(function (item) {
@@ -68,7 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const units = { "\u00b0C": "Grad Celsius", "\u00b0F": "Grad Fahrenheit", K: "Kelvin" };
             temperature.textContent = numberFormat.format(sensor.value) + " " + text(sensor.unit, units[sensor.unit]);
             temperatureRow.hidden = false;
+            if (bannerTemperature) {
+                bannerTemperature.textContent = text("Temperatur Clubraum: ", "Im Raum: ") + temperature.textContent;
+                bannerTemperature.hidden = false;
+            }
         }
+        // Both displays use the same response and the same language preference.
+        if (bannerDetails) bannerDetails.hidden = (!bannerSince || bannerSince.hidden) && (!bannerTemperature || bannerTemperature.hidden);
     }
 
     async function refresh() {

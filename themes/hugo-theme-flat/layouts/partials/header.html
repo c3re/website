@@ -1,7 +1,13 @@
 <header class="header-wrapper">
     <div class="header">
         <a class="site-title" href="{{ "/" | relURL }}">
-            <img src="{{ "img/c3re.png" | relURL }}" width="36" height="36" alt="">
+            {{/* Resize the supplied logo once and reuse it for all three layers. */}}
+            {{ $logo := (resources.Get "images/logo.png").Resize "96x webp" }}
+            <span class="site-logo" aria-hidden="true">
+                <img class="site-logo-base" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
+                <img class="site-logo-glitch-a" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
+                <img class="site-logo-glitch-b" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
+            </span>
             <span>c3RE</span>
             <span class="site-subtitle">Chaostreff Recklinghausen</span>
         </a>

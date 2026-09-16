@@ -1,8 +1,14 @@
 <div class="banner">
     <div class="banner-inner">
-        <span id="banner-status" class="banner-status">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span id="banner-status-label">{{ partial "text.html" (dict "standard" "Türstatus unbekannt" "simple" "Wir wissen gerade nicht, ob die Hütte offen ist.") }}</span>
-        </span>
+        <div class="banner-status-group">
+            <span id="banner-status" class="banner-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span id="banner-status-label">{{ partial "text.html" (dict "standard" "Türstatus unbekannt" "simple" "Wir wissen gerade nicht, ob die Hütte offen ist.") }}</span>
+            </span>
+            <div id="banner-status-details" class="banner-status-details" hidden>
+                <time id="banner-status-since" hidden></time>
+                <span id="banner-status-temperature" hidden></span>
+            </div>
+        </div>
     </div>
 </div>
