@@ -10,3 +10,12 @@
 # easy = "/audio/kontakt-leicht.mp3"
 
 [pages]
+
+[pages."/"]
+standard = "/audio/standard/startseite.mp3"
+
+[pages."/unsere-philosophie/"]
+standard = "/audio/standard/philosophie.mp3"
+
+[pages."/unvereinbarkeitserklaerung/"]
+standard = "/audio/standard/unvereinbarkeitserklaerung.mp3"

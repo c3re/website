@@ -13,7 +13,7 @@ Design-Anpassungen. Er ersetzt keine vollständige WCAG-Abnahme.
   Eine gespeicherte manuelle Auswahl hat Vorrang, nicht die Systemeinstellung.
 - Die normale Textfassung stammt wieder aus dem ursprünglichen Stand `dd22591`.
   Nur eine getrennte Leichte-Sprache-Fassung wird ergänzt.
-- Keine Browserstimme: Vorlesen verwendet später bereitgestellte Audiodateien.
+- Keine Browserstimme: Vorlesen verwendet die freigegebenen Audiodateien.
   Die bereits vorhandene Aufnahme unter `static/audio/einfache-sprache/` bleibt
   auf ausdrücklichen Wunsch unverknüpft.
 
@@ -72,7 +72,21 @@ vorhanden ist. Speicherzugriffe sind mit `try/catch` abgesichert. Reset setzt di
 Lesehilfen zurück und behält das ausdrücklich gewählte Farbschema bei.
 Ohne JavaScript sind Originaltexte und Navigation weiterhin benutzbar.
 
-## Audiodateien später zuordnen
+## Zugeordnete Audiodateien
+
+Die drei neu freigegebenen Aufnahmen sind in der normalen Sprachfassung verfügbar:
+
+| Seite | Datei | Ungefähre Dauer |
+| --- | --- | --- |
+| Startseite | `static/audio/standard/startseite.mp3` | 1:27 |
+| Philosophie | `static/audio/standard/philosophie.mp3` | 1:59 |
+| Unvereinbarkeitserklärung | `static/audio/standard/unvereinbarkeitserklaerung.mp3` | 2:38 |
+
+Die Kopien stimmen per SHA-256 mit den bereitgestellten Dateien überein.
+Start, Pause und Stopp wurden mit allen drei tatsächlichen Aufnahmen geprüft.
+Für Leichte Sprache werden diese normalen Aufnahmen nicht verwendet.
+
+### Weitere Audiodateien zuordnen
 
 1. Die freigegebenen Dateien unter `static/audio/` ablegen.
 2. In `data/audio.toml` die jeweilige Seiten-URL und Sprachfassung zuordnen:
@@ -119,7 +133,7 @@ gesonderte Aufgabe.
   WCAG-2.2-AA-Konformitätsaussage.
 - Redaktionelle und gegebenenfalls rechtliche Prüfung der Leichte-Sprache-Entwürfe,
   insbesondere Impressum und Datenschutz; Prüfung durch die Zielgruppe.
-- Passende, freigegebene Audiodateien und deren Zuordnung.
+- Weitere passende Audiodateien für die übrigen Seiten und Leichte Sprache.
 - PDF-Prüfung, reale Screenreader- und Browser-Zoom-Tests sowie dauerhafte CI-Tests.
 - Ergänzung der Datenschutzhinweise zur Einstellungsspeicherung als gesonderte
   redaktionelle Änderung. Der Originaltext wurde auf Wunsch nicht erweitert.
