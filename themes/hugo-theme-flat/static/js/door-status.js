@@ -2,12 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const panel = document.querySelector("[data-door-status]");
     if (!panel) return;
 
-    const status = document.getElementById("ds-status");
-    const date = document.getElementById("ds-date");
-    const temperature = document.getElementById("ds-temp");
-    const temperatureRow = panel.querySelector("[data-door-temperature]");
-    const icon = panel.querySelector("[data-door-icon-image]");
-    const unknownIcon = panel.querySelector("[data-door-icon-unknown]");
     const bannerLabel = document.getElementById("banner-status-label");
     const bannerDetails = document.getElementById("banner-status-details");
     const bannerSince = document.getElementById("banner-status-since");
@@ -31,8 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
         for (const value of ["open", "closed", "unknown"]) {
             document.body.classList.toggle("door_" + value, doorState === value);
         }
-        const statusText = known ? open ? text("Ge\u00f6ffnet", "Die H\u00fctte ist offen.") : text("Geschlossen", "Die H\u00fctte ist zu.") : text("Unbekannt", "Das wissen wir gerade nicht.");
-        if (status.textContent !== statusText) status.textContent = statusText;
         const bannerText = known ? open ? text("Hackerh\u00fctte ge\u00f6ffnet", "Die Hackerh\u00fctte ist offen.") : text("Hackerh\u00fctte geschlossen", "Die Hackerh\u00fctte ist zu.") : state === "loading" ? text("T\u00fcrstatus wird geladen...", "Wir pr\u00fcfen, ob die H\u00fctte offen ist...") : text("T\u00fcrstatus unbekannt", "Ob die H\u00fctte offen ist, wissen wir gerade nicht.");
         if (bannerLabel && bannerLabel.textContent !== bannerText) bannerLabel.textContent = bannerText;
         if (favicon) {
@@ -40,38 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
             if (favicon.getAttribute("href") !== href) favicon.setAttribute("href", href);
         }
 
-        icon.hidden = !known;
-        unknownIcon.hidden = known;
         if (bannerSince) {
             bannerSince.hidden = true;
             bannerSince.textContent = "";
             bannerSince.removeAttribute("datetime");
         }
         if (known) {
-            const src = open ? panel.dataset.doorOpenIcon : panel.dataset.doorClosedIcon;
-            if (icon.getAttribute("src") !== src) icon.setAttribute("src", src);
             const changed = data.state.lastchange;
             const since = typeof changed === "number" && Number.isFinite(changed) && changed > 0 && changed * 1000 <= Date.now() ? new Date(changed * 1000) : null;
-            date.textContent = since && Number.isFinite(since.getTime()) ? text("Seit ", "Das ist so seit ") + dateFormat.format(since) + ", " + timeFormat.format(since) + " Uhr" : text("Zeitpunkt der letzten \u00c4nderung unbekannt.", "Wir wissen nicht, seit wann.");
             if (bannerSince && since && Number.isFinite(since.getTime())) {
-                bannerSince.textContent = date.textContent;
+                bannerSince.textContent = text("Seit ", "Das ist so seit ") + dateFormat.format(since) + ", " + timeFormat.format(since) + " Uhr";
                 bannerSince.dateTime = since.toISOString();
                 bannerSince.hidden = false;
             }
-        } else {
-            icon.removeAttribute("src");
-            const messages = {
-                loading: text("Status wird geladen...", "Wir fragen gerade nach..."),
-                http: text("Der Statusdienst meldet einen Fehler.", "Die Abfrage hat nicht geklappt."),
-                timeout: text("Zeit\u00fcberschreitung bei der Statusabfrage.", "Die Antwort dauert zu lange."),
-                network: text("Der Statusdienst ist derzeit nicht erreichbar.", "Wir bekommen gerade keine Antwort."),
-                invalid: text("Der Statusdienst liefert keine g\u00fcltige Angabe.", "Die Antwort sagt nicht, ob die H\u00fctte offen oder zu ist.")
-            };
-            date.textContent = messages[state];
         }
 
-        temperatureRow.hidden = true;
-        temperature.textContent = "";
         if (bannerTemperature) {
             bannerTemperature.hidden = true;
             bannerTemperature.textContent = "";
@@ -83,14 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }) : null;
         if (sensor) {
             const units = { "\u00b0C": "Grad Celsius", "\u00b0F": "Grad Fahrenheit", K: "Kelvin" };
-            temperature.textContent = numberFormat.format(sensor.value) + " " + text(sensor.unit, units[sensor.unit]);
-            temperatureRow.hidden = false;
             if (bannerTemperature) {
-                bannerTemperature.textContent = text("Temperatur Clubraum: ", "Im Raum: ") + temperature.textContent;
+                bannerTemperature.textContent = text("Temperatur Clubraum: ", "Im Raum: ") + numberFormat.format(sensor.value) + " " + text(sensor.unit, units[sensor.unit]);
                 bannerTemperature.hidden = false;
             }
         }
-        // Both displays use the same response and the same language preference.
+        // Do not leave a stale timestamp or temperature visible after a failed refresh.
         if (bannerDetails) bannerDetails.hidden = (!bannerSince || bannerSince.hidden) && (!bannerTemperature || bannerTemperature.hidden);
     }
 

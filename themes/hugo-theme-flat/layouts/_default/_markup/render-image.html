@@ -1,9 +1,6 @@
 {{ $src := .Destination | safeURL }}
 {{ $image := resources.Get (printf "images/%s" (path.Base (index (split .Destination "#") 0))) }}
 {{ if .IsBlock }}
-    {{ if and .Page.IsHome (strings.Contains .Destination "crunch.webp") }}
-        {{ partial "visit-info.html" .Page }}
-    {{ end }}
     <figure>
 {{ end }}
 <img src="{{ $src }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ with $image }} width="{{ .Width }}" height="{{ .Height }}"{{ end }} loading="lazy" decoding="async">

@@ -8,79 +8,108 @@ show_comments: false
 katex: false
 draft: false
 description: ""
-simple:
-  title: "Impressum: Wer verantwortlich ist"
-  summary: "Hier stehen die verantwortlichen Personen, die Anschrift und die Bankdaten unseres Vereins."
+easy:
+  title: "Impressum: Wer für die Website verantwortlich ist"
+  summary: "Hier stehen Namen, Kontakt und Bankkonto von unserem Verein."
+  draft: true
   content: |
-    Das Impressum nennt die Verantwortlichen für diese Website. Diese Fassung hilft dir, die Angaben zu verstehen. Den Originaltext erreichst du über den Sprachschalter: Schalte „Einfache Sprache“ aus. Die Rechtsverweise sind aus dem Original übernommen.
+    ## Unser Verein {#c3re-ev}
 
-    ## Für wen das Impressum gilt
+    Für diese Website ist der **c3RE e.V.** verantwortlich.
+    e.V. bedeutet: eingetragener Verein.
 
-    Verantwortlich ist der c3RE e.V. Die Abkürzung e.V. bedeutet: eingetragener Verein.
+    Die Angaben auf dieser Seite heißen Impressum.
+    Sie gelten auch für unser [Profil auf Github](https://github.com/c3re).
+    Github ist eine Website.
+    Dort können Menschen zum Beispiel gemeinsam an Computerprogrammen arbeiten.
 
-    Dieses Impressum gilt auch für das Profil unseres Vereins auf [Github](https://github.com/c3re). Github ist eine Plattform, auf der Menschen zum Beispiel gemeinsam an Computerprogrammen arbeiten.
+    ## Adresse und Kontakt {#angaben-gemäß--5-tmg}
 
-    ## Anschrift und Kontakt
+    Im Original steht hier: „Angaben gemäß § 5 TMG“.
+    § ist das Zeichen für Paragraf.
+    Ein Paragraf ist ein Abschnitt in einem Gesetz.
+    TMG ist die Abkürzung für Telemediengesetz.
+    Der Verweis meint Paragraf 5 in diesem Gesetz.
 
-    Im Original heißt dieser Abschnitt „Angaben gemäß § 5 TMG“. Das bedeutet: Angaben nach Paragraf 5 des Telemediengesetzes, kurz TMG.
+    Das ist die Postadresse des Vereins:
 
     c3RE e.V.\
     c/o Christian Keßen\
     Graf-Bernadotte-Str. 4\
     45699 Herten
 
-    „c/o“ bedeutet hier: Post an den Verein wird über Christian Keßen an dieser Adresse zugestellt.
+    c/o bedeutet hier: Die Post kommt über Christian Keßen zum Verein.
 
-    Telefon: [+49 (0) 2361 8488096](tel:+4923618488096)
+    Telefon: +49 (0) 2361 8488096
 
-    E-Mail: [kontakt@c3re.de](mailto:kontakt@c3re.de)
+    E-Mail: kontakt@c3re.de
 
-    Im Original steht die E-Mail-Adresse mit „(ät)“. Gemeint ist das Zeichen @.
+    Im Original ist die E-Mail-Adresse so geschrieben: kontakt (ät) c3re.de.
+    „(ät)“ steht für das Zeichen @.
 
-    ## Diese Personen vertreten den Verein
+    ## Wer für den Verein handeln darf {#vertretungsberechtigte-personen}
 
-    Diese Personen dürfen für den Verein handeln:
+    Diese drei Personen vertreten den Verein:
 
-    - Alexander Hubl ist Vorstandsvorsitzender. Er ist der Vorsitzende des Vereinsvorstands.
-    - Christian Keßen ist stellvertretender Vorsitzender. Er vertritt den Vorsitzenden.
-    - Martin Herweg ist Schatzmeister. Er kümmert sich um die Finanzen des Vereins, also um das Geld.
+    - **Alexander Hubl** ist Vorstandsvorsitzender.
+      Er ist der Vorsitzende des Vorstands.
+    - **Christian Keßen** ist stellvertretender Vorsitzender.
+      Er vertritt den Vorsitzenden.
+    - **Martin Herweg** ist Schatzmeister.
+      Er kümmert sich um das Geld des Vereins.
 
-    ## Eintrag im Vereinsregister
+    ## Der Verein ist eingetragen {#eintragung-in-das-vereinsregister}
 
-    Das Vereinsregister ist ein amtliches Verzeichnis von Vereinen. Unser Verein ist dort eingetragen.
+    Es gibt ein amtliches Verzeichnis für Vereine.
+    Das Verzeichnis heißt Vereinsregister.
+    Unser Verein steht in diesem Verzeichnis.
 
-    Registergericht: Amtsgericht Recklinghausen\
-    Registernummer: VR 2840
+    Das zuständige Gericht führt dieses Verzeichnis.
+    Deshalb heißt es Registergericht.
 
-    Das Registergericht führt das Verzeichnis. Unter der Registernummer ist unser Verein dort zu finden.
+    Registergericht: **Amtsgericht Recklinghausen**\
+    Registernummer: **VR 2840**
 
-    ## Verantwortung für die Inhalte
+    Unter dieser Nummer findest du unseren Verein im Register.
 
-    Im Original steht „V.i.S.d § 55 Abs. 2 RStV“. Gemeint ist die verantwortliche Person im Sinne von Paragraf 55, Absatz 2 des Rundfunkstaatsvertrags, kurz RStV.
+    ## Wer für die Inhalte verantwortlich ist {#visd--55-abs-2-rstv}
 
-    Als verantwortlich ist genannt:
+    Im Original steht: „V.i.S.d § 55 Abs. 2 RStV“.
+    V.i.S.d bedeutet hier: verantwortlich im Sinne des.
+    Abs. bedeutet Absatz.
+    RStV ist die Abkürzung für Rundfunkstaatsvertrag.
 
-    Christian Keßen\
+    Der Verweis meint Paragraf 55, Absatz 2 des Rundfunkstaatsvertrags.
+    Als verantwortliche Person ist dort genannt:
+
+    **Christian Keßen**\
     Graf-Bernadotte-Str. 4\
     45699 Herten
 
-    ## Bankverbindung und Spenden
+    ## Unser Bankkonto und Spenden {#bankverbindung}
 
-    Du kannst unsere Arbeit mit einer Spende auf dieses Konto unterstützen:
+    Du kannst unsere Arbeit mit Geld unterstützen.
+    Das heißt: spenden.
+    Wir nehmen gerne Spenden auf diesem Konto an:
 
-    Konto / IBAN: DE22 4016 4528 0260 2961 00\
-    BIC: GENODEM1LHN\
-    Bank: Volksbank Südmünsterland-Mitte e.G.
+    Konto / IBAN: **DE22 4016 4528 0260 2961 00**\
+    BIC: **GENODEM1LHN**\
+    Bank: **Volksbank Südmünsterland-Mitte e.G.**
 
-    IBAN ist die internationale Kontonummer. BIC ist die internationale Kennung einer Bank. Der Zusatz e.G. im Banknamen steht für eingetragene Genossenschaft. Das ist eine Unternehmensform, bei der die Mitglieder gemeinsam Träger des Unternehmens sind.
+    IBAN ist die internationale Kontonummer.
+    BIC ist die internationale Kennung der Bank.
+    Mit diesen Angaben lässt sich das Konto zuordnen.
+
+    e.G. bedeutet: eingetragene Genossenschaft.
+    Bei einer Genossenschaft tragen die Mitglieder gemeinsam das Unternehmen.
 ---
 
-## c3RE e.V.
+# c3RE e.V.
 
 Dieses Impressum gilt auch für die Profile unseres Vereins auf den folgenden sozialen Netzwerken:
 [Github](https://github.com/c3re)
 
-## Angaben gemäß § 5 TMG:
+# Angaben gemäß § 5 TMG:
 
 c3RE e.V.  
 c/o Christian Keßen  
@@ -90,24 +119,24 @@ Graf-Bernadotte-Str. 4
 Telefon: +49 (0) 2361 8488096
 E-Mail: kontakt (ät) c3re.de
 
-## Vertretungsberechtigte Personen:
+# Vertretungsberechtigte Personen:
 
 Alexander	Hubl, Vorstandsvorsitzender  
 Christian Keßen, stellvertretender Vorsitzender  
 Martin Herweg, Schatzmeister
 
-## Eintragung in das Vereinsregister
+# Eintragung in das Vereinsregister
 
 Registergericht: Amtsgericht Recklinghausen  
 Registernummer: VR 2840
 
-## V.i.S.d § 55 Abs. 2 RStV:
+# V.i.S.d § 55 Abs. 2 RStV:
 
 Christian Keßen  
 Graf-Bernadotte-Str. 4  
 45699 Herten
 
-## Bankverbindung
+# Bankverbindung
 
 Konto DE22 4016 4528 0260 2961 00  
 BIC GENODEM1LHN bei der Volksbank Südmünsterland-Mitte e.G.  

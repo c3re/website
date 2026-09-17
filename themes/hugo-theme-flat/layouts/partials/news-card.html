@@ -9,8 +9,8 @@
     {{ end }}
     <div class="news-copy">
         <div class="news-meta">Neuigkeiten · <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "02.01.2006" }}</time></div>
-        <h2 class="news-title"><a href="{{ .RelPermalink }}">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title) }}</a></h2>
-        <p>{{ partial "text.html" (dict "standard" (.Description | default (.Summary | plainify | truncate 180)) "simple" .Params.simple.summary) }}</p>
+        <h2 class="news-title"><a href="{{ .RelPermalink }}">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title "easy" .Params.easy.title) }}</a></h2>
+        <p>{{ partial "text.html" (dict "standard" (.Description | default (.Summary | plainify | truncate 180)) "simple" .Params.simple.summary "easy" .Params.easy.summary) }}</p>
         <a href="{{ .RelPermalink }}">{{ partial "text.html" (dict "standard" "Weiterlesen" "simple" "Den ganzen Bericht lesen") }} <span aria-hidden="true">→</span></a>
     </div>
 </article>

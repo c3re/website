@@ -8,72 +8,131 @@ show_comments: false
 katex: false
 draft: false
 description: ""
-simple:
-  title: "Datenschutz: Was mit deinen Daten passiert"
-  summary: "Hier erklären wir, welche Daten die Website nutzt und wie wir sie schützen."
+easy:
+  title: "So gehen wir mit deinen Daten um"
+  summary: "Hier erfährst du, welche Daten die Website erfasst und wie wir persönliche Daten schützen."
+  draft: true
   content: |
-    Diese Fassung hilft dir, unsere Datenschutzerklärung zu verstehen. Den Originaltext erreichst du über den Sprachschalter: Schalte „Einfache Sprache“ aus.
+    ## Datenschutz {#datenschutzerklärung}
 
-    Der Schutz deiner persönlichen Daten ist uns wichtig. Persönliche Daten sind Angaben über einen Menschen. Wir richten uns nach dem Bundesdatenschutzgesetz, kurz BDSG, und der Datenschutzgrundverordnung, kurz DSGVO. Diese Gesetze regeln den Schutz persönlicher Daten. Hier erklären wir, welche Daten erfasst werden und wofür sie genutzt werden.
+    Persönliche Daten sind Informationen über einen Menschen.
+    Dazu gehören zum Beispiel Name und E-Mail-Adresse.
+    Uns ist der Schutz dieser Daten sehr wichtig.
 
-    ## 1. Welche Daten beim Besuch der Website erfasst werden
+    Wir richten uns nach diesen Gesetzen:
 
-    Wenn du die Website besuchst, schreibt der Web-Server automatisch ein Protokoll. Ein Web-Server ist ein Computer, der die Website bereitstellt. Die Protokolldateien heißen auch Log-Files.
+    - Bundesdatenschutzgesetz.
+      Die Abkürzung ist BDSG.
+    - Datenschutzgrundverordnung.
+      Die Abkürzung ist DSGVO.
 
-    Darin stehen zum Beispiel:
+    Diese Gesetze regeln den Schutz persönlicher Daten.
+    Hier erklären wir, welche Daten wir erfassen.
+    Wir erklären auch, wofür wir diese Daten nutzen.
 
-    - Name und Version deines Browsers. Der Browser ist das Programm, mit dem du Websites aufrufst. Die Version zeigt, welche Ausgabe des Programms du nutzt.
-    - Das Betriebssystem deines Geräts. Das sind die grundlegenden Programme, mit denen das Gerät arbeitet.
-    - Die Adresse der Seite, die du vorher besucht hast. Diese Angabe heißt Referrer URL. URL bedeutet Internetadresse.
-    - Die IP-Adresse deines Geräts. Das ist die Adresse, über die dein Gerät im Internet Daten austauscht.
-    - Datum und Uhrzeit deiner Anfrage an den Server.
-    - Name und Internetadresse der Datei, die dein Browser angefordert hat.
+    ## 1. Daten beim Besuch der Website
 
-    Im Original steht, dass diese Daten keiner bestimmten Person zugeordnet werden können. Wir sammeln sie laut dieser Erklärung nur für statistische Auswertungen. Damit sind zum Beispiel Zählungen der Seitenaufrufe gemeint. Wir geben diese Daten nicht an andere weiter. Das gilt sowohl für geschäftliche als auch für andere Zwecke.
+    Die Website liegt auf einem Web-Server.
+    Das ist ein Computer, der die Website bereitstellt.
 
-    ## 2. Wie wir persönliche Angaben nutzen
+    Du besuchst die Website mit einem Browser.
+    Der Browser ist ein Programm für Internetseiten.
+    Er fragt den Web-Server nach den Daten für die Seite.
 
-    Persönliche Angaben erfassen oder verarbeiten wir laut Original nur, wenn du sie uns freiwillig mitteilst. Das kann zum Beispiel passieren, wenn du uns eine Frage schickst.
+    Der Web-Server schreibt dabei automatisch ein Protokoll.
+    Die Dateien mit diesem Protokoll heißen Log-Files.
 
-    Wenn du uns die Erlaubnis gegeben hast, persönliche Daten zu speichern, kannst du diese Erlaubnis jederzeit schriftlich zurücknehmen. Das geht zum Beispiel per E-Mail. Die Rücknahme gilt sofort. Eine Ausnahme besteht, wenn wir die Daten noch benötigen, um ein Geschäft abzuwickeln.
+    Darin stehen zum Beispiel diese Angaben:
 
-    Wir geben deine persönlichen Daten nicht an andere weiter. Eine Ausnahme besteht, wenn ein Gesetz uns dazu verpflichtet.
+    - Welchen Browser nutzt du?
+      Welche Version nutzt du?
+      Die Version sagt, welche Ausgabe des Programms du hast.
+    - Welches Betriebssystem hat dein Gerät?
+      Das Betriebssystem sind die grundlegenden Programme auf deinem Gerät.
+    - Welche Seite hast du vorher besucht?
+      Diese Angabe heißt Referrer URL.
+      URL ist ein anderes Wort für Internetadresse.
+    - Welche IP-Adresse hat dein Gerät?
+      Das ist die Adresse für den Austausch von Daten im Internet.
+    - An welchem Datum kam die Anfrage?
+      Zu welcher Uhrzeit kam sie?
+    - Welche Datei hat dein Browser angefordert?
+      Gespeichert werden der Dateiname und die Internetadresse der Datei.
+
+    Diese Daten lassen sich keiner bestimmten Person zuordnen.
+    Wir sammeln sie nur für statistische Auswertungen.
+    Das können zum Beispiel Zählungen von Seitenaufrufen sein.
+
+    Wir geben die Protokolldaten nicht an andere weiter.
+    Das gilt für geschäftliche Zwecke.
+    Das gilt auch für andere Zwecke.
+
+    ## 2. So nutzen wir persönliche Angaben
+
+    Du kannst uns freiwillig persönliche Angaben mitteilen.
+    Zum Beispiel, wenn du uns eine Frage schickst.
+    Wir erfassen oder verarbeiten persönliche Angaben nur dann.
+
+    Du hast uns erlaubt, deine persönlichen Daten zu speichern?
+    Dann kannst du diese Erlaubnis schriftlich zurücknehmen.
+    Das geht zum Beispiel mit einer E-Mail.
+
+    Die Rücknahme gilt sofort.
+    Es gibt eine Ausnahme:
+    Wir brauchen die Daten noch, um ein Geschäft abzuwickeln.
+
+    Wir geben deine persönlichen Daten nicht an andere weiter.
+    Es gibt eine Ausnahme:
+    Ein Gesetz verpflichtet uns zur Weitergabe.
 
     ## 3. Auskunft, Änderung und Löschung deiner Daten
 
-    Du kannst uns nach geltendem Recht jederzeit schriftlich fragen, ob wir persönliche Daten über dich speichern und welche das sind. Wir antworten dir darauf umgehend.
+    Du kannst uns jederzeit schriftlich fragen:
 
-    ## 4. Wie wir deine Daten schützen
+    - Speichert ihr persönliche Daten über mich?
+    - Welche Daten sind das?
 
-    Wir schützen die persönlichen Daten, die du uns gibst, mit technischen Maßnahmen und Regeln für unsere Arbeitsabläufe. Dadurch sollen Menschen ohne Berechtigung keinen Zugriff auf deine Daten haben.
+    Das kannst du nach geltendem Recht tun.
+    Wir antworten dir darauf umgehend.
 
-    Wenn du uns besonders vertrauliche Daten oder Informationen schicken möchtest, empfehlen wir dir den Postweg. Bei E-Mails können wir keine vollständige Datensicherheit garantieren. Unsere Postanschrift steht im [Impressum](/impressum).
+    ## 4. So schützen wir deine Daten
 
-    ## 5. Änderungen dieser Datenschutzerklärung
+    Du hast uns persönliche Daten gegeben?
+    Wir schützen diese Daten mit technischen Maßnahmen.
+    Wir legen auch Regeln für unsere Arbeitsabläufe fest.
 
-    Wir aktualisieren diese Regeln zum Datenschutz von Zeit zu Zeit. Schau deshalb gelegentlich wieder hier nach. So erfährst du, wie wir deine Daten schützen und unsere Website weiter verbessern.
+    So sollen Menschen ohne Erlaubnis nicht an deine Daten kommen.
 
-    Wenn wir wichtige Änderungen machen, weisen wir deutlich sichtbar auf der Website darauf hin. Das betrifft Änderungen daran, wie wir die von dir mitgeteilten persönlichen Daten sammeln, nutzen oder weitergeben.
+    Du möchtest uns sehr vertrauliche Informationen schicken?
+    Dann empfehlen wir dir einen Brief mit der Post.
+    Bei E-Mails können wir keinen vollständigen Schutz der Daten garantieren.
 
-    Im Original steht außerdem: Mit der Nutzung der Website erklärst du dich mit den Bedingungen dieser Datenschutzregeln einverstanden.
+    ## 5. Änderungen an dieser Erklärung
 
-    ## Gespeicherte Einstellungen und aktuelle Anzeigen
+    Wir überarbeiten diese Regeln zum Datenschutz von Zeit zu Zeit.
+    Bitte lies deshalb gelegentlich wieder hier nach.
 
-    Die Website merkt sich zwei Einstellungen nur lokal in deinem Browser, also auf deinem Gerät:
+    So erfährst du, wie wir deine Daten schützen.
+    Du erfährst auch, wie wir die Inhalte der Website verbessern.
 
-    - `c3re-theme` speichert, ob du das helle oder das dunkle Design gewählt hast.
-    - `c3re-simple` speichert, ob du Einfache Sprache eingeschaltet hast.
+    Wichtige Änderungen zeigen wir mit einem gut sichtbaren Hinweis an.
+    Der Hinweis steht auf der Website.
+    Das betrifft diese Änderungen:
 
-    Diese Einstellungen werden nicht an uns übertragen. Sie dienen nicht dem Tracking. Tracking bedeutet, das Verhalten von Menschen im Internet zu verfolgen. Du kannst die Einstellungen entfernen, indem du in deinem Browser die Website-Daten dieser Seite löschst.
+    - Wie sammeln wir die persönlichen Daten, die du uns gibst?
+    - Wie nutzen wir diese Daten?
+    - Wie geben wir diese Daten weiter?
 
-    Für aktuelle Termine ruft dein Browser Daten von `ical2json.c3re.de` ab. Die Information, ob die Hackerhütte offen ist, kommt von `spaceapi.c3re.de`. Bei diesen Verbindungen erhalten die Dienste die technisch nötigen Verbindungsdaten. Dazu gehört deine IP-Adresse.
+    Wer die Website nutzt, erklärt sich mit diesen Datenschutzregeln einverstanden.
 
     ## Fragen zum Datenschutz
 
-    Schreib uns eine E-Mail, wenn du Fragen zu diesen Regeln hast. Die Kontaktdaten stehen im [Impressum](/impressum).
+    Du hast eine Frage zu diesen Regeln?
+    Schreib uns eine E-Mail.
+    Die Kontaktdaten stehen im [Impressum](/impressum).
 ---
 
-## Datenschutzerklärung
+# Datenschutzerklärung
 
 Der Schutz und die Sicherheit von persönlichen Daten hat bei uns eine hohe Priorität. Daher halten wir uns strikt an die Regeln des deutschen Bundesdatenschutzgesetzes (BDSG) und die Datenschutzgrundverordnung (DSGVO). Nachfolgend werden Sie darüber informiert, welche Art von Daten erfasst und zu welchem Zweck sie erhoben werden:
 
@@ -91,11 +150,5 @@ Der Schutz und die Sicherheit von persönlichen Daten hat bei uns eine hohe Prio
 
 5. Änderungen dieser Datenschutzbestimmungen
    Wir werden diese Richtlinien zum Schutz Ihrer persönlichen Daten von Zeit zu Zeit aktualisieren. Sie sollten sich diese Richtlinien gelegentlich ansehen, um auf dem Laufenden darüber zu bleiben, wie wir Ihre Daten schützen und die Inhalte unserer Website stetig verbessern. Sollten wir wesentliche Änderungen bei der Sammlung, der Nutzung und/oder der Weitergabe der uns von Ihnen zur Verfügung gestellten personenbezogenen Daten vornehmen, werden wir Sie durch einen eindeutigen und gut sichtbaren Hinweis auf der Website darauf aufmerksam machen. Mit der Nutzung der Webseite erklären Sie sich mit den Bedingungen dieser Richtlinien zum Schutz persönlicher Daten einverstanden.
-
-## Einstellungsspeicherung und Live-Anzeigen
-
-Die Website speichert die Auswahl des Farbschemas unter `c3re-theme` und die Auswahl der Einfachen Sprache unter `c3re-simple` ausschließlich lokal im Browser (Local Storage). Diese Einstellungen werden nicht an uns übertragen und nicht für Tracking verwendet. Sie können die gespeicherten Einstellungen durch Löschen der Website-Daten dieser Seite in Ihrem Browser entfernen.
-
-Für den Live-Kalender ruft der Browser Daten von `ical2json.c3re.de` ab, für den aktuellen Öffnungsstatus von `spaceapi.c3re.de`. Bei diesen Verbindungen erhalten die jeweiligen Dienste die für den Abruf technisch erforderlichen Verbindungsdaten, insbesondere die IP-Adresse.
 
 Bei Fragen zu diesen Datenschutzbestimmungen wenden Sie sich bitte per e-mail (siehe [Impressum](/impressum)) an uns.

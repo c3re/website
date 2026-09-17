@@ -1,0 +1,11 @@
+<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    {{ if eq . "access" }}
+        <circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="7.5" r="1" fill="currentColor"></circle><path d="M7.5 10.5l4.5 1 4.5-1M12 11.5v4l-2.5 4.5M12 15.5l2.5 4.5"></path>
+    {{ else if eq . "language" }}
+        <path d="M4 5h16v10H10l-6 4z"></path>
+    {{ else if eq . "contrast" }}
+        <circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"></path>
+    {{ else if eq . "speaker" }}
+        <path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"></path>
+    {{ end }}
+</svg>

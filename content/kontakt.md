@@ -8,86 +8,136 @@ show_comments: false
 katex: false
 draft: false
 description: ""
-simple:
-  title: "Kontakt und Anreise"
-  summary: "So erreichst du uns und findest den Weg zur Hackerhütte."
+easy:
+  title: "Kontakt und der Weg zu uns"
+  summary: "Besuche unser offenes Treffen am Mittwoch. Hier findest du den Kontakt und den Weg zur Hackerhütte."
+  draft: true
   content: |
-    ## Komm vorbei
+    ## Besuche uns {#vorbeikommen}
 
-    Mittwochs findet unser offenes Treffen statt. Es heißt „Open Chaos“. Du kannst gerne vorbeikommen. Die Termine stehen in unserem [Open-Chaos-Kalender](https://klaut.c3re.de/apps/calendar/p/A7sGSxRJdzsHBJea).
+    Unser offenes Treffen ist am Mittwoch.
+    Das Treffen heißt „Open Chaos“.
+    Du kannst gerne vorbeikommen.
 
-    Du kannst uns auch im [Chat auf Matrix](https://matrix.to/#/#hackerhuette:matrix.c3re.de) schreiben. Ein Chat ist ein Gespräch über Nachrichten im Internet. Matrix ist der Name des Dienstes, den wir dafür nutzen.
+    Die Termine stehen im [Open-Chaos-Kalender](https://cloud.c3re.de/apps/calendar/p/RLKKkdjNYgXH8yEz/dayGridMonth/now).
 
-    Die Anzeige zum Öffnungsstatus auf dieser Seite zeigt, ob die Hackerhütte gerade offen oder geschlossen ist. Diese Anzeige heißt auch „Space-Status“ oder „Doorstatus“.
+    Hier findest du uns:
 
-    ## Schreib uns oder ruf an
-
-    E-Mail: [kontakt@c3re.de](mailto:kontakt@c3re.de)
-
-    Telefon in der Hackerhütte: [02361 / 8488096](tel:+4923618488096)
-
-    ## Anreise
-
-    Unsere Adresse ist:
-
+    **Hackerhütte**\
     Westcharweg 101\
     45659 Recklinghausen
 
-    Das Gelände liegt direkt dort, wo sich die Bundesstraße B225 und die Autobahn A43 kreuzen.
+    Auf der Website gibt es eine Anzeige zur Öffnung.
+    Sie zeigt: Ist die Hackerhütte gerade offen oder geschlossen?
+    Die Anzeige heißt Space-Status.
 
-    ### Mit dem Auto aus Richtung Marl
+    ## So erreichst du uns {#kontakt}
 
-    Fahre auf der B225 in Richtung Recklinghausen. Nimm hinter der Autobahnbrücke die erste Straße links. Das ist der Westcharweg. Biege dann sofort an der Schranke wieder links ab. Dort fährst du auf das Gelände der Zeche. Eine Zeche ist ein Bergwerk.
+    E-Mail: kontakt@c3re.de
 
-    Die Hackerhütte steht auf der linken Seite in einem Bereich mit Zaun.
+    Telefon in der Hackerhütte: 02361 / 8488096
 
-    ### Mit dem Auto aus Recklinghausen oder von der A43
+    Du kannst uns im [Matrix-Chat](https://matrix.to/#/#hackerhuette:matrix.c3re.de) schreiben.
+    Ein Chat ist ein Gespräch mit Nachrichten im Internet.
+    Unser Dienst für den Chat heißt Matrix.
 
-    Wenn du aus Recklinghausen oder von der Recklinghäuser Ausfahrt der A43 kommst, fahre auf die B225 in Richtung Marl. Biege vor der Autobahnbrücke in den Westcharweg ab. Biege dann sofort an der Schranke links auf das Gelände der Zeche ab.
+    ## Der Weg zur Hackerhütte {#anreise}
 
-    Die Hackerhütte steht auf der linken Seite in einem Bereich mit Zaun.
+    Die Hackerhütte liegt an der Kreuzung von zwei Straßen:
 
-    ### Mit öffentlichen Verkehrsmitteln
+    - der Bundesstraße B225;
+    - der Autobahn A43.
 
-    Die Bushaltestelle bei unserer Hackerhütte heißt „Westcharweg“. Dort halten die Buslinien 214, 270 und NE3. Du kannst damit direkt aus Recklinghausen, Herten, Marl und Dorsten zu uns kommen.
+    ### Mit dem Auto {#anreise-mit-dem-pkw}
 
-    Vom Hauptbahnhof Recklinghausen dauert die Fahrt etwa 7 Minuten.
+    **Du kommst aus Marl:**
 
-    Deine Verbindung findest du in der [Fahrplanauskunft des VRR](https://www.vrr.de/fahrplan-mobilitaet/fahrplanauskunft/app/trip?formik=destination%3Dde%253A05562%253A3574&lng=de&trip=multiModalitySelected%3Dpt). VRR steht für Verkehrsverbund Rhein-Ruhr.
+    1. Fahre auf der B225 in Richtung Recklinghausen.
+    2. Nimm hinter der Autobahnbrücke die erste Straße links.
+       Die Straße heißt Westcharweg.
+    3. Biege gleich an der Schranke wieder links ab.
+       So kommst du auf das Gelände der Zeche.
 
-    ### Karten und Angaben für die Navigation
+    Eine Zeche ist ein Bergwerk.
+    Die Hackerhütte steht links auf dem Gelände.
+    Um diesen Bereich steht ein Zaun.
 
-    Diese Karten helfen dir, deinen eigenen Weg zu planen:
+    **Du kommst aus Recklinghausen oder von der A43:**
+
+    Du kommst aus Recklinghausen.
+    Oder du nimmst die Recklinghäuser Ausfahrt der A43.
+    Dann fahre so weiter:
+
+    1. Fahre auf der B225 in Richtung Marl.
+    2. Biege vor der Autobahnbrücke in den Westcharweg ab.
+    3. Biege gleich an der Schranke links ab.
+       So kommst du auf das Gelände der Zeche.
+
+    Die Hackerhütte steht links.
+    Sie steht in dem Bereich mit dem Zaun.
+
+    ### Mit Bus und Bahn {#anreise-mit-öffentlichen-verkehrsmitteln}
+
+    Bei der Hackerhütte ist die Bushaltestelle **Westcharweg**.
+    Dort halten diese Buslinien:
+
+    - 214
+    - 270
+    - NE3
+
+    Mit den Bussen kannst du direkt aus diesen Städten kommen:
+
+    - Recklinghausen
+    - Herten
+    - Marl
+    - Dorsten
+
+    Vom Hauptbahnhof Recklinghausen dauert die Fahrt etwa **7 Minuten**.
+
+    Du suchst eine passende Verbindung?
+    Nutze die [Fahrplanauskunft des VRR](https://www.vrr.de/fahrplan-mobilitaet/fahrplanauskunft/app/trip?formik=destination%3Dde%253A05562%253A3574&lng=de&trip=multiModalitySelected%3Dpt).
+    VRR bedeutet: Verkehrsverbund Rhein-Ruhr.
+
+    ### Karten und andere Angaben zum Ort {#anreise-für-individualisten}
+
+    Hier findest du Karten für deinen Weg:
 
     - [Hackerhütte auf Openstreetmap](https://www.openstreetmap.org/node/4115120510#map=17/51.62431/7.17115)
     - [Hackerhütte auf Google Maps](https://maps.app.goo.gl/jopY5gYHLvLP8yA5A)
     - [Hackerhütte auf Apple Maps](https://maps.apple.com/?address=Westcharweg%20103,%20Bockholt,%2045659%20Recklinghausen,%20Deutschland&auid=6929088596292009743&ll=51.624526,7.170036&lsp=9902&q=c3RE%20e.V.)
 
-    Du kannst auch diese Koordinaten verwenden. Koordinaten sind Zahlen, die einen Ort auf der Erde angeben. N steht für Norden, E für Osten. Hier stehen die Angaben in zwei Schreibweisen:
+    Du kannst den Ort auch mit Zahlen angeben.
+    Diese Zahlen heißen Koordinaten.
+    N bedeutet Norden.
+    E bedeutet Osten.
+
+    Die Koordinaten für unsere Hütte stehen hier in zwei Schreibweisen:
 
     - Dezimalgrad: N 51.62435 E 7.169125
     - Grad Minuten: N 51° 37.461000 E 7° 10.147500
 
-    What 3 Words: `erprobt.gedöns.voll`
+    Es gibt auch den Dienst What 3 Words.
+    Der Dienst bezeichnet einen Ort mit drei Wörtern.
+    Für unseren Ort sind das diese Wörter:
 
-    What 3 Words ist ein Dienst, der Orte mit jeweils drei Wörtern bezeichnet. Die drei Wörter oben bezeichnen unseren Standort.
+    `erprobt.gedöns.voll`
 ---
 
-## Vorbeikommen
+# Vorbeikommen
 
-Komm gerne einfach an unserem [Open Chaos](https://klaut.c3re.de/apps/calendar/p/A7sGSxRJdzsHBJea) Mittwochs vorbei! Oder schreib uns direkt in unserem [Chat](https://matrix.to/#/#hackerhuette:matrix.c3re.de) an.
+Komm gerne einfach an unserem [Open Chaos](https://cloud.c3re.de/apps/calendar/p/RLKKkdjNYgXH8yEz/dayGridMonth/now) Mittwochs vorbei! Oder schreib uns direkt in unserem [Chat](https://matrix.to/#/#hackerhuette:matrix.c3re.de) an.
 
 Ob die Hackerhuette gerade offen oder zu ist, kannst du am Space-Status Logo hier auf der Seite erkennen.
 
-## Kontakt
+# Kontakt
 
-E-Mail: [kontakt(ät)c3re.de](mailto:kontakt@c3re.de)
+E-Mail: kontakt(ät)c3re.de
 
-Hüttentelefon: [02361 / 8488096](tel:+4923618488096)
+Hüttentelefon: 02361 / 8488096
 
-## Anreise
+# Anreise
 
-### Anreise mit dem PKW
+## Anreise mit dem PKW
 
 Westcharweg 101 in 45659 Recklinghausen. Das Gelände liegt direkt an der Kreuzung B225 / A43.
 Von Marl aus kommend einfach hinter der Autobahnbrücke die erste links (Westcharweg) und dann sofort an der Schranke wieder links fahren auf das Gelände der Zeche.
@@ -96,13 +146,13 @@ Von Recklinghausen bzw. der Recklinghäuser A43 Ausfahrt aus fährt man auf die 
 
 Die Hütte ist dann auf der linken Seite im eingezäunten Bereich.
 
-### Anreise mit öffentlichen Verkehrsmitteln
+## Anreise mit öffentlichen Verkehrsmitteln
 
 Unser Hackerspace verfügt über eine eigene Bushaltestelle „Westcharweg“. Die Bushaltestelle wird von den Bussen 214, 270 und NE3 angefahren und ermöglicht so eine direkte Anreise aus Recklinghausen, Herten, Marl und Dorsten. Die Fahrtzeit ab Recklinghausen Hauptbahnhof beträgt ca. 7 Minuten.
 
 [VRR Fahrpläne](https://www.vrr.de/fahrplan-mobilitaet/fahrplanauskunft/app/trip?formik=destination%3Dde%253A05562%253A3574&lng=de&trip=multiModalitySelected%3Dpt)
 
-### Anreise für Individualisten
+## Anreise für Individualisten
 
 [Openstreetmap](https://www.openstreetmap.org/node/4115120510#map=17/51.62431/7.17115)
 

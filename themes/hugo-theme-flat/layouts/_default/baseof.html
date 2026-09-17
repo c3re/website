@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="dark" data-simple="false">
+<html lang="de" data-theme="dark" data-language="standard" data-simple="false">
     <head>
         {{ partial "head.html" . }}
     </head>
@@ -19,17 +19,12 @@
                 {{ partial "side-categories.html" . }}
                 {{ partial "side-tags.html" . }}
                 */}}
-                {{ if .IsHome }}
-                    {{ partial "side-door-status.html" . }}
-                    {{ partial "side-calendar.html" . }}
-                {{ else }}
-                    {{ partial "side-calendar.html" . }}
-                    {{ partial "side-door-status.html" . }}
-                {{ end }}
+                {{ partial "side-calendar.html" . }}
                 {{ partial "side-contact.html" . }}
 
             </aside>
         </div>
+        {{ partial "accessibility.html" . }}
         {{ partial "footer.html" . }}
         {{ partial "html-end.html" . }}
     </body>

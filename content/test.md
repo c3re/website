@@ -8,78 +8,272 @@ show_comments: false
 katex: false
 draft: false
 description: ""
-simple:
-  title: "Hallo beim c3RE!"
-  summary: "Diese Testseite zeigt unseren Vorstellungstext mit Bildern an verschiedenen Positionen."
+easy:
+  title: "Willkommen beim c3RE"
+  summary: "Bei uns treffen sich Menschen mit Interesse an Technik und Netzpolitik. Wir teilen Wissen und arbeiten an Projekten."
+  draft: true
   content: |
-    ![Eine Packung Cap'n Crunch, eine Schüssel mit Frühstücksflocken und eine orange Pfeife](/img/crunch.webp#left "Captain Crunch")
-    Seit Januar 2015 treffen wir uns als [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen. Wir interessieren uns für Technik und Netzpolitik. Bei Netzpolitik geht es um politische Fragen rund um das Internet, zum Beispiel um unsere Rechte dort. Unser Chaostreff ist eine lockere Gruppe. Wir fühlen uns mit dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club), kurz CCC, verbunden.
+    ![Gravel Calls](/img/crunch.webp#left)
 
-    Wir reden über unsere Projekte und darüber, was man mit Technik machen kann. Wir sprechen auch über die Folgen davon. Wir haben Spaß daran, Geräte auszuprobieren. Dabei helfen wir uns gegenseitig mit Tipps und Werkzeugen.
+    Seit Januar 2015 gibt es unseren [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen.
+    Das ist eine lockere Gruppe von Menschen.
+    Wir interessieren uns für Technik.
 
-    Wie wir zu unseren eigenen Räumen kamen, klingt wie der Anfang eines Witzes: Ein Punker und ein Elektroingenieur treffen sich in einer Bar. Ein Elektroingenieur entwickelt zum Beispiel elektrische Geräte. Aus dieser Begegnung entstand unser eigener Hackerspace in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace). Ein Hackerspace ist ein Ort, an dem Menschen gemeinsam Technik verstehen und ausprobieren.
-    ![Eine Packung Cap'n Crunch, eine Schüssel mit Frühstücksflocken und eine orange Pfeife](/img/crunch.webp#right "Captain Crunch")
+    Wir interessieren uns auch für Netzpolitik.
+    Das sind politische Fragen zum Internet.
+    Zum Beispiel: Welche Rechte haben Menschen im Internet?
 
-    Bei unseren offenen Treffen schreiben wir Programme. Das heißt Programmieren. Wir übersetzen den Programmtext auch in eine Form, die der Computer ausführen kann. Das heißt Compilieren. Wir planen Geräte und löten. Beim Löten verbindet man zum Beispiel elektronische Bauteile mit geschmolzenem Metall. Wir teilen unser Wissen und unsere Erfahrungen.
+    Wir fühlen uns dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club) verbunden.
+    Die Abkürzung dafür ist CCC.
+    Dort beschäftigen sich Menschen mit Computern und Technik.
 
-    Wir wollten, dass unsere gemeinsame Arbeit auf Dauer weitergeht. Deshalb haben wir am 7. September 2016 den c3RE e.V. gegründet. Die Abkürzung e.V. bedeutet: eingetragener Verein. Bei der Gründungsversammlung haben wir eine Satzung beschlossen. Darin stehen die Regeln unseres Vereins.
+    Wir sprechen über unsere Projekte.
+    Ein Projekt ist eine Aufgabe, an der wir arbeiten.
+    Wir überlegen, was mit Technik möglich ist.
+    Manchmal sprechen wir auch über die Folgen.
 
-    Jeden Mittwoch ab etwa 18 Uhr findet unser offenes Treffen statt. Es heißt „Open Chaos“ und hat das Motto „All Creatures Welcome“. Das ist Englisch und bedeutet: Alle Lebewesen sind willkommen. Alle Menschen, die sich für unsere Themen interessieren, können vorbeikommen.
+    Wir haben Spaß daran, Geräte auszuprobieren.
+    Wir helfen uns mit Tipps und Werkzeugen.
 
-    Es gibt kurze Vorträge, meistens über Technik. Wir planen unsere Projekte und löten gemeinsam.
+    Die Geschichte unserer Räume beginnt in einer Bar.
+    Dort trafen sich ein Punker und ein Elektroingenieur.
+    Ein Elektroingenieur arbeitet zum Beispiel an elektrischen Geräten.
+    Dieser Anfang klingt wie ein Witz.
 
-    Komm doch mal vorbei! Wir freuen uns auf deinen Besuch.
+    Heute haben wir eigene Räume in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace).
+    Solche Räume heißen Hackerspace.
+    Dort können Menschen zusammen Technik verstehen und ausprobieren.
 
-    Seit Januar 2015 treffen wir uns als [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen. Wir interessieren uns für Technik und Netzpolitik. Bei Netzpolitik geht es um politische Fragen rund um das Internet, zum Beispiel um unsere Rechte dort. Unser Chaostreff ist eine lockere Gruppe. Wir fühlen uns mit dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club), kurz CCC, verbunden.
+    ![Gravel Calls](/img/crunch.webp#right)
 
-    Wir reden über unsere Projekte und darüber, was man mit Technik machen kann. Wir sprechen auch über die Folgen davon. Wir haben Spaß daran, Geräte auszuprobieren. Dabei helfen wir uns gegenseitig mit Tipps und Werkzeugen.
+    Bei unseren offenen Treffen schreiben wir Programme.
+    Das heißt Programmieren.
+    Ein Programm sagt dem Computer, was er tun soll.
 
-    Wie wir zu unseren eigenen Räumen kamen, klingt wie der Anfang eines Witzes: Ein Punker und ein Elektroingenieur treffen sich in einer Bar. Ein Elektroingenieur entwickelt zum Beispiel elektrische Geräte. Aus dieser Begegnung entstand unser eigener Hackerspace in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace). Ein Hackerspace ist ein Ort, an dem Menschen gemeinsam Technik verstehen und ausprobieren.
+    Wir übersetzen den Programmtext für den Computer.
+    So kann der Computer ihn ausführen.
+    Dieses Übersetzen heißt Compilieren.
 
-    Bei unseren offenen Treffen schreiben wir Programme. Das heißt Programmieren. Wir übersetzen den Programmtext auch in eine Form, die der Computer ausführen kann. Das heißt Compilieren. Wir planen Geräte und löten. Beim Löten verbindet man zum Beispiel elektronische Bauteile mit geschmolzenem Metall. Wir teilen unser Wissen und unsere Erfahrungen.
+    Wir planen Geräte und löten.
+    Beim Löten verbinden wir Bauteile mit heißem Metall.
+    Wir teilen unser Wissen und unsere Erfahrungen.
 
-    Wir wollten, dass unsere gemeinsame Arbeit auf Dauer weitergeht. Deshalb haben wir am 7. September 2016 den c3RE e.V. gegründet. Die Abkürzung e.V. bedeutet: eingetragener Verein. Bei der Gründungsversammlung haben wir eine Satzung beschlossen. Darin stehen die Regeln unseres Vereins.
+    Unsere gemeinsame Arbeit sollte lange weitergehen.
+    Deshalb haben wir am **7. September 2016** einen Verein gegründet.
+    Der Verein heißt c3RE e.V.
+    e.V. bedeutet: eingetragener Verein.
 
-    Jeden Mittwoch ab etwa 18 Uhr findet unser offenes Treffen statt. Es heißt „Open Chaos“ und hat das Motto „All Creatures Welcome“. Das ist Englisch und bedeutet: Alle Lebewesen sind willkommen. Alle Menschen, die sich für unsere Themen interessieren, können vorbeikommen.
+    Bei der Gründung haben wir eine Satzung beschlossen.
+    Darin stehen die Regeln für unseren Verein.
 
-    Es gibt kurze Vorträge, meistens über Technik. Wir planen unsere Projekte und löten gemeinsam.
+    Unser offenes Treffen ist jeden **Mittwoch ab etwa 18 Uhr**.
+    Es heißt „Open Chaos“.
+    Alle interessierten Menschen können kommen.
 
-    Komm doch mal vorbei! Wir freuen uns auf deinen Besuch.
+    Unser Motto heißt: „All Creatures Welcome“.
+    Das ist Englisch für: Alle Lebewesen sind willkommen.
 
-    ![Eine Packung Cap'n Crunch, eine Schüssel mit Frühstücksflocken und eine orange Pfeife](/img/crunch.webp#left_sa "Captain Crunch")
-    Seit Januar 2015 treffen wir uns als [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen. Wir interessieren uns für Technik und Netzpolitik. Bei Netzpolitik geht es um politische Fragen rund um das Internet, zum Beispiel um unsere Rechte dort. Unser Chaostreff ist eine lockere Gruppe. Wir fühlen uns mit dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club), kurz CCC, verbunden.
+    Es gibt kurze Vorträge.
+    Meistens geht es um Technik.
+    Wir planen unsere Projekte und löten zusammen.
 
-    Wir reden über unsere Projekte und darüber, was man mit Technik machen kann. Wir sprechen auch über die Folgen davon. Wir haben Spaß daran, Geräte auszuprobieren. Dabei helfen wir uns gegenseitig mit Tipps und Werkzeugen.
+    Komm uns besuchen!
+    Wir freuen uns auf dich.
 
-    Wie wir zu unseren eigenen Räumen kamen, klingt wie der Anfang eines Witzes: Ein Punker und ein Elektroingenieur treffen sich in einer Bar. Ein Elektroingenieur entwickelt zum Beispiel elektrische Geräte. Aus dieser Begegnung entstand unser eigener Hackerspace in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace). Ein Hackerspace ist ein Ort, an dem Menschen gemeinsam Technik verstehen und ausprobieren.
-    ![Eine Packung Cap'n Crunch, eine Schüssel mit Frühstücksflocken und eine orange Pfeife](/img/crunch.webp#right_sa "Captain Crunch")
+    Seit Januar 2015 gibt es unseren [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen.
+    Das ist eine lockere Gruppe von Menschen.
+    Wir interessieren uns für Technik.
 
-    Bei unseren offenen Treffen schreiben wir Programme. Das heißt Programmieren. Wir übersetzen den Programmtext auch in eine Form, die der Computer ausführen kann. Das heißt Compilieren. Wir planen Geräte und löten. Beim Löten verbindet man zum Beispiel elektronische Bauteile mit geschmolzenem Metall. Wir teilen unser Wissen und unsere Erfahrungen.
+    Wir interessieren uns auch für Netzpolitik.
+    Das sind politische Fragen zum Internet.
+    Zum Beispiel: Welche Rechte haben Menschen im Internet?
 
-    Wir wollten, dass unsere gemeinsame Arbeit auf Dauer weitergeht. Deshalb haben wir am 7. September 2016 den c3RE e.V. gegründet. Die Abkürzung e.V. bedeutet: eingetragener Verein. Bei der Gründungsversammlung haben wir eine Satzung beschlossen. Darin stehen die Regeln unseres Vereins.
+    Wir fühlen uns dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club) verbunden.
+    Die Abkürzung dafür ist CCC.
+    Dort beschäftigen sich Menschen mit Computern und Technik.
 
-    Jeden Mittwoch ab etwa 18 Uhr findet unser offenes Treffen statt. Es heißt „Open Chaos“ und hat das Motto „All Creatures Welcome“. Das ist Englisch und bedeutet: Alle Lebewesen sind willkommen. Alle Menschen, die sich für unsere Themen interessieren, können vorbeikommen.
+    Wir sprechen über unsere Projekte.
+    Ein Projekt ist eine Aufgabe, an der wir arbeiten.
+    Wir überlegen, was mit Technik möglich ist.
+    Manchmal sprechen wir auch über die Folgen.
 
-    Es gibt kurze Vorträge, meistens über Technik. Wir planen unsere Projekte und löten gemeinsam.
+    Wir haben Spaß daran, Geräte auszuprobieren.
+    Wir helfen uns mit Tipps und Werkzeugen.
 
-    Komm doch mal vorbei! Wir freuen uns auf deinen Besuch.
-    ![Eine Packung Cap'n Crunch, eine Schüssel mit Frühstücksflocken und eine orange Pfeife](/img/crunch.webp#center_sa "Captain Crunch")
+    Die Geschichte unserer Räume beginnt in einer Bar.
+    Dort trafen sich ein Punker und ein Elektroingenieur.
+    Ein Elektroingenieur arbeitet zum Beispiel an elektrischen Geräten.
+    Dieser Anfang klingt wie ein Witz.
 
-    Seit Januar 2015 treffen wir uns als [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen. Wir interessieren uns für Technik und Netzpolitik. Bei Netzpolitik geht es um politische Fragen rund um das Internet, zum Beispiel um unsere Rechte dort. Unser Chaostreff ist eine lockere Gruppe. Wir fühlen uns mit dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club), kurz CCC, verbunden.
+    Heute haben wir eigene Räume in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace).
+    Solche Räume heißen Hackerspace.
+    Dort können Menschen zusammen Technik verstehen und ausprobieren.
 
-    Wir reden über unsere Projekte und darüber, was man mit Technik machen kann. Wir sprechen auch über die Folgen davon. Wir haben Spaß daran, Geräte auszuprobieren. Dabei helfen wir uns gegenseitig mit Tipps und Werkzeugen.
+    Bei unseren offenen Treffen schreiben wir Programme.
+    Das heißt Programmieren.
+    Ein Programm sagt dem Computer, was er tun soll.
 
-    Wie wir zu unseren eigenen Räumen kamen, klingt wie der Anfang eines Witzes: Ein Punker und ein Elektroingenieur treffen sich in einer Bar. Ein Elektroingenieur entwickelt zum Beispiel elektrische Geräte. Aus dieser Begegnung entstand unser eigener Hackerspace in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace). Ein Hackerspace ist ein Ort, an dem Menschen gemeinsam Technik verstehen und ausprobieren.
+    Wir übersetzen den Programmtext für den Computer.
+    So kann der Computer ihn ausführen.
+    Dieses Übersetzen heißt Compilieren.
 
-    Bei unseren offenen Treffen schreiben wir Programme. Das heißt Programmieren. Wir übersetzen den Programmtext auch in eine Form, die der Computer ausführen kann. Das heißt Compilieren. Wir planen Geräte und löten. Beim Löten verbindet man zum Beispiel elektronische Bauteile mit geschmolzenem Metall. Wir teilen unser Wissen und unsere Erfahrungen.
+    Wir planen Geräte und löten.
+    Beim Löten verbinden wir Bauteile mit heißem Metall.
+    Wir teilen unser Wissen und unsere Erfahrungen.
 
-    Wir wollten, dass unsere gemeinsame Arbeit auf Dauer weitergeht. Deshalb haben wir am 7. September 2016 den c3RE e.V. gegründet. Die Abkürzung e.V. bedeutet: eingetragener Verein. Bei der Gründungsversammlung haben wir eine Satzung beschlossen. Darin stehen die Regeln unseres Vereins.
+    Unsere gemeinsame Arbeit sollte lange weitergehen.
+    Deshalb haben wir am **7. September 2016** einen Verein gegründet.
+    Der Verein heißt c3RE e.V.
+    e.V. bedeutet: eingetragener Verein.
 
-    Jeden Mittwoch ab etwa 18 Uhr findet unser offenes Treffen statt. Es heißt „Open Chaos“ und hat das Motto „All Creatures Welcome“. Das ist Englisch und bedeutet: Alle Lebewesen sind willkommen. Alle Menschen, die sich für unsere Themen interessieren, können vorbeikommen.
+    Bei der Gründung haben wir eine Satzung beschlossen.
+    Darin stehen die Regeln für unseren Verein.
 
-    Es gibt kurze Vorträge, meistens über Technik. Wir planen unsere Projekte und löten gemeinsam.
+    Unser offenes Treffen ist jeden **Mittwoch ab etwa 18 Uhr**.
+    Es heißt „Open Chaos“.
+    Alle interessierten Menschen können kommen.
 
-    Komm doch mal vorbei! Wir freuen uns auf deinen Besuch.
+    Unser Motto heißt: „All Creatures Welcome“.
+    Das ist Englisch für: Alle Lebewesen sind willkommen.
+
+    Es gibt kurze Vorträge.
+    Meistens geht es um Technik.
+    Wir planen unsere Projekte und löten zusammen.
+
+    Komm uns besuchen!
+    Wir freuen uns auf dich.
+
+    ![Gravel Calls](/img/crunch.webp#left_sa)
+
+    Seit Januar 2015 gibt es unseren [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen.
+    Das ist eine lockere Gruppe von Menschen.
+    Wir interessieren uns für Technik.
+
+    Wir interessieren uns auch für Netzpolitik.
+    Das sind politische Fragen zum Internet.
+    Zum Beispiel: Welche Rechte haben Menschen im Internet?
+
+    Wir fühlen uns dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club) verbunden.
+    Die Abkürzung dafür ist CCC.
+    Dort beschäftigen sich Menschen mit Computern und Technik.
+
+    Wir sprechen über unsere Projekte.
+    Ein Projekt ist eine Aufgabe, an der wir arbeiten.
+    Wir überlegen, was mit Technik möglich ist.
+    Manchmal sprechen wir auch über die Folgen.
+
+    Wir haben Spaß daran, Geräte auszuprobieren.
+    Wir helfen uns mit Tipps und Werkzeugen.
+
+    Die Geschichte unserer Räume beginnt in einer Bar.
+    Dort trafen sich ein Punker und ein Elektroingenieur.
+    Ein Elektroingenieur arbeitet zum Beispiel an elektrischen Geräten.
+    Dieser Anfang klingt wie ein Witz.
+
+    Heute haben wir eigene Räume in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace).
+    Solche Räume heißen Hackerspace.
+    Dort können Menschen zusammen Technik verstehen und ausprobieren.
+
+    ![Gravel Calls](/img/crunch.webp#right_sa)
+
+    Bei unseren offenen Treffen schreiben wir Programme.
+    Das heißt Programmieren.
+    Ein Programm sagt dem Computer, was er tun soll.
+
+    Wir übersetzen den Programmtext für den Computer.
+    So kann der Computer ihn ausführen.
+    Dieses Übersetzen heißt Compilieren.
+
+    Wir planen Geräte und löten.
+    Beim Löten verbinden wir Bauteile mit heißem Metall.
+    Wir teilen unser Wissen und unsere Erfahrungen.
+
+    Unsere gemeinsame Arbeit sollte lange weitergehen.
+    Deshalb haben wir am **7. September 2016** einen Verein gegründet.
+    Der Verein heißt c3RE e.V.
+    e.V. bedeutet: eingetragener Verein.
+
+    Bei der Gründung haben wir eine Satzung beschlossen.
+    Darin stehen die Regeln für unseren Verein.
+
+    Unser offenes Treffen ist jeden **Mittwoch ab etwa 18 Uhr**.
+    Es heißt „Open Chaos“.
+    Alle interessierten Menschen können kommen.
+
+    Unser Motto heißt: „All Creatures Welcome“.
+    Das ist Englisch für: Alle Lebewesen sind willkommen.
+
+    Es gibt kurze Vorträge.
+    Meistens geht es um Technik.
+    Wir planen unsere Projekte und löten zusammen.
+
+    Komm uns besuchen!
+    Wir freuen uns auf dich.
+
+    ![Gravel Calls](/img/crunch.webp#center_sa)
+
+    Seit Januar 2015 gibt es unseren [Chaostreff](http://ccc.de/de/regional) im Kreis Recklinghausen.
+    Das ist eine lockere Gruppe von Menschen.
+    Wir interessieren uns für Technik.
+
+    Wir interessieren uns auch für Netzpolitik.
+    Das sind politische Fragen zum Internet.
+    Zum Beispiel: Welche Rechte haben Menschen im Internet?
+
+    Wir fühlen uns dem [Chaos Computer Club](https://de.wikipedia.org/wiki/Chaos_Computer_Club) verbunden.
+    Die Abkürzung dafür ist CCC.
+    Dort beschäftigen sich Menschen mit Computern und Technik.
+
+    Wir sprechen über unsere Projekte.
+    Ein Projekt ist eine Aufgabe, an der wir arbeiten.
+    Wir überlegen, was mit Technik möglich ist.
+    Manchmal sprechen wir auch über die Folgen.
+
+    Wir haben Spaß daran, Geräte auszuprobieren.
+    Wir helfen uns mit Tipps und Werkzeugen.
+
+    Die Geschichte unserer Räume beginnt in einer Bar.
+    Dort trafen sich ein Punker und ein Elektroingenieur.
+    Ein Elektroingenieur arbeitet zum Beispiel an elektrischen Geräten.
+    Dieser Anfang klingt wie ein Witz.
+
+    Heute haben wir eigene Räume in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace).
+    Solche Räume heißen Hackerspace.
+    Dort können Menschen zusammen Technik verstehen und ausprobieren.
+
+    Bei unseren offenen Treffen schreiben wir Programme.
+    Das heißt Programmieren.
+    Ein Programm sagt dem Computer, was er tun soll.
+
+    Wir übersetzen den Programmtext für den Computer.
+    So kann der Computer ihn ausführen.
+    Dieses Übersetzen heißt Compilieren.
+
+    Wir planen Geräte und löten.
+    Beim Löten verbinden wir Bauteile mit heißem Metall.
+    Wir teilen unser Wissen und unsere Erfahrungen.
+
+    Unsere gemeinsame Arbeit sollte lange weitergehen.
+    Deshalb haben wir am **7. September 2016** einen Verein gegründet.
+    Der Verein heißt c3RE e.V.
+    e.V. bedeutet: eingetragener Verein.
+
+    Bei der Gründung haben wir eine Satzung beschlossen.
+    Darin stehen die Regeln für unseren Verein.
+
+    Unser offenes Treffen ist jeden **Mittwoch ab etwa 18 Uhr**.
+    Es heißt „Open Chaos“.
+    Alle interessierten Menschen können kommen.
+
+    Unser Motto heißt: „All Creatures Welcome“.
+    Das ist Englisch für: Alle Lebewesen sind willkommen.
+
+    Es gibt kurze Vorträge.
+    Meistens geht es um Technik.
+    Wir planen unsere Projekte und löten zusammen.
+
+    Komm uns besuchen!
+    Wir freuen uns auf dich.
 ---
 
 ![Gravel Calls](/img/crunch.webp#left)

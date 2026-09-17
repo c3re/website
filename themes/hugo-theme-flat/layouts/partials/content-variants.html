@@ -1,13 +1,25 @@
-{{/* Simple Markdown lives beside the original in each page's front matter. */}}
-<div class="content"{{ with .Params.simple.content }} data-language="standard"{{ end }}>
+{{/* All language versions live beside the original Markdown. */}}
+<div class="content" data-language="standard">
     {{ .Content }}
 </div>
-{{ with .Params.simple.content }}
-    {{/* Prefix anchors so both rendered versions have unique IDs. */}}
-    {{ $content := $.RenderString (dict "display" "block") . }}
-    {{ $content = replaceRE `id="([^"]+)"` `id="simple-$1"` $content }}
-    {{ $content = replaceRE `href="#([^"]+)"` `href="#simple-$1"` $content }}
-    <div class="content" data-language="simple">
-        {{ $content | safeHTML }}
+{{ range slice "easy" }}
+    {{ $language := . }}
+    {{ $version := index $.Params $language }}
+    <div class="content" data-language="{{ $language }}">
+        {{ with $version.content }}
+            {{ $markdown := . }}
+            {{ if eq $language "easy" }}
+                {{/* Preserve the short, deliberately separated lines of the draft. */}}
+                {{ $markdown = replaceRE `([^\n])\n` "$1  \n" $markdown }}
+                <p class="language-notice">Entwurf in Leichter Sprache. Dieser Text wurde noch nicht von einer Prüfgruppe geprüft.</p>
+            {{ end }}
+            {{ $content := $.RenderString (dict "display" "block") $markdown }}
+            {{ $content = replaceRE `id="([^"]+)"` (printf `id="%s-$1"` $language) $content }}
+            {{ $content = replaceRE `href="#([^"]+)"` (printf `href="#%s-$1"` $language) $content }}
+            {{ $content | safeHTML }}
+        {{ else }}
+            <p>Diese Seite gibt es noch nicht in {{ if eq $language "easy" }}Leichter{{ else }}Einfacher{{ end }} Sprache.</p>
+            <button class="settings-reset" type="button" data-set-language="standard">Originaltext anzeigen</button>
+        {{ end }}
     </div>
 {{ end }}

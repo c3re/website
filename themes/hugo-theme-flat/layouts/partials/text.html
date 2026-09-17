@@ -1,6 +1,7 @@
-{{/* Keep short interface texts together with their simple wording. */}}
-{{- if and .simple (ne .standard .simple) -}}
-    <span data-language="standard">{{ .standard }}</span><span data-language="simple">{{ .simple }}</span>
+{{/* Share one language selection for content and interface labels. */}}
+{{- $easy := .easy | default .simple | default .standard -}}
+{{- if ne .standard $easy -}}
+    <span data-language="standard">{{ .standard }}</span><span data-language="easy">{{ $easy }}</span>
 {{- else -}}
     {{ .standard }}
 {{- end -}}

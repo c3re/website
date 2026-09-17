@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <article class="single{{ if eq .File.ContentBaseName "kontakt" }} contact-page{{ end }}">
-    <h1 class="title">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title) }}</h1>
+    <h1 class="title">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title "easy" .Params.easy.title) }}</h1>
     {{ if eq .Type "news" }}
         <p class="news-meta"><time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "02.01.2006" }}</time></p>
     {{ end }}

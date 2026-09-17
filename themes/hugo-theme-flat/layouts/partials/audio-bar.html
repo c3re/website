@@ -1,0 +1,15 @@
+{{/* Audio files are assigned per page and language in data/audio.toml. */}}
+{{ $sources := index (.Site.Data.audio.pages | default dict) .RelPermalink | default dict }}
+<div id="audio-bar" class="audio-bar" data-state="idle" role="region" aria-label="Vorlese-Leiste" hidden>
+    <div class="audio-inner">
+        <span class="audio-dot" aria-hidden="true"></span>
+        <span id="audio-state" class="audio-state" role="status">Liest vor</span>
+        <span id="audio-title" class="audio-title"></span>
+        <progress id="audio-progress" class="audio-progress" value="0" max="1" aria-label="Fortschritt der Wiedergabe"></progress>
+        <span id="audio-position" class="audio-position">0:00 / 0:00</span>
+        <button id="audio-speed" class="audio-button audio-speed" type="button" aria-label="Geschwindigkeit ändern">1×</button>
+        <button id="audio-pause" class="audio-button" type="button" aria-label="Vorlesen pausieren"><span aria-hidden="true">❚❚</span></button>
+        <button id="audio-stop" class="audio-button" type="button" aria-label="Vorlesen beenden"><span aria-hidden="true">■</span></button>
+    </div>
+</div>
+<audio id="page-audio" preload="none" data-source-standard="{{ with $sources.standard }}{{ . | relURL }}{{ end }}" data-source-easy="{{ with $sources.easy }}{{ . | relURL }}{{ end }}"></audio>

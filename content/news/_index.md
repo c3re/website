@@ -9,11 +9,13 @@ katex: false
 draft: false
 description: ""
 layout: "newsoverview"
-simple:
-  title: "Neuigkeiten"
-  summary: "Hier findest du Neuigkeiten vom c3RE."
+easy:
+  title: "Neues vom c3RE"
+  summary: "Hier liest du, was es bei uns Neues gibt."
+  draft: true
   content: |
-    Hier findest du Neuigkeiten vom c3RE.
+    Was gibt es Neues beim c3RE?
+    Auf dieser Seite findest du unsere Nachrichten.
 ---
 
 News

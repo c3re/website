@@ -9,29 +9,74 @@ katex: false
 draft: false
 description: ""
 thumbnail: '/img/251218-Kommunikation-_DIDAY2.jpg'
-simple:
-  title: "Unser erster DI-Day"
-  summary: "Am 1. Februar 2026 haben wir in der Hackerhütte andere Betriebssysteme ausprobiert."
+easy:
+  title: "Unser erster Tag für digitale Unabhängigkeit"
+  summary: "Am 1. Februar haben Gäste bei uns Linux ausprobiert. Linux ist ein Betriebssystem für Computer."
+  draft: true
   content: |
     ![DI-Day](/img/251218-Kommunikation-_DIDAY2.jpg)
 
-    Am 1. Februar 2026 fand unser erster [DI-Day](https://di.day) in der Hackerhütte statt. DI-Day steht für Digital Independence Day. Das ist Englisch und bedeutet: Tag der digitalen Unabhängigkeit. Es geht darum, bei der Nutzung von Computern und Internet selbst entscheiden zu können und weniger von großen Unternehmen abhängig zu sein.
+    Am **1. Februar** war unser erster [DI-Day](di.day).
+    Er fand in der Hackerhütte statt.
 
-    Unser Thema war „Alternative Betriebssysteme“. Ein Betriebssystem besteht aus den grundlegenden Programmen eines Computers. Es sorgt dafür, dass das Gerät und seine weiteren Programme funktionieren. Windows und Linux sind Beispiele dafür. Alternative bedeutet hier: eine andere Möglichkeit.
+    DI-Day ist die Abkürzung für Digital Independence Day.
+    Das ist Englisch.
+    Es bedeutet: Tag der digitalen Unabhängigkeit.
 
-    Viele Menschen interessierten sich für das Thema. Es kamen Menschen aus dem Umfeld des Chaos Computer Clubs und viele Menschen aus der Umgebung. Die Hackerhütte war voll. Das zeigte uns, wie wichtig das Thema für viele ist.
+    ## Wir haben andere Betriebssysteme ausprobiert
 
-    Bei Kaffee und Kuchen konnten die Gäste verschiedene Linuxdistributionen ansehen und direkt ausprobieren. Eine Linuxdistribution ist eine Zusammenstellung von Linux und weiteren Programmen. Einige Gäste haben Linux erfolgreich auf ihren eigenen Geräten installiert. Installieren heißt: ein Programm oder Betriebssystem auf einem Gerät einrichten.
+    Unser Thema hieß: „Alternative Betriebssysteme“.
+    Alternative bedeutet hier: eine andere Möglichkeit.
 
-    Besonders war die Vorstellung von Linux-Nobara. Das ist eine Linuxdistribution für Gaming, also für Computerspiele. Die Gäste konnten sehen, was das System leistet. Dabei wurde deutlich: Linux ist auch bei Computerspielen besser geworden und bietet hier eine Alternative zu Windows.
+    Ein Computer braucht ein Betriebssystem.
+    Das sind die grundlegenden Programme auf dem Computer.
+    Sie sorgen dafür, dass der Computer arbeiten kann.
+    Windows und Linux sind Betriebssysteme.
 
-    Zum Abschluss gab es einen Vortrag über Big Tech Unternehmen und die Probleme, die mit ihnen verbunden sind. Big Tech ist ein englischer Begriff für sehr große Technologieunternehmen.
+    Viele Menschen kamen zu uns.
+    Einige kamen aus dem Umfeld des Chaos Computer Clubs.
+    Viele andere kamen aus der Umgebung.
+
+    Die Hackerhütte war voll.
+    Daran haben wir gemerkt: Das Thema ist vielen Menschen wichtig.
+
+    ## Linux auf dem eigenen Gerät
+
+    Es gab Kaffee und Kuchen.
+    Die Gäste konnten verschiedene Linuxdistributionen ansehen.
+    Sie konnten diese auch gleich ausprobieren.
+
+    Eine Linuxdistribution enthält Linux und weitere Programme.
+    Diese Programme sind zusammen für die Nutzung vorbereitet.
+
+    Einige Gäste haben Linux auf ihren eigenen Geräten eingerichtet.
+    Das Einrichten heißt: Installieren.
+    Die Installation hat bei diesen Gästen geklappt.
+
+    ## Computerspiele mit Linux
+
+    Wir haben auch Linux-Nobara vorgestellt.
+    Das ist eine Linuxdistribution für Computerspiele.
+    Computerspielen heißt auf Englisch Gaming.
+
+    Die Gäste konnten sehen, was Linux-Nobara kann.
+    Linux ist auch für Computerspiele besser geworden.
+    Es bietet hier eine andere Möglichkeit neben Windows.
+
+    ## Ein Vortrag zum Schluss
+
+    Zum Abschluss gab es einen Vortrag über Big Tech.
+    Big Tech ist ein englischer Begriff.
+    Er bezeichnet sehr große Unternehmen für Technik.
+
+    Im Vortrag ging es um diese Unternehmen.
+    Es ging auch um die Probleme, die mit ihnen verbunden sind.
 
     **Tschüss, Windows!**
 ---
 
 ![DI-Day](/img/251218-Kommunikation-_DIDAY2.jpg)
 
-Am 01. Februar haben wir unseren ersten [DI-Day](https://di.day) in der Hackerhütte zum Thema: "Alternative Betriebssysteme" veranstaltet. Die Relevanz des Themas zeigte die Resonanz der Leute. Uns besuchten neben einigen Menschen aus der Chaosfamilie viele Personen aus der Umgebung und bescherrten uns eine volle Hütte. Bei Kaffee und Kuchen hatten die Leute die Möglichkeit sich verschiedene Linuxdistributionen anzuschauen und live auszuprobieren. Einige haben sich erfolgreich in der Installation auf ihren eigenen Geräten versucht. Eine Besonderheit war die Vorstellung von Linux-Nobara, eine "Gaming-Distribution". Hier konnten sich die Interessierten von der Leistungsfähig des Systems überzeugen und gezeigt werden, dass Linux auch im Thema Gaming aufgeholt hat und Windows auch in diesem Sektor Paroli bietet. Abgerundet wurde der Tag mit einem Vortrag zum Thema Big Tech Unternehmen und die damit einhergehenden Probleme.
+Am 01. Februar haben wir unseren ersten [DI-Day](di.day) in der Hackerhütte zum Thema: "Alternative Betriebssysteme" veranstaltet. Die Relevanz des Themas zeigte die Resonanz der Leute. Uns besuchten neben einigen Menschen aus der Chaosfamilie viele Personen aus der Umgebung und bescherrten uns eine volle Hütte. Bei Kaffee und Kuchen hatten die Leute die Möglichkeit sich verschiedene Linuxdistributionen anzuschauen und live auszuprobieren. Einige haben sich erfolgreich in der Installation auf ihren eigenen Geräten versucht. Eine Besonderheit war die Vorstellung von Linux-Nobara, eine "Gaming-Distribution". Hier konnten sich die Interessierten von der Leistungsfähig des Systems überzeugen und gezeigt werden, dass Linux auch im Thema Gaming aufgeholt hat und Windows auch in diesem Sektor Paroli bietet. Abgerundet wurde der Tag mit einem Vortrag zum Thema Big Tech Unternehmen und die damit einhergehenden Probleme.
 
 **Goodby Windows!**

@@ -3,9 +3,9 @@
     {{ if .Content }}{{ partial "content-variants.html" . }}{{ end }}
     {{ range .Pages.ByPublishDate.Reverse }}
         <article class="list-item">
-            <h2 class="news-title"><a href="{{ .RelPermalink }}">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title) }}</a></h2>
+            <h2 class="news-title"><a href="{{ .RelPermalink }}">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title "easy" .Params.easy.title) }}</a></h2>
             {{ if not .Date.IsZero }}<p class="news-meta"><time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "02.01.2006" }}</time></p>{{ end }}
-            <p>{{ partial "text.html" (dict "standard" (.Description | default (.Summary | plainify | truncate 180)) "simple" .Params.simple.summary) }}</p>
+            <p>{{ partial "text.html" (dict "standard" (.Description | default (.Summary | plainify | truncate 180)) "simple" .Params.simple.summary "easy" .Params.easy.summary) }}</p>
         </article>
     {{ end }}
 </section>

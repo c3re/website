@@ -8,19 +8,38 @@ show_comments: false
 katex: false
 draft: false
 description: ""
-simple:
-  title: "Dokumente herunterladen"
-  summary: "Hier findest du die Regeln und Erklärungen unseres Vereins als PDF-Dateien."
+easy:
+  title: "Dateien für den Verein"
+  summary: "Hier kannst du wichtige Texte von unserem Verein herunterladen."
+  draft: true
   content: |
-    Du kannst diese Dokumente herunterladen und auf deinem Gerät lesen. Herunterladen heißt auch Download. Die Dokumente sind PDF-Dateien. Das ist ein Dateiformat für Texte. Du kannst die Dateien mit einem PDF-Programm oder im Browser öffnen. Der Browser ist das Programm, mit dem du Websites aufrufst.
+    Du kannst die Texte auf deinem Gerät speichern.
+    Das heißt: herunterladen.
+    Das englische Wort dafür ist Download.
 
-    **Die verlinkten PDFs sind Originalfassungen. Ihre Texte sind nicht in Einfacher Sprache.** Die folgenden Erklärungen helfen dir, das passende Dokument zu finden.
+    Die Texte sind PDF-Dateien.
+    Eine PDF-Datei kannst du zum Beispiel im Browser öffnen.
+    Der Browser ist dein Programm für Internetseiten.
 
-    - [Satzung als PDF](/dl/Satzung.pdf): Die Satzung enthält die grundlegenden Regeln unseres Vereins.
-    - [Beitragsordnung als PDF](/dl/Beitragsordnung.pdf): Hier stehen die Regeln zu den Mitgliedsbeiträgen. Ein Mitgliedsbeitrag ist Geld, das Mitglieder an den Verein zahlen.
-    - [Unvereinbarkeitserklärung als PDF](/dl/Unvereinbarkeitserklärung.pdf): Die Erklärung beschreibt, welche Einstellungen und Handlungen nicht zu einer Mitgliedschaft passen. Dazu gehören Rassismus und die Unterstützung entsprechender Gruppen. Unvereinbar bedeutet: Das passt nicht zusammen.
+    ## Die Satzung
 
-    Unsere [Unvereinbarkeitserklärung auf der Website](/unvereinbarkeitserklaerung) gibt es auch in Einfacher Sprache. Mit dem Sprachschalter kannst du dort zwischen der Erklärung in Einfacher Sprache und dem Original wechseln. Die einfache Fassung dient dem Verständnis.
+    In der Satzung stehen die wichtigsten Regeln für unseren Verein.
+
+    [Satzung als PDF herunterladen](/dl/Satzung.pdf)
+
+    ## Die Beitragsordnung
+
+    Mitglieder zahlen Geld an den Verein.
+    Dieses Geld heißt Mitgliedsbeitrag.
+    In der Beitragsordnung stehen die Regeln dafür.
+
+    [Beitragsordnung als PDF herunterladen](/dl/Beitragsordnung.pdf)
+
+    ## Die Unvereinbarkeitserklärung
+
+    Unvereinbar bedeutet: Das passt nicht zusammen.
+
+    [Unvereinbarkeitserklärung als PDF herunterladen](/dl/Unvereinbarkeitserklärung.pdf)
 ---
 
 - [Satzung](/dl/Satzung.pdf)

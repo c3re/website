@@ -32,7 +32,6 @@ params = { simple = "Erklärung gegen Rechts" }
 name = "Codeweek"
 url = "/codeweek"
 weight = 30
-params = { simple = "Programmieren lernen" }
 
 # [[menus.main]]
 # name = "News"
@@ -43,13 +42,11 @@ params = { simple = "Programmieren lernen" }
 name = "Werkzeuge"
 url = "https://dienste.c3re.de/"
 weight = 90
-params = { simple = "Online-Werkzeuge" }
 
 [[menus.main]]
 name = "Downloads"
 url = "/downloads/"
 weight = 110
-params = { simple = "Dateien herunterladen" }
 [[menus.main]]
 name = "Kontakt"
 url = "/kontakt/"

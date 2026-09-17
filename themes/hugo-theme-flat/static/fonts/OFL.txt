@@ -1,5 +1,8 @@
 Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)
 Copyright 2016 The Space Mono Project Authors (https://github.com/googlefonts/spacemono)
+Copyright (c) 2019-07-29, Abbie Gonzalez (https://abbiecod.es|support@abbiecod.es),
+with Reserved Font Name OpenDyslexic.
+Copyright (c) 12/2012 - 2019
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

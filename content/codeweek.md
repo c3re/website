@@ -8,17 +8,40 @@ show_comments: false
 katex: false
 draft: false
 description: ""
-simple:
-  title: "Codeweek: Programmieren lernen"
-  summary: "Bei der Codeweek lernen Kinder und Jugendliche das Programmieren kennen."
+easy:
+  title: "Programme schreiben lernen"
+  summary: "Bei der Codeweek probieren Kinder und Jugendliche das Programmieren aus."
+  draft: true
   content: |
-    Seit 2017 beteiligen wir uns an der [EU CodeWeek](https://codeweek.eu). Das sind Aktionswochen in ganz Europa. Dabei geht es um das Programmieren. Programmieren heißt: Man schreibt Anweisungen, die ein Computer ausführen kann.
+    ## Was ist die Codeweek?
 
-    Wir wollen Kindern und Jugendlichen den Einstieg leicht machen. Sie sollen kennenlernen, wie man eigene Programme schreibt.
+    Ein Computer braucht Anweisungen.
+    Die Anweisungen stehen in einem Programm.
+    Ein Programm schreiben heißt: Programmieren.
 
-    Auch außerhalb der EU CodeWeek bieten wir manchmal Workshops für junge Menschen an. Ein Workshop ist ein Treffen, bei dem man gemeinsam etwas lernt und ausprobiert. Diese Treffen finden nicht nach einem festen Zeitplan statt.
+    Bei der [EU CodeWeek](https://codeweek.eu) geht es um das Programmieren.
+    Die Codeweek findet in vielen Ländern in Europa statt.
+    Es gibt dafür besondere Aktionswochen.
 
-    Für 2025 war eine weitere Teilnahme geplant. Informationen zu aktuellen Terminen und den einzelnen Veranstaltungen veröffentlichen wir auf [codeweek.c3re.de](https://codeweek.c3re.de), sobald sie vorliegen.
+    Wir machen seit **2017** mit.
+    Wir helfen Kindern und Jugendlichen beim Einstieg.
+    Sie sollen eigene Programme schreiben lernen.
+
+    ## Weitere Treffen zum Lernen
+
+    Wir bieten auch außerhalb der Codeweek Treffen für junge Menschen an.
+    Diese Treffen heißen Workshops.
+    Bei einem Workshop lernt man zusammen.
+    Man probiert etwas selbst aus.
+
+    Die Workshops haben keinen festen Zeitplan.
+    Sie finden in unregelmäßigen Abständen statt.
+
+    ## Informationen zu Terminen
+
+    Unsere nächste Teilnahme an der Codeweek ist für **2025** geplant.
+
+    Informationen zu den einzelnen Veranstaltungen findest du zu gegebener Zeit auf [codeweek.c3re.de](https://codeweek.c3re.de).
 ---
 
-Bereits seit dem Jahr 2017 beteiligen wir uns an den europaweiten Aktionswochen der [EU CodeWeek](https://codeweek.eu) um Kinder und Jugendliche einen leichten Einstieg in die Welt der Programmierung zu bieten. Neben der EU CodeWeek finden in unregelmäßigen Abständen weitere Workshops, die speziell für jüngeres Publikum ausgerichtet sind statt. Informationen zu den jeweiligen Veranstaltungen findet man zu gegebener Zeit auf der Webseite [codeweek.c3re.de](https://codeweek.c3re.de). Für 2025 war eine weitere Teilnahme geplant. Aktuelle Termine veröffentlichen wir auf [codeweek.c3re.de](https://codeweek.c3re.de), sobald sie feststehen.
+Bereits seit dem Jahr 2017 beteiligen wir uns an den europaweiten Aktionswochen der [EU CodeWeek](https://codeweek.eu) um Kinder und Jugendliche einen leichten Einstieg in die Welt der Programmierung zu bieten. Neben der EU CodeWeek finden in unregelmäßigen Abständen weitere Workshops, die speziell für jüngeres Publikum ausgerichtet sind statt. Informationen zu den jeweiligen Veranstaltungen findet man zu gegebener Zeit auf der Webseite [codeweek.c3re.de](https://codeweek.c3re.de). Die nächste Teilnahme ist für 2025 geplant.

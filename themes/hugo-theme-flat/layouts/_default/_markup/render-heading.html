@@ -1,1 +1,4 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }} <a href="#{{ .Anchor | safeURL }}" class="anchor" aria-label="Link zu: {{ .PlainText }}"><span aria-hidden="true">#</span></a></h{{ .Level }}>
+{{/* The page template supplies h1; preserve the original Markdown text. */}}
+{{ $level := .Level }}
+{{ if eq $level 1 }}{{ $level = 2 }}{{ end }}
+<h{{ $level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }} <a href="#{{ .Anchor | safeURL }}" class="anchor" aria-label="Link zu: {{ .PlainText }}"><span aria-hidden="true">#</span></a></h{{ $level }}>

@@ -1,33 +1,37 @@
 <header class="header-wrapper">
     <div class="header">
-        <a class="site-title" href="{{ "/" | relURL }}">
-            {{/* Resize the supplied logo once and reuse it for all three layers. */}}
-            {{ $logo := (resources.Get "images/logo.png").Resize "96x webp" }}
-            <span class="site-logo" aria-hidden="true">
-                <img class="site-logo-base" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
-                <img class="site-logo-glitch-a" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
-                <img class="site-logo-glitch-b" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
-            </span>
-            <span>c3RE</span>
-            <span class="site-subtitle">Chaostreff Recklinghausen</span>
-        </a>
-        <div class="header-tools">
-            <nav class="menu" aria-label="Hauptmenü">
-                <div class="menu-item"><a href="{{ "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}>{{ partial "text.html" (dict "standard" "Home" "simple" "Start") }}</a></div>
-                {{ range .Site.Menus.main }}
-                    <div class="menu-item">
-                        <a href="{{ .URL | relURL }}"{{ if eq (strings.TrimSuffix "/" $.RelPermalink) (strings.TrimSuffix "/" .URL) }} aria-current="page"{{ end }}>{{ partial "text.html" (dict "standard" .Name "simple" .Params.simple) }}{{ if hasPrefix .URL "https://" }} <span aria-hidden="true">↗</span>{{ end }}</a>
-                        {{ with .Children }}
-                            <div class="sub-menu">
-                                {{ range . }}
-                                    <div class="menu-item"><a href="{{ .URL | relURL }}">{{ partial "text.html" (dict "standard" .Name "simple" .Params.simple) }}</a></div>
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    </div>
-                {{ end }}
-            </nav>
+        <div class="header-brand">
+            <a class="site-title" href="{{ "/" | relURL }}">
+                {{/* Resize the supplied logo once and reuse it for all three layers. */}}
+                {{ $logo := (resources.Get "images/logo.png").Resize "120x webp" }}
+                <span class="site-logo" aria-hidden="true">
+                    <img class="site-logo-base" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
+                    <img class="site-logo-glitch-a" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
+                    <img class="site-logo-glitch-b" src="{{ $logo.RelPermalink }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="">
+                </span>
+                <span>c3RE</span>
+                <span class="site-subtitle">Chaostreff Recklinghausen</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" hidden><span aria-hidden="true">☰</span> Menü</button>
+        </div>
+        <div class="header-settings">
             {{ partial "preferences.html" . }}
         </div>
+        <nav id="main-menu" class="menu" aria-label="Hauptmenü">
+            <div class="menu-item"><a href="{{ "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}><span class="menu-label">{{ partial "text.html" (dict "standard" "Home" "simple" "Start") }}</span></a></div>
+            {{ range .Site.Menus.main }}
+                <div class="menu-item">
+                    <a href="{{ .URL | relURL }}"{{ if eq (strings.TrimSuffix "/" $.RelPermalink) (strings.TrimSuffix "/" .URL) }} aria-current="page"{{ end }}><span class="menu-label">{{ partial "text.html" (dict "standard" .Name "simple" .Params.simple) }}</span>{{ if hasPrefix .URL "https://" }} <span aria-hidden="true">↗</span>{{ end }}</a>
+                    {{ with .Children }}
+                        <div class="sub-menu">
+                            {{ range . }}
+                                <div class="menu-item"><a href="{{ .URL | relURL }}"><span class="menu-label">{{ partial "text.html" (dict "standard" .Name "simple" .Params.simple) }}</span></a></div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </nav>
     </div>
+    {{ partial "audio-bar.html" . }}
 </header>

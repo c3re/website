@@ -22,3 +22,36 @@
   font-weight: 700;
   src: url("../fonts/space-mono-latin-700-normal.woff2") format("woff2");
 }
+
+/* Optional reading font; no external font request is needed. */
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/OpenDyslexic-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/OpenDyslexic-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/OpenDyslexic-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/OpenDyslexic-BoldItalic.woff2") format("woff2");
+}

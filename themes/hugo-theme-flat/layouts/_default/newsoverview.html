@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <section class="single">
-    <h1 class="title">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title) }}</h1>
+    <h1 class="title">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title "easy" .Params.easy.title) }}</h1>
     {{ partial "content-variants.html" . }}
 </section>
 {{ $pages := (where .Site.RegularPages "Type" "news").ByPublishDate.Reverse }}

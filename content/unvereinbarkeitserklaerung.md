@@ -8,68 +8,145 @@ show_comments: false
 katex: false
 draft: false
 description: ""
-simple:
-  title: "Unsere Erklärung gegen Rechts"
-  summary: "Rassismus, rechte Gewalt und extremistische Ideen passen nicht zu unserem Verein."
+easy:
+  title: "Was nicht zu unserem Verein passt"
+  summary: "Wir lehnen Rassismus und rechte Gewalt ab. Hier erklären wir unsere Haltung."
+  draft: true
   content: |
-    Diese Fassung hilft dir, unsere Erklärung zu verstehen. Den Originaltext erreichst du über den Sprachschalter: Schalte „Einfache Sprache“ aus.
+    Unser Verein heißt c3RE e.V./Chaostreff Recklinghausen.
+    e.V. bedeutet: eingetragener Verein.
 
-    Der vollständige Name ist „Unvereinbarkeitserklärung“. Unvereinbar bedeutet: Das passt nicht zusammen. Die Erklärung beschreibt, welche Einstellungen und Handlungen nicht mit einer Mitgliedschaft in unserem Verein zusammenpassen.
+    Wir haben eine Unvereinbarkeitserklärung beschlossen.
+    Unvereinbar bedeutet: Das passt nicht zusammen.
+    Die Erklärung sagt, was nicht zu einer Mitgliedschaft passt.
 
-    ## Woher die Erklärung kommt
+    ## Unsere Gemeinschaft
 
-    Der Chaos Computer Club e.V., kurz CCC, hat 2005 die Erklärung [Farbe bekennen gegen Rechts](https://www.ccc.de/de/updates/2005/unvereinbarkeitserklaerung) veröffentlicht. e.V. bedeutet: eingetragener Verein. Die Mitgliederversammlung des CCC hat diese Erklärung 2025 [aktualisiert](https://www.ccc.de/de/club/unvereinbarkeitserklaerung-des-ccc). Eine Mitgliederversammlung ist ein Treffen, bei dem die Mitglieder Entscheidungen für den Verein treffen.
+    Bei uns kommen Menschen zusammen.
+    Diese Merkmale entscheiden nicht darüber, ob jemand dazugehört:
 
-    Unsere Erklärung baut auf den Erklärungen des Chaos Computer Club e.V., des Chaos Computer Club München e.V. und des CCC Salzburg auf.
+    - Das Geschlecht.
+    - Das Alter.
+    - Die Weltanschauung.
+      Das bedeutet: Wie sieht jemand die Welt?
+      Woran glaubt die Person?
+    - Die sexuelle Orientierung.
+      Das bedeutet: Zu wem fühlt sich jemand hingezogen?
+    - Die ethnische Zugehörigkeit.
+      Das meint eine Gruppe mit gemeinsamer Herkunft oder Kultur.
+    - Die gesellschaftliche Stellung.
+      Dazu gehören zum Beispiel Beruf, Geld oder Ansehen.
 
-    Wir teilen viele Werte mit Menschen und Gruppen aus dem Umfeld des CCC. Das gilt für den deutschsprachigen Raum und für andere Länder. Zu diesen Werten gehört die [Hackerethik](https://www.ccc.de/hackerethik). Sie beschreibt Grundsätze für Menschen, die Technik verstehen und ausprobieren wollen.
+    ## Unsere Ziele
 
-    Ein weiterer Grundsatz lautet „be excellent to each other“. Das ist Englisch und heißt: Seid gut zueinander. Außerdem gilt: Private Daten schützen und öffentliche Daten nützen. Persönliche Informationen sollen geschützt bleiben. Informationen für die Öffentlichkeit sollen genutzt werden können. Neben diesen und vielen weiteren Gemeinsamkeiten gibt es unsere Unvereinbarkeitserklärung.
+    Menschen sollen Zugang zu Informationen haben.
+    Das heißt: Informationsfreiheit.
+    Dafür setzen wir uns auch über Ländergrenzen hinweg ein.
 
-    Die politischen Ereignisse der letzten Jahre sind für uns ein Grund, unsere Haltung deutlich zu erklären.
+    Wir wollen elektronische Medien kritisch nutzen.
+    Dazu gehört zum Beispiel: Informationen im Internet hinterfragen.
 
-    ## Wofür wir uns einsetzen
+    Wir beschäftigen uns auch mit elektronischer Kommunikation.
+    Das heißt: Menschen tauschen Nachrichten mit technischen Geräten aus.
+    Zum Beispiel schreiben sie E-Mails.
+    Dabei gibt es Risiken und unerwünschte Folgen.
+    Wir wollen helfen, diese zu erkennen.
 
-    Der c3RE e.V./Chaostreff Recklinghausen ist eine Gemeinschaft von Menschen. Für die Zugehörigkeit zu unserer Gemeinschaft spielen diese Merkmale keine Rolle:
+    Wir unterstützen freie Technologien.
+    Das ist Technik, die Menschen frei nutzen und weiterentwickeln können.
+    Wir wollen diese Technik verbreiten.
 
-    - das Geschlecht;
-    - das Alter;
-    - die Weltanschauung, also wie jemand die Welt sieht und woran jemand glaubt;
-    - die sexuelle Orientierung, also zu wem sich jemand hingezogen fühlt;
-    - die ethnische Zugehörigkeit, also zu welcher Gruppe mit gemeinsamer Herkunft oder Kultur jemand gehört;
-    - die gesellschaftliche Stellung, zum Beispiel Beruf, Geld oder Ansehen.
+    Wir unterstützen auch freie Standards.
+    Standards sind gemeinsame technische Regeln.
+    Sie helfen zum Beispiel, damit Geräte zusammenarbeiten.
+    Freie Standards sind offen zugänglich.
 
-    Wir setzen uns über Ländergrenzen hinweg für Informationsfreiheit ein. Menschen sollen Zugang zu Informationen haben.
+    Wir teilen Wissen über die Entwicklung dieser Technik.
+    Bei Fragen zu Technik vertreten wir die Zivilgesellschaft.
+    Das bedeutet: Wir setzen uns als Verein für die Menschen ein.
 
-    Wir fördern einen kritischen Umgang mit elektronischen Medien. Menschen sollen zum Beispiel Informationen im Internet hinterfragen können. Sie sollen auch Risiken und unerwünschte Folgen erkennen, wenn sie elektronisch miteinander kommunizieren, etwa per E-Mail oder Chat. Ein Chat ist ein Gespräch über Nachrichten im Internet.
+    ## Diese Vorstellungen lehnen wir ab
 
-    Wir unterstützen freie Technologien und freie Standards. Damit meinen wir Technik, die Menschen frei nutzen und weiterentwickeln können, und offen zugängliche technische Regeln. Solche Regeln helfen dabei, dass Geräte und Programme zusammenarbeiten. Wir wollen diese Technik und das Wissen über ihre Entwicklung verbreiten.
+    Uns sind die Würde der Menschen und ein gutes Zusammenleben wichtig.
+    Wir wollen verantwortlich miteinander umgehen.
+    Das sind unsere humanistischen und moralischen Grundsätze.
 
-    Bei Fragen zu Technik verstehen wir uns als Vertreter der Zivilgesellschaft. Das bedeutet: Wir setzen uns als Verein für die Interessen der Menschen in unserer Gesellschaft ein.
+    Manche Menschen wollen unser Zusammenleben zerstören.
+    Sie wollen eine Gesellschaft mit diesen Eigenschaften:
 
-    ## Was unseren Werten widerspricht
+    - Spaltung.
+      Menschen werden gegeneinander aufgebracht.
+    - Chauvinismus.
+      Menschen halten die eigene Gruppe für besser als andere.
+      Sie werten andere Gruppen ab.
+    - Ausgrenzung.
+      Menschen werden aus der Gemeinschaft ausgeschlossen.
+    - Bespitzelung.
+      Menschen werden heimlich überwacht.
+    - Nationalismus.
+      Menschen stellen die eigene Nation über andere Nationen.
 
-    Manche Menschen wollen das Zusammenleben in unserer Gesellschaft zerstören. Sie arbeiten auf eine Gesellschaft hin, die auf diesen Vorstellungen und Handlungen beruht:
+    Wer eine solche Gesellschaft will, handelt gegen unsere Grundsätze.
 
-    - Spaltung: Menschen werden gegeneinander aufgebracht.
-    - Chauvinismus: Die eigene Gruppe wird für besser gehalten als andere. Andere Gruppen werden abgewertet.
-    - Ausgrenzung: Menschen werden aus der Gemeinschaft ausgeschlossen.
-    - Bespitzelung: Menschen werden heimlich überwacht.
-    - Nationalismus: Die eigene Nation wird über andere gestellt.
+    ## Diese Dinge passen nicht zu einer Mitgliedschaft
 
-    Wer eine solche Gesellschaft will, handelt gegen die Grundsätze unseres Vereins. Unsere Grundsätze sind humanistisch und moralisch. Das heißt: Die Würde der Menschen und ein verantwortlicher Umgang miteinander sind uns wichtig.
+    **Rassismus ist bei uns nicht akzeptabel.**
+    Rassismus bedeutet: Menschen werden abgewertet oder schlechter behandelt.
+    Zum Beispiel wegen ihrer Hautfarbe.
+    Oder wegen der Herkunft, die andere ihnen zuschreiben.
+    Rassismus vertreten oder verbreiten passt nicht zu unserem Verein.
 
-    ## Was mit einer Mitgliedschaft unvereinbar ist
+    **Rechte Gewalt verharmlosen ist bei uns nicht akzeptabel.**
+    Rechte Gewalt entsteht aus einer rechten, menschenfeindlichen Haltung.
+    Verharmlosen bedeutet: So tun, als sei diese Gewalt weniger schlimm.
+    Das gilt für rechte Gewalt in der Vergangenheit.
+    Das gilt auch für rechte Gewalt heute.
 
-    Der c3RE e.V./Chaostreff Recklinghausen erklärt: Folgende Einstellungen und Handlungen akzeptieren wir nicht. Sie sind mit einer Mitgliedschaft unvereinbar:
+    **Extremistische Ideen befürworten ist bei uns nicht akzeptabel.**
+    Das sind Ideen gegen grundlegende Rechte und demokratisches Zusammenleben.
+    Befürworten bedeutet: solche Ideen gut finden und dafür eintreten.
 
-    - Rassismus vertreten oder verbreiten. Rassismus bedeutet, Menschen zum Beispiel wegen ihrer zugeschriebenen Herkunft oder Hautfarbe abzuwerten oder schlechter zu behandeln.
-    - Rechte Gewalt aus der Vergangenheit oder aus der Gegenwart verharmlosen. Verharmlosen bedeutet: So tun, als sei diese Gewalt weniger schlimm. Rechte Gewalt richtet sich gegen Menschen aus einer rechten, menschenfeindlichen Haltung heraus.
-    - Extremistisches Gedankengut befürworten. Damit sind Ideen gemeint, die sich gegen grundlegende Rechte und ein demokratisches Zusammenleben richten.
+    Diese Einstellungen und Handlungen sind mit einer Mitgliedschaft unvereinbar.
+    Das gilt auch für Mitglieder von Gruppen mit solchen Einstellungen.
+    Auch solche Gruppen unterstützen passt nicht zu einer Mitgliedschaft.
 
-    Das gilt auch für die Mitgliedschaft in Gruppen, die solche Einstellungen vertreten. Ebenso unvereinbar ist es, solche Gruppen zu unterstützen.
+    ## Woher unsere Erklärung kommt
 
-    Die Mitgliederversammlung hat diese Erklärung am 21.03.2026 in Recklinghausen beschlossen.
+    Der Chaos Computer Club e.V. hat 2005 eine Erklärung veröffentlicht.
+    Der kurze Name des Clubs ist CCC.
+    Die Erklärung heißt [Farbe bekennen gegen Rechts](https://www.ccc.de/de/updates/2005/unvereinbarkeitserklaerung).
+
+    2025 hat die Mitgliederversammlung des CCC die Erklärung [aktualisiert](https://www.ccc.de/de/club/unvereinbarkeitserklaerung-des-ccc).
+    Eine Mitgliederversammlung ist ein Treffen der Vereinsmitglieder.
+    Dort treffen die Mitglieder Entscheidungen für den Verein.
+
+    Unsere Erklärung baut auf den Erklärungen dieser Gruppen auf:
+
+    - Chaos Computer Club e.V.
+    - Chaos Computer Club München e.V.
+    - CCC Salzburg.
+
+    Mit Menschen aus dem Umfeld des CCC teilen wir viele Werte.
+    Das gilt im deutschsprachigen Raum.
+    Das gilt auch in anderen Ländern.
+
+    Ein gemeinsamer Wert ist die [Hackerethik](https://www.ccc.de/hackerethik).
+    Das sind Grundsätze für den verantwortlichen Umgang mit Technik.
+
+    Ein weiterer Grundsatz heißt: „be excellent to each other“.
+    Das ist Englisch für: Seid gut zueinander.
+
+    Wir sagen auch: „private Daten schützen und öffentliche Daten nützen“.
+    Persönliche Informationen über Menschen sollen geschützt bleiben.
+    Informationen für die Öffentlichkeit sollen genutzt werden können.
+
+    Es gibt noch viele weitere Gemeinsamkeiten.
+    Dazu gehört auch diese Erklärung.
+    Die politischen Ereignisse der letzten Jahre waren ein Anlass dafür.
+    Wir wollten unsere Haltung deutlich sagen.
+
+    Unsere Mitgliederversammlung hat die Erklärung beschlossen.
+    Das war am **21.03.2026 in Recklinghausen**.
 ---
 
 Im Jahr 2005 hat der Chaos Computer Club e.V. die Erklärung [Farbe bekennen gegen Rechts](https://www.ccc.de/de/updates/2005/unvereinbarkeitserklaerung) veröffentlicht und durch die CCC e.V. Mitgliederversammlung 2025 [aktualisiert](https://www.ccc.de/de/club/unvereinbarkeitserklaerung-des-ccc).
