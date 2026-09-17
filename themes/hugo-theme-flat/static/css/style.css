@@ -15,7 +15,7 @@
   --color-accent-line: rgba(98, 222, 158, .45);
   --color-danger: #f0605f;
   --color-danger-line: rgba(240, 96, 95, .5);
-  --color-header: rgba(32, 33, 36, .92);
+  --color-header: #202124;
   --color-bg-shadow: var(--color-border);
   --color-fg-font-hover: var(--color-fg-strong);
   --color-fg-font-quote: var(--color-fg-muted);
@@ -38,14 +38,14 @@ html[data-theme="light"] {
   --color-fg-tiny-line: #d2d2cf;
   --color-fg-font-normal: #4e403e;
   --color-fg-strong: #2b2422;
-  --color-fg-muted: #6f6a66;
-  --color-fg-hyperlink: #1f7a3d;
+  --color-fg-muted: #696460;
+  --color-fg-hyperlink: #1d743a;
   --color-fg-hyperlink-hover: #166030;
   --color-accent-soft: rgba(31, 122, 61, .1);
   --color-accent-line: rgba(31, 122, 61, .45);
   --color-danger: #c0392b;
   --color-danger-line: rgba(192, 57, 43, .5);
-  --color-header: rgba(235, 235, 235, .92);
+  --color-header: #ebebeb;
   color-scheme: light;
 }
 
@@ -163,6 +163,26 @@ a:hover {
   color: var(--color-fg-hyperlink-hover);
 }
 
+/* Links in prose remain identifiable without color or optional settings. */
+.content a,
+.list-item p a,
+.calendar-description a,
+.footer a {
+  text-decoration: underline;
+  text-underline-offset: .18em;
+  text-decoration-thickness: .08em;
+}
+
+:root[data-links="true"] a {
+  text-decoration: underline;
+  text-decoration-thickness: .14em;
+  text-underline-offset: .2em;
+}
+
+:root[data-links="true"] .content a {
+  background-color: var(--color-accent-soft);
+}
+
 button {
   font: inherit;
   cursor: pointer;
@@ -171,6 +191,7 @@ button {
 :focus-visible {
   outline: 2px solid var(--color-fg-hyperlink);
   outline-offset: 4px;
+  scroll-margin: 16px;
 }
 
 h1,
@@ -780,7 +801,7 @@ svg.a11y-icon {
 }
 
 .a11y-row[aria-checked="true"] .a11y-switch-knob {
-  background-color: #fff;
+  background-color: var(--color-bg-page);
   transform: translateX(16px);
 }
 
@@ -865,6 +886,22 @@ svg.a11y-icon {
 .a11y-read:disabled {
   cursor: default;
   opacity: .55;
+}
+
+.a11y-more summary {
+  min-height: 36px;
+  padding: 8px 4px;
+  color: var(--color-fg-strong);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.a11y-more .a11y-row {
+  margin-bottom: 8px;
+}
+
+:root[data-contrast="1"] .a11y-row[aria-checked="true"] .a11y-switch-knob {
+  background-color: #000;
 }
 
 .a11y-note {
@@ -1108,7 +1145,62 @@ body.door_closed .banner-status {
 }
 
 body.door_open .status-dot {
-  animation: c3pulse 2s ease-out infinite;
+  animation: c3pulse 2s ease-out 2;
+}
+
+.live-note {
+  display: none;
+  margin: 8px 0 0;
+  color: var(--color-fg-font-normal);
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+
+:root[data-live="paused"] .live-note {
+  display: block;
+}
+
+.banner-status-group .live-note {
+  max-width: 28ch;
+  padding: 4px 8px;
+  background-color: var(--color-header);
+  border-radius: 6px;
+  font-family: var(--fonts-mono);
+  font-size: 9px;
+  text-align: right;
+}
+
+.calendar-description {
+  margin-top: 8px;
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+
+.calendar-description summary {
+  min-height: 32px;
+  padding: 4px 0;
+  color: var(--color-fg-hyperlink);
+  cursor: pointer;
+}
+
+.calendar-description p {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.download-meta {
+  font-family: var(--fonts-mono);
+  font-size: .75rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+:root[data-motion="reduce"] *,
+:root[data-motion="reduce"] *::before,
+:root[data-motion="reduce"] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
 }
 
 @keyframes c3pulse {
@@ -2158,7 +2250,7 @@ html[data-theme="light"]:not([data-contrast="1"]) .social-links img {
     background-color: Highlight;
   }
 
-  .a11y-row[aria-checked="true"] .a11y-switch-knob {
+  :root[data-contrast] .a11y-row[aria-checked="true"] .a11y-switch-knob {
     background-color: HighlightText;
   }
 

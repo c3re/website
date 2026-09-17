@@ -1,6 +1,6 @@
 {{/* All language versions live beside the original Markdown. */}}
 <div class="content" data-language="standard">
-    {{ .Content }}
+    {{ partial "page-content.html" . }}
 </div>
 {{ range slice "easy" }}
     {{ $language := . }}
@@ -16,7 +16,7 @@
             {{ $content := $.RenderString (dict "display" "block") $markdown }}
             {{ $content = replaceRE `id="([^"]+)"` (printf `id="%s-$1"` $language) $content }}
             {{ $content = replaceRE `href="#([^"]+)"` (printf `href="#%s-$1"` $language) $content }}
-            {{ $content | safeHTML }}
+            {{ partial "content-language.html" $content }}
         {{ else }}
             <p>Diese Seite gibt es noch nicht in {{ if eq $language "easy" }}Leichter{{ else }}Einfacher{{ end }} Sprache.</p>
             <button class="settings-reset" type="button" data-set-language="standard">Originaltext anzeigen</button>

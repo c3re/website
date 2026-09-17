@@ -4,7 +4,7 @@
             <div class="footer-row">
                 {{ range $row.items }}
                     {{ if .pre }}
-                        <span class="footer-label">{{ partial "text.html" (dict "standard" .pre "simple" .simple) }}</span>
+                        <span class="footer-label"><span data-language="standard" lang="en">{{ .pre }}</span><span data-language="easy">{{ .simple | default .pre }}</span></span>
                     {{ else }}
                         <a class="footer-item" href="{{ .url | relURL }}">{{ partial "text.html" (dict "standard" .name "simple" .simple) }}{{ if hasPrefix .url "https://" }} <span aria-hidden="true">↗</span>{{ end }}</a>
                     {{ end }}

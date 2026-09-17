@@ -1,6 +1,8 @@
 (function () {
     const root = document.documentElement;
-    const keys = { theme: "c3re-theme", language: "c3re-lang", size: "c3re-fs", contrast: "c3re-contrast", font: "c3re-font" };
+    const keys = { theme: "c3re-theme", language: "c3re-lang", size: "c3re-fs", contrast: "c3re-contrast", font: "c3re-font", motion: "c3re-motion", links: "c3re-links", livePaused: "c3re-live-paused" };
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const increasedContrast = window.matchMedia("(prefers-contrast: more)");
 
     function load(key) {
         try {
@@ -26,8 +28,11 @@
             theme: load(keys.theme) === "light" ? "light" : "dark",
             language: language === "leicht" || (language === null && load("c3re-simple") === "1") ? "easy" : "standard",
             size: [100, 125, 150].includes(size) ? size : 100,
-            contrast: load(keys.contrast) === "1",
-            font: load(keys.font) === "dys" ? "dys" : "std"
+            contrast: load(keys.contrast) === null ? increasedContrast.matches : load(keys.contrast) === "1",
+            font: load(keys.font) === "dys" ? "dys" : "std",
+            motion: load(keys.motion) === null ? reducedMotion.matches : load(keys.motion) === "1",
+            links: load(keys.links) === "1",
+            livePaused: load(keys.livePaused) === "1"
         };
     }
 
@@ -58,6 +63,9 @@
         root.dataset.contrast = preferences.contrast ? "1" : "0";
         root.dataset.font = preferences.font;
         root.dataset.reading = String(preferences.font === "dys");
+        root.dataset.motion = preferences.motion ? "reduce" : "auto";
+        root.dataset.links = String(preferences.links);
+        root.dataset.live = preferences.livePaused ? "paused" : "auto";
     }
 
     applyAttributes();
@@ -91,6 +99,12 @@
             const id = anchorId();
             const prefix = preferences.language === "easy" ? "easy-" : "";
             const target = document.getElementById(prefix + id) || document.getElementById(id);
+            let nativeTarget = null;
+            try {
+                nativeTarget = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+            } catch (error) {
+                // Malformed fragments are ignored by anchorId as well.
+            }
             if (share) {
                 // URL fragments stay in the browser and are not sent to the server.
                 const hash = new URLSearchParams();
@@ -99,7 +113,8 @@
                 const next = preferences.language === "easy" ? "#" + hash : id && target ? "#" + encodeURIComponent(id) : "";
                 history.replaceState(null, "", window.location.pathname + window.location.search + next);
             }
-            if (scroll && id && target && target.getClientRects().length) target.scrollIntoView();
+            // Native anchors already scroll. Repeating that after hashchange can undo Tab focus.
+            if (scroll && id && target && target !== nativeTarget && target.getClientRects().length) target.scrollIntoView();
         }
 
         function render() {
@@ -110,7 +125,7 @@
             });
             document.querySelectorAll("[data-toggle-preference]").forEach(function (button) {
                 const name = button.dataset.togglePreference;
-                const checked = name === "language" ? preferences.language === "easy" : name === "font" ? preferences.font === "dys" : preferences.contrast;
+                const checked = name === "language" ? preferences.language === "easy" : name === "font" ? preferences.font === "dys" : Boolean(preferences[name]);
                 button.setAttribute("aria-checked", String(checked));
             });
             document.getElementById("font-size-value").textContent = preferences.size + " %";
@@ -119,7 +134,7 @@
             // Reaching a size limit must not drop focus out of the open panel.
             if (focused === up && up.disabled) down.focus({ preventScroll: true });
             if (focused === down && down.disabled) up.focus({ preventScroll: true });
-            const active = Number(preferences.language === "easy") + Number(preferences.size !== 100) + Number(preferences.contrast) + Number(preferences.font === "dys");
+            const active = Number(preferences.language === "easy") + Number(preferences.size !== 100) + Number(preferences.contrast) + Number(preferences.font === "dys") + Number(preferences.motion) + Number(preferences.links) + Number(preferences.livePaused);
             count.textContent = String(active);
             count.hidden = active === 0;
             const heading = document.querySelector("#main-content h1");
@@ -128,8 +143,9 @@
         }
 
         function change(name, value, message) {
+            if (!Object.prototype.hasOwnProperty.call(keys, name)) return;
             preferences[name] = value;
-            const stored = name === "language" ? value === "easy" ? "leicht" : "std" : name === "contrast" ? value ? "1" : "0" : value;
+            const stored = name === "language" ? value === "easy" ? "leicht" : "std" : typeof value === "boolean" ? value ? "1" : "0" : value;
             save(keys[name], stored);
             render();
             if (name === "language") updateAnchor(false, true);
@@ -163,7 +179,15 @@
                 const name = button.dataset.togglePreference;
                 if (name === "language") change(name, preferences.language === "easy" ? "standard" : "easy", preferences.language === "easy" ? "Originaltext eingeschaltet." : "Leichte Sprache eingeschaltet.");
                 else if (name === "font") change(name, preferences.font === "dys" ? "std" : "dys", preferences.font === "dys" ? "Standardschrift eingeschaltet." : "OpenDyslexic eingeschaltet.");
-                else change(name, !preferences.contrast, preferences.contrast ? "Normaler Kontrast eingeschaltet." : "Hoher Kontrast eingeschaltet.");
+                else {
+                    const messages = {
+                        contrast: ["Normaler Kontrast eingeschaltet.", "Hoher Kontrast eingeschaltet."],
+                        motion: ["Bewegungen folgen wieder der Systemeinstellung.", "Animationen sind ausgeschaltet."],
+                        links: ["Zusätzliche Link-Hervorhebung ausgeschaltet.", "Links werden zusätzlich hervorgehoben."],
+                        livePaused: ["Live-Anzeigen werden wieder aktualisiert.", "Live-Anzeigen sind pausiert. Angezeigte Werte können veraltet sein."]
+                    };
+                    if (messages[name]) change(name, !preferences[name], messages[name][preferences[name] ? 0 : 1]);
+                }
             });
         });
         down.addEventListener("click", function () { change("size", Math.max(100, preferences.size - 25), "Schrift verkleinert."); });
@@ -175,11 +199,18 @@
             });
         });
         document.getElementById("preferences-reset").addEventListener("click", function () {
-            preferences = { ...preferences, language: "standard", size: 100, contrast: false, font: "std" };
+            preferences = { ...preferences, language: "standard", size: 100, contrast: increasedContrast.matches, font: "std", motion: reducedMotion.matches, links: false, livePaused: false };
             save(keys.language, "std");
             save(keys.size, "100");
-            save(keys.contrast, "0");
             save(keys.font, "std");
+            save(keys.links, "0");
+            save(keys.livePaused, "0");
+            try {
+                localStorage.removeItem(keys.contrast);
+                localStorage.removeItem(keys.motion);
+            } catch (error) {
+                // Reset also works without persistent storage.
+            }
             render();
             updateAnchor(false, true);
             status.textContent = "Alle Lesehilfen sind zurückgesetzt.";
@@ -199,6 +230,13 @@
                 render();
             }
             updateAnchor(true, false);
+        });
+
+        reducedMotion.addEventListener("change", function () {
+            if (load(keys.motion) === null) { preferences.motion = reducedMotion.matches; render(); }
+        });
+        increasedContrast.addEventListener("change", function () {
+            if (load(keys.contrast) === null) { preferences.contrast = increasedContrast.matches; render(); }
         });
 
         render();

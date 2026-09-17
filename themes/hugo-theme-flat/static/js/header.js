@@ -25,6 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
         scheduled = false;
     }
 
+    function revealFocus(element) {
+        if (!element || !element.isConnected || element !== document.activeElement) return;
+        if (header.contains(element) || element.closest("#a11y-panel, #a11y-toggle, .skip-link")) return;
+        const rect = element.getBoundingClientRect();
+        const top = header.getBoundingClientRect().bottom + 24;
+        const tab = document.getElementById("a11y-toggle");
+        const edge = tab && !tab.hidden ? tab.getBoundingClientRect() : null;
+        if (edge && rect.right > edge.left && rect.left < edge.right && rect.bottom > edge.top && rect.top < edge.bottom) {
+            window.scrollBy(0, rect.top - Math.max(top, edge.bottom + 16));
+        } else if (rect.top < top) {
+            window.scrollBy(0, rect.top - top);
+        } else if (rect.height < window.innerHeight - top && rect.bottom > window.innerHeight - 16) {
+            window.scrollBy(0, rect.bottom - window.innerHeight + 16);
+        }
+    }
+
+    document.addEventListener("focusin", function (event) {
+        const element = event.target;
+        if (mobile.matches && !header.contains(element)) setMenu(false);
+        requestAnimationFrame(function () { revealFocus(element); });
+    });
+
     toggle.addEventListener("click", function () {
         setMenu(root.dataset.menuOpen !== "true");
     });
@@ -59,7 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
     updateScroll();
     updateHeight();
     if (window.ResizeObserver) {
-        new ResizeObserver(updateHeight).observe(header);
+        new ResizeObserver(function () {
+            updateHeight();
+        }).observe(header);
     } else {
         window.addEventListener("resize", updateHeight);
     }

@@ -1,5 +1,5 @@
 <section class="single">
-    <h1 class="title">{{ partial "text.html" (dict "standard" .Title "simple" (.Params.simple.title | default "Beiträge zu diesem Thema")) }}</h1>
+    <h1 class="title">{{ partial "text.html" (dict "standard" (partial "page-title.html" .) "easy" .Params.easy.title) }}</h1>
     {{ if .Content }}{{ partial "content-variants.html" . }}{{ end }}
     {{ range .Pages.ByPublishDate.Reverse }}
         <article class="list-item">

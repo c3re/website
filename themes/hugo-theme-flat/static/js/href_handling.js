@@ -6,9 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.location.origin === url.origin) {
       element.classList.add("internal");
     } else {
-      element.setAttribute("target", "_blank");
-      element.setAttribute("rel", "noopener noreferrer");
       element.classList.add("external");
+      // Follow links in the same tab unless a template explicitly requests a new one.
+      if (element.target === "_blank") {
+        element.setAttribute("rel", "noopener noreferrer");
+        const hint = document.createElement("span");
+        hint.className = "language-status";
+        hint.textContent = " (öffnet einen neuen Tab)";
+        element.appendChild(hint);
+      }
     }
   });
 });

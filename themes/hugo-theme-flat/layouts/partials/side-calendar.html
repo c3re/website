@@ -4,9 +4,10 @@
         <a href="https://klaut.c3re.de/apps/calendar/p/A7sGSxRJdzsHBJea">{{ partial "text.html" (dict "standard" "Zum Kalender" "simple" "Alle Termine ansehen") }} <span aria-hidden="true">&rarr;</span></a>
     </div>
     <p id="calendar-status" role="status" aria-live="polite">
-        {{ partial "text.html" (dict "standard" "Termine werden geladen..." "simple" "Wir laden die Termine...") }}
+        Termine findest du im verlinkten Kalender.
     </p>
-    <ul id="calendar" aria-busy="true"></ul>
+    <ul id="calendar" aria-busy="false"></ul>
+    <p class="live-note">{{ partial "text.html" (dict "standard" "Live-Aktualisierung pausiert. Die Termine können veraltet sein." "easy" "Die Termine werden gerade nicht erneuert. Bitte prüfe sie im Kalender.") }}</p>
     <p id="calendar-copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
     <noscript><p>Bitte &ouml;ffne den Kalender &uuml;ber den Link oben. Ohne JavaScript werden hier keine Termine geladen.</p></noscript>
 </section>

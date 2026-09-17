@@ -1,9 +1,11 @@
 {{ $src := .Destination | safeURL }}
 {{ $image := resources.Get (printf "images/%s" (path.Base (index (split .Destination "#") 0))) }}
+{{ $metadata := index .Page.Site.Data.accessibility.images (path.Base (index (split .Destination "#") 0)) | default dict }}
+{{ $alt := $metadata.alt | default .PlainText }}
 {{ if .IsBlock }}
     <figure>
 {{ end }}
-<img src="{{ $src }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ with $image }} width="{{ .Width }}" height="{{ .Height }}"{{ end }} loading="lazy" decoding="async">
+<img src="{{ $src }}" alt="{{ $alt }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ with $image }} width="{{ .Width }}" height="{{ .Height }}"{{ end }} loading="lazy" decoding="async">
 {{ if .IsBlock }}
     {{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
     </figure>

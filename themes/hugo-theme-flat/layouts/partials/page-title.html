@@ -1,0 +1,11 @@
+{{- $title := .Title | default .Site.Title -}}
+{{- if and .IsSection (eq .Section "news") -}}
+    {{- $title = "Neuigkeiten" -}}
+{{- else if eq .Kind "taxonomy" -}}
+    {{- if eq .Data.Plural "categories" -}}{{- $title = "Rubriken" -}}{{- else -}}{{- $title = "Schlagwörter" -}}{{- end -}}
+{{- else if eq .Kind "term" -}}
+    {{- $title = printf "Beiträge zum Thema %s" (cond (eq (lower .Title) "news") "Neuigkeiten" .Title) -}}
+{{- else if eq .Kind "404" -}}
+    {{- $title = "Seite nicht gefunden" -}}
+{{- end -}}
+{{- return $title -}}

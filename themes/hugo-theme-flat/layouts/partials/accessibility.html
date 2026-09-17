@@ -29,6 +29,16 @@
     </button>
     <button id="audio-start" class="a11y-read" type="button" aria-describedby="audio-note" disabled>{{ partial "a11y-icon.html" "speaker" }}<span id="audio-start-label">Seite vorlesen</span></button>
     <p id="audio-note" class="a11y-note">Die Audiodatei für diese Seite wird später ergänzt.</p>
+    <details class="a11y-more">
+        <summary>Weitere Hilfen</summary>
+        {{ range slice (dict "key" "motion" "label" "Animationen aus") (dict "key" "links" "label" "Links hervorheben") (dict "key" "livePaused" "label" "Live-Anzeigen pausieren") }}
+            <button class="a11y-row" type="button" role="switch" aria-checked="false" data-toggle-preference="{{ .key }}">
+                <span class="a11y-row-copy"><span>{{ .label }}</span></span>
+                <span class="a11y-switch-track" aria-hidden="true"><span class="a11y-switch-knob"></span></span>
+            </button>
+        {{ end }}
+        <p class="a11y-note">Reduzierte Bewegung im Betriebssystem wird immer berücksichtigt.</p>
+    </details>
     <p class="a11y-storage">Einstellungen werden im Browser gespeichert</p>
 </div>
 <p id="preferences-status" class="language-status" role="status" aria-live="polite" aria-atomic="true"></p>

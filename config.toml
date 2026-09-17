@@ -3,7 +3,8 @@ languageCode = "de-de"
 title = "c3RE"
 theme = "hugo-theme-flat"
 defaultContentLanguage = "de"
-relativeURLs = true
+# Root-relative URLs also work when 404.html serves a nested missing address.
+relativeURLs = false
 style = "green"
 
 [markup.goldmark.parser]
@@ -72,6 +73,16 @@ url = "/datenschutz"
 [[params.footer_rows.items]]
 name = "Mitglied werden"
 url = "https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Mitgliedwerden"
+
+[[params.footer_rows.items]]
+name = "Seitenübersicht"
+simple = "Alle Seiten"
+url = "/seitenuebersicht/"
+
+[[params.footer_rows.items]]
+name = "Barrierefreiheit"
+simple = "Hilfen für diese Website"
+url = "/barrierefreiheit/"
 
 [[params.footer_rows]]
 [[params.footer_rows.items]]

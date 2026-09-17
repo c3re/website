@@ -1,0 +1,16 @@
+# Text alternatives describe the existing images without rewriting page bodies.
+# Editorial review is recorded in docs/barrierefreiheit/BERICHT.md.
+[images."hackerhuette_400.webp"]
+alt = "Computer, Bildschirme und Spielautomaten auf einem Tisch in der Hackerhütte."
+
+[images."hackerhuette.webp"]
+alt = "Computer, Bildschirme und Spielautomaten auf einem Tisch in der Hackerhütte."
+
+[images."crunch_400.webp"]
+alt = "Eine Packung Cap’n Crunch, Frühstücksflocken und eine orange Pfeife."
+
+[images."crunch.webp"]
+alt = "Eine Packung Cap’n Crunch, Frühstücksflocken und eine orange Pfeife."
+
+[images."251218-Kommunikation-_DIDAY2.jpg"]
+alt = "Plakat zum Digital Independence Day: Jeden ersten Sonntag digital freier werden!"

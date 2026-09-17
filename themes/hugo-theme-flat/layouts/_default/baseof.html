@@ -7,6 +7,7 @@
     <body class="door_unknown">
         <a class="skip-link" href="#main-content">Zum Inhalt</a>
         {{ partial "header.html" . }}
+        {{ partial "accessibility.html" . }}
         {{ partial "banner.html" . }}
         <div class="main-wrapper">
             <main id="main-content" class="main" tabindex="-1">
@@ -24,7 +25,6 @@
 
             </aside>
         </div>
-        {{ partial "accessibility.html" . }}
         {{ partial "footer.html" . }}
         {{ partial "html-end.html" . }}
     </body>

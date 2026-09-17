@@ -3,8 +3,8 @@
 <meta name="buildtime" content="{{ time.Now }}">
 <link rel="icon" type="image/png" href="{{ "img/fav.png" | relURL }}">
 {{ $title := .Site.Title -}}
-{{ if .Params.Title -}}
-    {{ $title = printf "%s | %s" .Params.Title $title -}}
+{{ with partial "page-title.html" . -}}
+    {{ $title = printf "%s | %s" . $title -}}
 {{ end -}}
 
 {{ $description := "" -}}

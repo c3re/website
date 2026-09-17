@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let data = null;
     let state = "loading";
     let pending = false;
+    let request = null;
+    let paused = document.documentElement.dataset.live === "paused";
 
     function text(standard, simple) {
         return document.documentElement.dataset.simple === "true" ? simple : standard;
@@ -25,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (const value of ["open", "closed", "unknown"]) {
             document.body.classList.toggle("door_" + value, doorState === value);
         }
-        const bannerText = known ? open ? text("Hackerh\u00fctte ge\u00f6ffnet", "Die Hackerh\u00fctte ist offen.") : text("Hackerh\u00fctte geschlossen", "Die Hackerh\u00fctte ist zu.") : state === "loading" ? text("T\u00fcrstatus wird geladen...", "Wir pr\u00fcfen, ob die H\u00fctte offen ist...") : text("T\u00fcrstatus unbekannt", "Ob die H\u00fctte offen ist, wissen wir gerade nicht.");
+        const bannerText = known ? open ? text("Hackerh\u00fctte ge\u00f6ffnet", "Die Hackerh\u00fctte ist offen.") : text("Hackerh\u00fctte geschlossen", "Die Hackerh\u00fctte ist zu.") : state === "loading" && !paused ? text("T\u00fcrstatus wird geladen...", "Wir pr\u00fcfen, ob die H\u00fctte offen ist...") : text("T\u00fcrstatus unbekannt", "Ob die H\u00fctte offen ist, wissen wir gerade nicht.");
         if (bannerLabel && bannerLabel.textContent !== bannerText) bannerLabel.textContent = bannerText;
         if (favicon) {
             const href = panel.dataset.faviconBase + (known ? open ? "favopen.png" : "favclosed.png" : "fav.png");
@@ -68,9 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     async function refresh() {
-        if (pending) return;
+        if (pending || paused) return;
         pending = true;
         const controller = new AbortController();
+        request = controller;
         const timeout = setTimeout(function () { controller.abort(); }, 10000);
         let failure = "network";
         try {
@@ -81,21 +84,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             failure = "invalid";
             const result = await response.json();
+            if (paused || controller.signal.aborted) return;
             if (!result || !result.state || typeof result.state.open !== "boolean") throw new Error("Invalid door status");
             data = result;
             state = "ready";
         } catch (error) {
+            if (paused || controller.signal.reason === "paused") return;
             // A failed refresh makes the current state unknown, not closed.
             data = null;
             state = controller.signal.aborted ? "timeout" : failure;
         } finally {
             clearTimeout(timeout);
             pending = false;
+            request = null;
             render();
+            if (controller.signal.reason === "paused" && !paused) refresh();
         }
     }
 
-    document.addEventListener("preferenceschange", render);
+    document.addEventListener("preferenceschange", function () {
+        const wasPaused = paused;
+        paused = document.documentElement.dataset.live === "paused";
+        if (paused && request) request.abort("paused");
+        render();
+        if (wasPaused && !paused) refresh();
+    });
     render();
     refresh();
     setInterval(refresh, 30000);
