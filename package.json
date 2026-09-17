@@ -1,0 +1,15 @@
+{
+  "name": "c3re-website-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:content": "node --test tests/content.test.mjs",
+    "test:a11y": "npm run test:content && make check && playwright test",
+    "audit:lighthouse": "make check && node tests/lighthouse.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "lighthouse": "13.4.1"
+  }
+}
