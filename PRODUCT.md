@@ -18,14 +18,15 @@ als Markdown im bestehenden Hugo-Projekt gepflegt.
 ## Brand Personality
 
 Offen, technisch, gemeinschaftlich. Die gestalterische Referenz ist der Export
-`Website für C3RE e.V./c3RE Website.dc.html`.
+`design_handoff_c3re_website/c3RE Website.dc.html` für Menü und Lesehilfen.
 
 ## Design Principles
 
 - Die bereitgestellte Gestaltung in das vorhandene Hugo-Theme übertragen.
 - Bestehende Seitenadressen, Inhalte und lokale Bilder weiterverwenden.
 - Dunkles Design als Standard, unabhängig von den Systemeinstellungen.
-- Helles Design und Einfache Sprache bewusst wählbar und lokal gespeichert.
+- Helles Design und Leichte Sprache bewusst wählbar und lokal gespeichert.
+- Originaltexte erhalten; vereinfachte Fassungen getrennt als Entwürfe pflegen.
 - Live-Daten nur anzeigen, wenn sie verfügbar sind; Ausfälle verständlich melden.
 
 ## Anti-references
@@ -35,7 +36,7 @@ oder gekürzten Zusammenfassungen als Ersatz für vollständige einfache Texte.
 
 ## Accessibility & Inclusion
 
-Vollständige Einfache Sprache für Inhalte und Bedienung, einschließlich rechtlicher
-Seiten. Tastaturbedienbare Schalter, sichtbarer Fokus, lesbare Kontraste und ein
-responsives Layout. Animationen berücksichtigen reduzierte Bewegung. Die Texte
-sind Einfache Sprache, keine zertifizierte Leichte Sprache.
+Getrennte Leichte-Sprache-Entwürfe für die Seiten, einschließlich rechtlicher Seiten.
+Die Texte sind noch nicht durch eine Prüfgruppe geprüft. Tastaturbedienbare Schalter,
+sichtbarer Fokus und ein responsives Layout. Animationen berücksichtigen reduzierte
+Bewegung. Der vollständige WCAG-Prüfstand steht in `docs/barrierefreiheit/`.
