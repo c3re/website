@@ -1,7 +1,8 @@
 # Aktueller Umsetzungsstand
 
-Dieser Stand folgt den nach dem Phase-1-Audit ausdrücklich beauftragten
-Design-Anpassungen. Er ersetzt keine vollständige WCAG-Abnahme.
+Dieser Stand umfasst die nach dem Phase-1-Audit beauftragten Design-Anpassungen
+und die am 17.09.2026 freigegebene WCAG-Weiterarbeit. Er ersetzt keine vollständige
+WCAG-Abnahme. Die Kriterienmatrix und Prüfergebnisse stehen in [BERICHT.md](BERICHT.md).
 
 ## Verbindliche Vorgaben
 
@@ -30,6 +31,16 @@ Design-Anpassungen. Er ersetzt keine vollständige WCAG-Abnahme.
 - Audio-Leiste unter der Navigation mit Pause/Fortsetzen, Stopp, Zeit/Fortschritt
   und Geschwindigkeit 0,8× / 1× / 1,25×. Sichtbar erst bei gestarteter Wiedergabe.
 - Ohne zugeordnete Aufnahme ist „Seite vorlesen“ deaktiviert und nennt den Grund.
+- Dauerhaft unterstrichene Textlinks, korrigierte helle Kontraste und deckende
+  Header-/Statusflächen schützen die Lesbarkeit unabhängig von Hintergrundbildern.
+- „Weitere Hilfen“ bietet abschaltbare Animationen, zusätzliche Link-Hervorhebung
+  und pausierbare Live-Anzeigen. Eine Pause wird sichtbar als solche gekennzeichnet.
+- Kalenderdetails sind per Tastatur zugänglich; Fokus und geöffnete Details bleiben
+  bei einer Aktualisierung erhalten. Vollständige Datumsangaben sind als Text vorhanden.
+- Neue Seitenübersicht, Barrierefreiheitsinformationen und eine eigene Fehlerseite.
+- URLs ab Website-Wurzel erhalten Gestaltung und Rücklinks der Fehlerseite auch
+  unter verschachtelten unbekannten Adressen; dafür bestehen Regressionstests.
+- Dauerhafte Node-, Playwright-, axe- und Lighthouse-Prüfungen mit GitHub-Actions-Anbindung.
 
 ## Texte und Sprachvarianten
 
@@ -66,10 +77,15 @@ Ein Controller in `static/js/preferences.js` verwaltet folgende Keys:
 | `c3re-fs` | `100`, `125`, `150` |
 | `c3re-contrast` | `0`, `1` |
 | `c3re-font` | `std`, `dys` |
+| `c3re-motion` | `0`, `1`; ohne gespeicherte Wahl zählt die Systemeinstellung |
+| `c3re-links` | `0`, `1` |
+| `c3re-live-paused` | `0`, `1` |
 
 Die alte Auswahl `c3re-simple=1` wird nur übernommen, wenn noch kein `c3re-lang`
 vorhanden ist. Speicherzugriffe sind mit `try/catch` abgesichert. Reset setzt die
-Lesehilfen zurück und behält das ausdrücklich gewählte Farbschema bei.
+Lesehilfen zurück und behält das ausdrücklich gewählte Farbschema bei. Kontrast und
+Bewegung orientieren sich danach wieder an den Systemeinstellungen; die ausdrückliche
+Dark-Standardvorgabe bleibt davon unabhängig.
 Ohne JavaScript sind Originaltexte und Navigation weiterhin benutzbar.
 
 ## Zugeordnete Audiodateien
@@ -108,33 +124,33 @@ bedienbar und verschwindet beim Beenden.
 
 ## Prüfungen
 
-- `make check` mit Hugo 0.156.0 und der vorhandenen Minifizierung erfolgreich.
-- JavaScript-Syntaxprüfungen erfolgreich.
-- Originaltextvergleich für elf Markdown-Dateien erfolgreich.
-- 14 Seiten mit Standard-/Leicht-Fassung bei 150 % Schrift und 320/768/1440 px:
-  kein horizontaler Seitenüberlauf, ein sichtbares H1 und ein Main, keine doppelten IDs.
-- Schalter, Größen-Endstufen, OpenDyslexic-Ladevorgang, Speicherung, Zähler, Reset,
-  Escape, No-JS- und gesperrter-Storage-Fall geprüft.
-- Zusätzliche axe-Prüfung des neuen Panels/Tabs im hohen Kontrast ohne gemeldete
-  Verstöße. Das ist keine erneute vollständige Prüfung aller Website-Zustände.
-- Audio-Leiste mit einer ausschließlich im Test eingesetzten synthetischen
-  Aufnahme geprüft: kein Autoplay, Start, Pause, Fortsetzen, Tempo, Fortschritt,
-  Stopp/Fokus-Rückgabe sowie Sprach-/Seitenwechsel.
+Die dauerhafte Testsuite liegt unter `tests/`:
 
-Die Prüfscripte dieser Sitzung liegen im temporären Auditprojekt
-`/var/folders/dg/pg323lwj4kg1cyvxjrctl1nw0000gn/T/opencode/c3re-a11y/`:
-`handoff.mjs` und `audio-test.mjs`. Die dauerhafte CI-Integration bleibt eine
-gesonderte Aufgabe.
+```sh
+npm ci
+npx playwright install chromium
+npm run test:a11y
+npm run audit:lighthouse
+```
+
+Voraussetzungen sind Hugo 0.156.0, `minify`, Node.js 22 und die vollständige
+Git-Historie für den Originaltextvergleich gegen `dd22591`. `npm run test:a11y`
+baut selbst und startet den lokalen Testserver.
+
+Geprüft werden alle ausgelieferten HTML-Seiten, beide Sprachfassungen, beide Themes,
+hoher Kontrast, 150 % Schrift sowie eine kombinierte Einstellung bei 320 und 1440 px.
+Hinzu kommen Tastatur-, Audio-, Fokus-, Textabstands-, Storage- und Live-Pausenprüfungen.
+Aktuelle Zahlen und Grenzen stehen in [BERICHT.md](BERICHT.md).
 
 ## Weiter offen
 
-- Die umfassenden Basisbefunde und manuellen Prüfungen aus `AUDIT.md`, soweit nicht
-  durch die gezielt beauftragten Komponentenänderungen berührt; keine vollständige
-  WCAG-2.2-AA-Konformitätsaussage.
+- Die in `BERICHT.md` benannten manuellen und inhaltlichen Prüfungen; keine vollständige
+  WCAG-2.2-AA-Konformitätsaussage allein aufgrund automatisierter Tests.
 - Redaktionelle und gegebenenfalls rechtliche Prüfung der Leichte-Sprache-Entwürfe,
   insbesondere Impressum und Datenschutz; Prüfung durch die Zielgruppe.
 - Weitere passende Audiodateien für die übrigen Seiten und Leichte Sprache.
-- PDF-Prüfung, reale Screenreader- und Browser-Zoom-Tests sowie dauerhafte CI-Tests.
+- PDF-Prüfung sowie reale Screenreader- und Browser-Zoom-Tests. Die CI ist konfiguriert,
+  muss nach einem späteren Push auch auf GitHub durchlaufen.
 - Ergänzung der Datenschutzhinweise zur Einstellungsspeicherung als gesonderte
   redaktionelle Änderung. Der Originaltext wurde auf Wunsch nicht erweitert.
 
