@@ -19,10 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         document
           .getElementById("ds-img")
-          .setAttribute(
-            "src",
-            data.state.open ? data.state.icon.open : data.state.icon.closed
-          );
+            .setAttribute(
+                "src",
+                data.state.open ? data.state.icon.open : data.state.icon.closed
+            )
+            .setAttribute(
+                "alt",
+                data.state.open ? "Open" : "Closed"
+            );
         document.getElementById("ds-status").innerHTML = data.state.open
           ? "Geöffnet"
           : "Geschlossen";
