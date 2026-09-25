@@ -345,7 +345,6 @@ a.external:after {
 
 /* setup hyper link style */
 .header .site-title {
-  text-decoration: none;
   font-family: var(--fonts-sans);
   font-size: var(--font-size-3);
   font-weight: bold;
@@ -409,7 +408,6 @@ a.external:after {
 
 .header a {
   color: var(--color-dark-fg-font-normal);
-  text-decoration: none;
 } /*always dark since backgroundimage is dark */
 .header a:hover {
   color: var(--color-fg-font-hover);
@@ -452,7 +450,6 @@ a.external:after {
 
 .footer a {
   color: var(--color-fg-hyperlink);
-  text-decoration: none;
 }
 .footer a:hover {
   color: var(--color-fg-hyperlink-hover);
@@ -480,14 +477,12 @@ a.external:after {
 }
 
 .list-item .title a {
-  text-decoration: none;
   color: var(--color-fg-font-normal);
 }
 .list-item .title a:hover {
   color: var(--color-fg-font-hover);
 }
 .list-item .tips a {
-  text-decoration: none;
   color: var(--color-fg-hyperlink);
 }
 .list-item .tips a:hover {
@@ -572,7 +567,6 @@ a.external:after {
 
 .side a {
   color: var(--color-dark-fg-font-hyper-hover);
-  text-decoration: none;
 }
 .side a:hover {
   color: var(--color-fg-hyperlink);
@@ -594,7 +588,6 @@ a.external:after {
 }
 
 .single a {
-  text-decoration: none;
   color: var(--color-fg-hyperlink);
 }
 .single a:hover {
@@ -820,7 +813,6 @@ a.external:after {
 }
 
 #archive .group .value a {
-  text-decoration: none;
 }
 
 #archive .group .value a {
@@ -902,7 +894,6 @@ a.external:after {
   text-align: center;
   vertical-align: middle;
 
-  text-decoration: none;
 
   color: var(--color-fg-font-normal);
   background-color: var(--color-bg-pager-normal);
