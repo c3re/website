@@ -17,13 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
           fav.setAttribute("href", "img/favclosed.png")
 
         }
-        document
+        let statusimg=document
           .getElementById("ds-img")
-            .setAttribute(
+
+        statusimg.setAttribute(
                 "src",
                 data.state.open ? data.state.icon.open : data.state.icon.closed
             )
-            .setAttribute(
+        statusimg.setAttribute(
                 "alt",
                 data.state.open ? "Open" : "Closed"
             );
