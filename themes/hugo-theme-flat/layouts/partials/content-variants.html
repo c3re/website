@@ -1,6 +1,7 @@
 {{/* All language versions live beside the original Markdown. */}}
 <div class="content" data-language="standard">
     {{ partial "page-content.html" . }}
+    {{ if .Params.privacy_notes }}{{ partial "privacy-notes.html" "standard" }}{{ end }}
 </div>
 {{ range slice "easy" }}
     {{ $language := . }}
@@ -21,5 +22,6 @@
             <p>Diese Seite gibt es noch nicht in {{ if eq $language "easy" }}Leichter{{ else }}Einfacher{{ end }} Sprache.</p>
             <button class="settings-reset" type="button" data-set-language="standard">Originaltext anzeigen</button>
         {{ end }}
+        {{ if $.Params.privacy_notes }}{{ partial "privacy-notes.html" $language }}{{ end }}
     </div>
 {{ end }}

@@ -7,6 +7,7 @@ weight: 50
 show_comments: false
 katex: false
 draft: false
+privacy_notes: true
 description: ""
 easy:
   title: "So gehen wir mit deinen Daten um"

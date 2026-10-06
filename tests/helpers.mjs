@@ -44,3 +44,10 @@ export async function preferences(page, values = {}) {
         for (const [key, value] of Object.entries(values)) localStorage.setItem(key, String(value));
     }, values);
 }
+
+export async function waitForPageFeatures(page) {
+    await page.waitForFunction(() => !document.getElementById("a11y-toggle").hidden);
+    const calendar = page.locator("#calendar");
+    if (await calendar.count()) await page.waitForFunction(() => document.getElementById("calendar").getAttribute("aria-busy") === "false");
+    if (await page.locator("#terminal-form").count()) await page.locator("#terminal-form").waitFor({ state: "visible" });
+}

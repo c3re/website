@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const timeout = setTimeout(function () { controller.abort(); }, 10000);
         let failure = "network";
         try {
-            const response = await fetch("https://spaceapi.c3re.de/", { signal: controller.signal, cache: "no-store" });
+            const response = await fetch("https://spaceapi.c3re.de/", { signal: controller.signal, cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer" });
             if (!response.ok) {
                 failure = "http";
                 throw new Error("Door status HTTP error");

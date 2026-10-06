@@ -49,8 +49,8 @@
     let preferences = readPreferences();
     const requestedLanguage = sharedLanguage();
     if (requestedLanguage) {
+        // A shared link selects this page's language without creating a saved preference.
         preferences.language = requestedLanguage;
-        save(keys.language, requestedLanguage === "easy" ? "leicht" : "std");
     }
 
     function applyAttributes() {
@@ -203,14 +203,12 @@
         });
         document.getElementById("preferences-reset").addEventListener("click", function () {
             preferences = { ...preferences, language: "standard", size: 100, contrast: increasedContrast.matches, font: "std", motion: reducedMotion.matches, links: false, livePaused: false };
-            save(keys.language, "std");
-            save(keys.size, "100");
-            save(keys.font, "std");
-            save(keys.links, "0");
-            save(keys.livePaused, "0");
             try {
-                localStorage.removeItem(keys.contrast);
-                localStorage.removeItem(keys.motion);
+                // Forget reading aids instead of storing defaults; keep the chosen theme.
+                Object.entries(keys).forEach(function ([name, key]) {
+                    if (name !== "theme") localStorage.removeItem(key);
+                });
+                localStorage.removeItem("c3re-simple");
             } catch (error) {
                 // Reset also works without persistent storage.
             }
@@ -229,7 +227,6 @@
             const language = sharedLanguage();
             if (language && language !== preferences.language) {
                 preferences.language = language;
-                save(keys.language, language === "easy" ? "leicht" : "std");
                 render();
             }
             updateAnchor(true, false);

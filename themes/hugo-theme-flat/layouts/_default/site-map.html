@@ -10,6 +10,16 @@
                 {{ end }}
             {{ end }}
         </ul>
+        <details class="site-map-discoveries">
+            <summary>Kleine Entdeckungen</summary>
+            <ul>
+                {{ range slice "terminal" "teapot" "dev-null" }}
+                    {{ with $.Site.GetPage . }}
+                        <li><a href="{{ .RelPermalink }}">{{ partial "text.html" (dict "standard" .Title "easy" .Params.easy.title) }}</a></li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </details>
     </nav>
 </section>
 {{ end }}

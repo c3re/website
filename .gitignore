@@ -18,3 +18,7 @@ dist
 /test-results/
 /playwright-report/
 /a11y-reports/
+
+# Local Cloudflare state and credentials
+/.wrangler/
+/.dev.vars*

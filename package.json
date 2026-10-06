@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "test:content": "node --test tests/content.test.mjs",
+    "test:auth": "node --test tests/demo-auth.test.mjs",
     "test:a11y": "npm run test:content && make check && playwright test",
     "audit:lighthouse": "make check && node tests/lighthouse.mjs"
   },

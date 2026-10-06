@@ -134,6 +134,14 @@ die folgenden Schritte nicht.
 - Die neue Barrierefreiheitsinformation sowie rechtliche Angaben redaktionell bzw.
   rechtlich freigeben. Den tatsächlichen 404-Status und die Fehlerseite auf dem Zielhost prüfen.
 
+## Neue Fundstücke
+
+- Der Footer-Link zum Terminal sowie die PDF-Links müssen verständliche
+  Namen haben. Die PDFs selbst sind dadurch noch nicht barrierefrei geprüft.
+- Terminal: Eingabefeld „Befehl“ erreichen, `help`, einen unbekannten Befehl,
+  `sudo make coffee` und `clear` ausführen. Nur die neue Antwort soll sinnvoll
+  angesagt werden; der Wechsel zwischen deutscher und englischer Antwort muss stimmen.
+
 ## Protokollvorlage
 
 | Feld | Eintrag |

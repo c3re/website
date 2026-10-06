@@ -7,6 +7,10 @@ defaultContentLanguage = "de"
 relativeURLs = false
 style = "green"
 
+# Keep the source-code Easter egg through Hugo's first minification pass.
+[minify.tdewolff.html]
+keepComments = true
+
 [markup.goldmark.parser]
 wrapStandAloneImageWithinParagraph = false
 
@@ -45,10 +49,6 @@ url = "https://dienste.c3re.de/"
 weight = 90
 
 [[menus.main]]
-name = "Downloads"
-url = "/downloads/"
-weight = 110
-[[menus.main]]
 name = "Kontakt"
 url = "/kontakt/"
 weight = 120
@@ -83,6 +83,22 @@ url = "/seitenuebersicht/"
 name = "Barrierefreiheit"
 simple = "Hilfen für diese Website"
 url = "/barrierefreiheit/"
+
+[[params.footer_rows]]
+[[params.footer_rows.items]]
+name = "Satzung"
+simple = "Vereinsregeln"
+url = "/dl/Satzung.pdf"
+
+[[params.footer_rows.items]]
+name = "Beitragsordnung"
+simple = "Regeln für Mitgliedsbeiträge"
+url = "/dl/Beitragsordnung.pdf"
+
+[[params.footer_rows.items]]
+name = "Unvereinbarkeitserklärung"
+simple = "Erklärung gegen Rechts"
+url = "/dl/Unvereinbarkeitserklärung.pdf"
 
 [[params.footer_rows]]
 [[params.footer_rows.items]]

@@ -20,7 +20,8 @@ minify:
 	rm -rf tmp
 	mkdir -p tmp
 	cp -rp public/* tmp/
-	minify -q -a -r -o tmp/ public/
+	minify -q -a -r --html-keep-comments -o tmp/ public/
+	@if [ -f static/.assetsignore ]; then cp static/.assetsignore tmp/.assetsignore; fi
 	rm -rf public
 	mv tmp public
 

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-import { publishedPages, mockServices, preferences } from "../helpers.mjs";
+import { publishedPages, mockServices, preferences, waitForPageFeatures } from "../helpers.mjs";
 
 const pages = await publishedPages();
 const tags = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
@@ -28,7 +28,7 @@ for (const width of [1440, 320]) {
                 });
                 const response = await page.goto(path);
                 expect(response.status()).toBe(200);
-                await expect(page.locator("#calendar")).toHaveAttribute("aria-busy", "false");
+                await waitForPageFeatures(page);
                 await page.evaluate(() => document.fonts.ready);
                 expect(errors).toEqual([]);
                 const result = await new AxeBuilder({ page }).withTags(tags).analyze();

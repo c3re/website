@@ -6,7 +6,7 @@
                     {{ if .pre }}
                         <span class="footer-label"><span data-language="standard" lang="en">{{ .pre }}</span><span data-language="easy">{{ .simple | default .pre }}</span></span>
                     {{ else }}
-                        <a class="footer-item" href="{{ .url | relURL }}">{{ partial "text.html" (dict "standard" .name "simple" .simple) }}{{ if hasPrefix .url "https://" }} <span aria-hidden="true">↗</span>{{ end }}</a>
+                        <a class="footer-item" href="{{ .url | relURL }}">{{ partial "text.html" (dict "standard" .name "simple" .simple) }}{{ with partial "pdf-meta.html" .url }} {{ . }}{{ end }}{{ if hasPrefix .url "https://" }} <span aria-hidden="true">↗</span>{{ end }}</a>
                     {{ end }}
                 {{ end }}
                 {{ if eq $index 0 }}
@@ -18,5 +18,8 @@
                 {{ end }}
             </div>
         {{ end }}
+        <nav class="footer-row footer-discoveries" aria-label="Kleine Entdeckungen">
+            <a class="footer-terminal" href="{{ "terminal/" | relURL }}" aria-label="Terminal öffnen"><span aria-hidden="true">[ &gt;_ ]</span></a>
+        </nav>
     </div>
 </footer>

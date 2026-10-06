@@ -16,21 +16,29 @@ Prüfung der Leichten Sprache durch die Zielgruppe, redaktionelle Freigaben,
 PDF-Prüfungen und der Abgleich auf dem Produktionshost sind noch offen.
 Ein Lighthouse-Ergebnis von 100 allein belegt keine vollständige WCAG-Konformität.
 
-### Lokale Prüfergebnisse
+### Lokale Prüfergebnisse (damaliger Umfang)
+
+Die folgenden Gesamtzahlen dokumentieren den damaligen Prüfstand. Am 28.09.2026
+wurde Game of Life einschließlich der zugehörigen Tests und Navigation entfernt.
+Für den bereinigten Stand bestanden Build, 11 Inhaltstests und 12 gezielte
+Browserprüfungen für die verbleibenden Fundstücke und Fehlerseiten. Die vollständige
+axe-/Lighthouse-Matrix wurde bei dieser Entfernung nicht erneut ausgeführt.
 
 | Prüfung | Ergebnis |
 | --- | --- |
 | Hugo 0.156.0 und bestehende Minifizierung | `make check` erfolgreich |
 | Schutz der Originaltexte | 11 Node-Tests bestanden |
-| Browser-Tests | 270 bestanden, keine übersprungenen Tests |
-| axe | 238 vollständige Seitenzustände plus 2 Panel-Prüfungen ohne gemeldete Verstöße |
+| Browser-Tests | 370 bestanden, keine übersprungenen Tests; abschließende Seitenübersichts-Ergänzung zusätzlich gezielt nachgeprüft |
+| axe | 294 vollständige Seitenzustände plus 2 Panel-Prüfungen ohne gemeldete Verstöße |
 | Zustände | Dunkel, Hell, hoher Kontrast, 150 % Schrift, Leicht/Dunkel, Leicht/Hell, Kombination aus Leicht/150 %/Kontrast/OpenDyslexic/Link-Hervorhebung |
-| Breiten | Alle 17 ausgelieferten Inhalts-/Übersichts-/Fehlerseiten bei 1440 und 320 CSS-Pixeln |
-| Tastatur | Vorwärts und rückwärts auf allen 17 Seiten; Skip-Link, freie Fokusziele und Panel zusätzlich geprüft |
+| Breiten | Alle 21 ausgelieferten Inhalts-/Übersichts-/Fehler-/Easter-Egg-Seiten bei 1440 und 320 CSS-Pixeln |
+| Tastatur | Vorwärts und rückwärts auf allen 21 Seiten; Skip-Link, freie Fokusziele, Terminal zusätzlich geprüft |
 | Live-Anzeigen | Pausieren, Fortsetzen, schnelles Umschalten bei laufender Abfrage sowie Fokus-/Detail-Erhalt beim Kalender-Refresh geprüft |
 | Aufnahmen | Alle drei tatsächlichen MP3s mit Start, Pause, Stopp, Tempo und korrekter Sprachzuordnung geprüft |
 | Fehlerseite | HTTP 404, geladene Assets, Lesehilfen, Skip-Link und Rückkehr zur Startseite an zwei unbekannten Adressen einschließlich verschachteltem Pfad geprüft |
-| Lighthouse Accessibility | 17 Seiten mit jeweils 100/100 im normalen dunklen Modus; Statusdienste dabei kontrolliert blockiert |
+| Datenschutz-Technik | 26 Prüfungen: alle 21 HTML-Seiten ohne passive Speicherung/Cookies oder fremde Einbettungen; Sprachlinks, Reset, Abfragen ohne Credentials und CSP-Sperren geprüft |
+| Easter Eggs | 14 Browser-Tests zu Quelltext, Rezept, Terminal, Tastatur, Bewegungsreduktion, Speicherfreiheit und No-JS-Navigation |
+| Lighthouse Accessibility | 21 Seiten mit jeweils 100/100 im normalen dunklen Modus; Statusdienste dabei kontrolliert blockiert |
 
 Werkzeuge: `@playwright/test` 1.63.0, `@axe-core/playwright` 4.13.0,
 Lighthouse 13.4.1, Chromium 153.0.8010.12. Alle npm-Pakete sind ausschließlich
@@ -58,6 +66,20 @@ Der Testserver ist Entwicklungswerkzeug, kein neuer Produktionsdienst.
 Die GitHub-Actions-Konfiguration enthält einen eigenen Accessibility-Job einschließlich
 Ergebnis-Artefakten. Die oben genannten Ergebnisse stammen aus der **lokalen** Ausführung;
 ein erfolgreicher GitHub-Lauf nach Push wird damit nicht vorweggenommen.
+
+Die nachfolgend beauftragte Gestaltung für einen Betrieb ohne Cookie-Banner
+ergänzt technische Datenschutzhinweise, eine Ressourcenbeschränkung und 22
+Regressionstests. Der ursprüngliche Markdown-Textkörper bleibt erhalten. Details,
+Speicherzwecke und noch zu prüfende Hosting-Bedingungen stehen in
+[DATENSCHUTZ-TECHNIK.md](../DATENSCHUTZ-TECHNIK.md). Die Browser- und Lighthouse-Läufe
+wurden nach dieser Ergänzung erneut vollständig ausgeführt.
+
+Die verbleibenden fünf Easter Eggs und die direkten PDF-Links im
+Footer sind ebenfalls umgesetzt. Der Hauptmenüpunkt „Downloads“ wurde entfernt;
+seine bestehende Seitenadresse bleibt erreichbar. Die drei zusätzlichen HTML-Seiten
+werden vollständig mitgeprüft. Die Seitenübersicht führt sie für einen zweiten
+Navigationsweg unter „Kleine Entdeckungen“ auf. Siehe [EASTER-EGGS.md](../EASTER-EGGS.md)
+für Bedienung und die noch hostabhängige Einrichtung eines echten HTTP-418-Status.
 
 ## Eingebundene Aufnahmen
 
@@ -171,15 +193,15 @@ Die PDF-Dokumente und externe Websites sind nicht darin freigeprüft.
 | 1.4.3 Kontrast, Minimum | AA | erfüllt | Korrigierte Tokens, deckende Statusflächen, axe-Matrix ohne Kontrastverstöße |
 | 1.4.4 Textgröße ändern | AA | teilweise | 150-%-Modus getestet; echte Browser-Zoom-/Textzoom-Prüfung auf Zielgeräten offen |
 | 1.4.5 Schriftgrafiken | AA | teilweise | Plakattext als Alternative; Bewertung der Bildschrift und ihrer Ausnahmen manuell offen |
-| 1.4.10 Umbruch | AA | erfüllt | Alle 17 Seiten bei 320 CSS-Pixeln in sieben Zuständen ohne Seitenüberlauf |
+| 1.4.10 Umbruch | AA | erfüllt | Alle 21 Seiten bei 320 CSS-Pixeln in sieben Zuständen ohne Seitenüberlauf |
 | 1.4.11 Nicht-Text-Kontrast | AA | teilweise | Schalter/Fokus verbessert und Forced Colors technisch geprüft; vollständige visuelle Geräteprüfung offen |
 | 1.4.12 Textabstände | AA | teilweise | Kontaktseite und Panel mit erhöhten Abständen ohne gemessenen horizontalen Überlauf; vollständige Prüfung auf Abschneidung/Überlagerung offen |
 | 1.4.13 Inhalt bei Hover/Fokus | AA | erfüllt | Keine überdeckenden eigenen Hover-Tooltips; reservierte Überschriftenanker und native Browserhinweise |
-| 2.1.1 Tastatur | A | erfüllt | Navigation, Lesehilfen, Kalenderdetails, Kopieren und Audio getestet |
+| 2.1.1 Tastatur | A | erfüllt | Navigation, Lesehilfen, Kalenderdetails, Kopieren, Audio, Terminal getestet |
 | 2.1.2 Keine Tastaturfalle | A | erfüllt | Vorwärts-/Rückwärtslauf und nichtmodales Panel mit Escape |
 | 2.1.4 Zeichentasten-Kurzbefehle | A | nicht anwendbar | Keine eigenen Ein-Zeichen-Kurzbefehle |
 | 2.2.1 Zeiteinteilung anpassbar | A | nicht anwendbar | Keine zeitbegrenzte Nutzereingabe; API-Timeouts sind keine Eingabefristen |
-| 2.2.2 Pausieren, beenden, ausblenden | A | erfüllt | Begrenzte Pulse, Motion-Schalter, pausierbare Live-Anzeigen und stoppbare Wiedergabe |
+| 2.2.2 Pausieren, beenden, ausblenden | A | erfüllt | Begrenzte Pulse, Motion-Schalter, pausierbare Live-Anzeigen, stoppbare Wiedergabe |
 | 2.3.1 Dreimaliges Blitzen / Grenzwerte | A | teilweise | Kleine, kurze Logoanimation und abschaltbare Bewegung; abschließende visuelle Grenzwertprüfung bei Zoom offen |
 | 2.4.1 Blöcke umgehen | A | erfüllt | Skip-Link zuerst, Fokus gelangt in das einzige Main |
 | 2.4.2 Seite mit Titel | A | erfüllt | Individuelle Server-/Clienttitel einschließlich News, Themen und Fehlerseite |
@@ -202,9 +224,9 @@ Die PDF-Dokumente und externe Websites sind nicht darin freigeprüft.
 | 3.2.3 Konsistente Navigation | AA | erfüllt | Gemeinsamer Header/Footer auf allen Seiten |
 | 3.2.4 Konsistente Erkennung | AA | erfüllt | Gemeinsame Komponenten und Beschriftungen |
 | 3.2.6 Konsistente Hilfe | A | erfüllt | Kontakt in Sidebar/Footer sowie eigene Barrierefreiheitsseite |
-| 3.3.1 Fehlerkennzeichnung | A | nicht anwendbar | Keine zu validierende Formulareingabe; Medien-/Netzfehler als Statusmeldungen behandelt |
+| 3.3.1 Fehlerkennzeichnung | A | erfüllt | Unbekannte Terminalbefehle sowie Medien-/Netzfehler werden als verständliche Statusmeldungen ausgegeben |
 | 3.3.2 Beschriftungen / Anweisungen | A | erfüllt | Einstellungen, Schriftgrößen und Audioaktionen beschriftet |
-| 3.3.3 Vorschlag bei Fehler | AA | nicht anwendbar | Keine frei einzugebenden Formularwerte |
+| 3.3.3 Vorschlag bei Fehler | AA | erfüllt | Terminal nennt bei unbekanntem Befehl help bzw. bei unbekanntem Ziel ls als nächsten Schritt |
 | 3.3.4 Fehlervermeidung, rechtlich/finanziell/Daten | AA | nicht anwendbar | Keine entsprechenden Transaktionen |
 | 3.3.7 Redundante Eingabe | A | nicht anwendbar | Keine mehrstufige Datenerfassung |
 | 3.3.8 Zugängliche Authentifizierung, Minimum | AA | nicht anwendbar | Kein Login, keine CAPTCHA |
@@ -227,6 +249,8 @@ Die folgenden neuen oder umformulierten Angaben sind keine bereits extern freige
 | Seitenübersicht, Fehlerseite und generierte Übersichtstitel | **Redaktionell prüfen**, neue Templates und `page-title.html` |
 | Größe und Typ der PDF-Links | Aus tatsächlicher Datei berechnet; Bezeichnungen **redaktionell prüfen** |
 | Bestehende Leichte-Sprache-Entwürfe | Weiterhin **redaktionell und durch Prüfgruppe prüfen**; in dieser Arbeitsrunde nicht inhaltlich erweitert |
+| Ergänzende technische Datenschutzhinweise, normal und leicht | **Redaktionell/rechtlich prüfen**, separates `privacy-notes.html`; keine Umformulierung des ursprünglichen Textkörpers |
+| Easter-Egg-Einleitungen und Bedientexte | **Redaktionell prüfen**, leichte Einleitungen zusätzlich durch Prüfgruppe prüfen; echte Screenreader-Bedienung noch offen |
 | Aufnahmen und Textgleichheit | **Redaktionell prüfen**; Audioquellen unverändert übernommen |
 
 Die elf bisherigen Textkörper wurden nicht neu formuliert. Englische `lang`-Markierungen,

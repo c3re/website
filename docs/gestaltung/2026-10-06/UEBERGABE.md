@@ -45,14 +45,16 @@ Umstellungen von `languageCode` auf `locale`, `.Site.Data` auf `hugo.Data` sowie
 des RSS-Sprachfelds auf `.Site.Language.Locale` wurden geprüft und übernommen.
 Beide CI-Jobs verwenden dafür dieselbe lokal geprüfte Hugo-Version 0.161.1.
 
-Die Änderungen werden auf `feature/barrierefreiheit` zu
+Die UI-Änderung wurde als `dd81abf` auf `feature/barrierefreiheit` zu
 `origin/feature/barrierefreiheit` übertragen. `origin/master` und
 `upstream/master` enthielten beim ersten Fetch keine neueren Basis-Commits.
-Andere bereits vorhandene Änderungen, insbesondere Datenschutz, Easter Eggs,
-Cloudflare-Konfiguration, Inhalte und Audio-Dateien, bleiben im Arbeitsverzeichnis
-erhalten und sind nicht Teil dieses UI-Commits. Die gesonderte Entfernung von
-Downloads aus dem Menü bleibt ebenfalls eine offene vorherige Änderung.
 
-Es wurde keine Serverkonfiguration geändert und keine neue Version der Demo auf
-`c3re.sagorski.org` veröffentlicht. Der vorhandene Serverstand ist lokal in
-`docs/CLOUDFLARE.md` dokumentiert.
+Auf ausdrücklichen Folgeauftrag wurde die Demo ebenfalls aktualisiert. Dabei
+wurde der gesamte geprüfte Website-Stand einschließlich der vorher vorhandenen
+Datenschutz-Ergänzungen, Fundstücke, PDF-Footerlinks und Worker-Konfiguration
+veröffentlicht und für GitHub gesichert. Der Menüpunkt Downloads bleibt daher
+in der Demo entfernt; seine bisherige Seitenadresse ist weiterhin verfügbar.
+
+Die aktive Cloudflare-Version ist `cc7c3731-f629-465d-a388-c8d72facd6af`.
+Der Passwortschutz und die bisherigen Zugangsdaten bleiben bestehen. Details
+und die Grenzen der Live-Prüfung stehen in `docs/CLOUDFLARE.md`.

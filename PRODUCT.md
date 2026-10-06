@@ -28,6 +28,9 @@ Offen, technisch, gemeinschaftlich. Die gestalterische Referenz ist der Export
 - Helles Design und Leichte Sprache bewusst wählbar und lokal gespeichert.
 - Originaltexte erhalten; vereinfachte Fassungen getrennt als Entwürfe pflegen.
 - Live-Daten nur anzeigen, wenn sie verfügbar sind; Ausfälle verständlich melden.
+- Betrieb ohne Cookie-Banner: keine Werbung, Besucheranalyse, Identifikatoren oder
+  automatisch geladenen Drittanbieter-Einbettungen. Darstellungseinstellungen nur
+  nach aktiver Auswahl lokal speichern; technische Regeln unter `docs/DATENSCHUTZ-TECHNIK.md`.
 
 ## Anti-references
 

@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { publishedPages, mockServices, preferences } from "../helpers.mjs";
+import { publishedPages, mockServices, preferences, waitForPageFeatures } from "../helpers.mjs";
 
 const pages = await publishedPages();
 
@@ -56,13 +56,13 @@ for (const path of pages) {
         await preferences(page, { "c3re-lang": "leicht" });
         await mockServices(page);
         await page.goto(path);
-        await expect(page.locator("#calendar")).toHaveAttribute("aria-busy", "false");
+        await waitForPageFeatures(page);
         await page.evaluate(() => document.fonts.ready);
         await page.keyboard.press("Tab");
         await expect(page.locator(".skip-link")).toBeFocused();
         await page.keyboard.press("Enter");
         await expect(page.locator("#main-content")).toBeFocused();
-        const total = await page.locator("a[href]:visible, button:enabled:visible, summary:visible").count();
+        const total = await page.locator('a[href]:visible, button:enabled:visible:not([tabindex="-1"]), input:enabled:visible, summary:visible, [tabindex="0"]:visible').count();
         for (const direction of ["Tab", "Shift+Tab"]) {
             for (let index = 0; index < total + 1; index++) {
                 await page.keyboard.press(direction);

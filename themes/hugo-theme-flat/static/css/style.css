@@ -117,6 +117,19 @@ html {
   scroll-padding-top: calc(var(--header-height, 128px) + 16px);
 }
 
+/* Quiet discoveries in the footer, with full keyboard and touch targets. */
+.footer-discoveries a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.footer-terminal {
+  font-family: var(--fonts-mono);
+}
+
 /* Text size and reading font */
 html[data-font-size="100"],
 html[data-fs="100"] {
@@ -167,6 +180,7 @@ a:hover {
 .content a,
 .list-item p a,
 .calendar-description a,
+.a11y-storage a,
 .footer a {
   text-decoration: underline;
   text-underline-offset: .18em;

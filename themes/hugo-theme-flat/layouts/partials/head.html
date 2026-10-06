@@ -1,5 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
+{{/* Keep assets local and limit live connections to the two public c3RE services. */}}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://spaceapi.c3re.de https://ical2json.c3re.de; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
 <meta name="buildtime" content="{{ time.Now }}">
 <link rel="icon" type="image/png" href="{{ "img/fav.png" | relURL }}">
 {{ $title := .Site.Title -}}
@@ -61,12 +64,20 @@
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
 <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />
 
+{{ if .Params.easter_egg }}
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="{{ "css/easter-eggs.css" | relURL }}" />
+{{ if eq .Params.easter_egg "terminal" }}<script defer src="{{ "js/terminal.js" | relURL }}"></script>{{ end }}
+{{ else }}
 <link rel="preload" as="image" href="{{ "img/banner_unknown.jpg" | relURL }}" />
+{{ end }}
 
 
 
 <script defer src="{{ "js/href_handling.js" | relURL }}"></script>
 <script defer src="{{ "js/header.js" | relURL }}"></script>
 <script defer src="{{ "js/audio.js" | relURL }}"></script>
+{{ if not .Params.easter_egg }}
 <script defer src="{{ "js/door-status.js" | relURL }}"></script>
 <script defer src="{{ "js/calendar.js" | relURL }}"></script>
+{{ end }}

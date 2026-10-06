@@ -41,6 +41,12 @@ WCAG-Abnahme. Die Kriterienmatrix und Prüfergebnisse stehen in [BERICHT.md](BER
 - URLs ab Website-Wurzel erhalten Gestaltung und Rücklinks der Fehlerseite auch
   unter verschachtelten unbekannten Adressen; dafür bestehen Regressionstests.
 - Dauerhafte Node-, Playwright-, axe- und Lighthouse-Prüfungen mit GitHub-Actions-Anbindung.
+- Lokale Easter Eggs: Terminal, Teekanne, `/dev/null/`, Keksrezept
+  und Quelltext-Kommentar ganz am Anfang, einschließlich des minifizierten Builds.
+  Bedienung und Hosting-Vorlage stehen in [EASTER-EGGS.md](../EASTER-EGGS.md).
+- „Downloads“ ist aus dem Hauptmenü entfernt. Satzung, Beitragsordnung und
+  Unvereinbarkeitserklärung sind im Footer direkt mit Dateityp und Größe verlinkt.
+  `pdf-meta.html` berechnet diese Angaben gemeinsam für Footer- und Markdown-Links.
 
 ## Texte und Sprachvarianten
 
@@ -54,7 +60,9 @@ eigenmächtig redaktionell korrigiert.
 `easy.title`, `easy.summary` und `easy.content` sind **redaktionell prüfen**.
 Die Fassungen sind als Entwürfe gekennzeichnet und noch nicht durch eine Prüfgruppe
 geprüft. Es wird keine DIN-konforme oder zertifizierte Leichte Sprache behauptet.
-Die normale Fassung erhält keine zusätzlichen erklärenden Absätze.
+Die normale Fassung erhält keine aus den Vereinfachungen übernommenen Erklärungen.
+Für den ausdrücklich gewünschten Betrieb ohne Cookie-Banner ergänzt das Theme
+separate technische Datenschutzhinweise; der ursprüngliche Markdown-Textkörper bleibt erhalten.
 
 Gemeinsame Texte stehen in `partials/text.html`, ganze Seitenfassungen in
 `partials/content-variants.html`. `data-language="standard|easy"` steuert die
@@ -65,6 +73,8 @@ Beschriftung im Accessibility Tree zu erscheinen.
 Der Sprachzustand kann als Fragment geteilt werden, etwa `/#sprache=leicht` oder
 `/kontakt/#sprache=leicht&abschnitt=anreise`. Fragmente werden nicht an den Server
 übertragen. Abschnittsanker bekommen in der leichten Fassung das Präfix `easy-`.
+Das Öffnen solcher Links speichert keine Sprachwahl und überschreibt keine
+ausdrücklich gespeicherte Einstellung.
 
 ## Lokale Einstellungen
 
@@ -83,10 +93,15 @@ Ein Controller in `static/js/preferences.js` verwaltet folgende Keys:
 
 Die alte Auswahl `c3re-simple=1` wird nur übernommen, wenn noch kein `c3re-lang`
 vorhanden ist. Speicherzugriffe sind mit `try/catch` abgesichert. Reset setzt die
-Lesehilfen zurück und behält das ausdrücklich gewählte Farbschema bei. Kontrast und
+Lesehilfen zurück, löscht ihre gespeicherten Schlüssel einschließlich `c3re-simple`
+und behält das ausdrücklich gewählte Farbschema bei. Kontrast und
 Bewegung orientieren sich danach wieder an den Systemeinstellungen; die ausdrückliche
 Dark-Standardvorgabe bleibt davon unabhängig.
 Ohne JavaScript sind Originaltexte und Navigation weiterhin benutzbar.
+
+Nur die aktive Auswahl eines Bedienelements schreibt dessen Wert. Frische
+Seitenaufrufe schreiben keine Browserdaten. Die technischen Voraussetzungen für
+den Betrieb ohne Cookie-Banner stehen in [DATENSCHUTZ-TECHNIK.md](../DATENSCHUTZ-TECHNIK.md).
 
 ## Zugeordnete Audiodateien
 
@@ -139,7 +154,8 @@ baut selbst und startet den lokalen Testserver.
 
 Geprüft werden alle ausgelieferten HTML-Seiten, beide Sprachfassungen, beide Themes,
 hoher Kontrast, 150 % Schrift sowie eine kombinierte Einstellung bei 320 und 1440 px.
-Hinzu kommen Tastatur-, Audio-, Fokus-, Textabstands-, Storage- und Live-Pausenprüfungen.
+Hinzu kommen Tastatur-, Audio-, Fokus-, Textabstands-, Storage- und Live-Pausenprüfungen
+sowie Prüfungen auf passive Speicherung, Cookies und unerlaubte externe Ressourcen.
 Aktuelle Zahlen und Grenzen stehen in [BERICHT.md](BERICHT.md).
 
 ## Weiter offen
@@ -151,12 +167,11 @@ Aktuelle Zahlen und Grenzen stehen in [BERICHT.md](BERICHT.md).
 - Weitere passende Audiodateien für die übrigen Seiten und Leichte Sprache.
 - PDF-Prüfung sowie reale Screenreader- und Browser-Zoom-Tests. Die CI ist konfiguriert,
   muss nach einem späteren Push auch auf GitHub durchlaufen.
-- Ergänzung der Datenschutzhinweise zur Einstellungsspeicherung als gesonderte
-  redaktionelle Änderung. Der Originaltext wurde auf Wunsch nicht erweitert.
+- Redaktionelle/rechtliche Freigabe der ergänzten technischen Datenschutzhinweise
+  sowie Abgleich des ursprünglichen Datenschutztextes mit dem tatsächlichen Hosting.
+  Bedingungen und bekannte Alttext-Probleme stehen in `docs/DATENSCHUTZ-TECHNIK.md`.
 
 **Redaktionell prüfen:** alle neuen Leichte-Sprache-Texte, die Panelbeschriftungen,
-Hinweise zu fehlenden Aufnahmen und Statusmeldungen. Ein rechtlich zu prüfender
-Hinweisvorschlag für die Speicherung lautet: „Die gewählten Lese- und
-Darstellungseinstellungen werden ausschließlich lokal in Ihrem Browser gespeichert.
-Sie können sie über das Panel zurücksetzen oder durch Löschen der Website-Daten
-entfernen.“ Dieser Vorschlag ist nicht in den Original-Seitentext eingebaut.
+Hinweise zu fehlenden Aufnahmen und Statusmeldungen. `privacy-notes.html` ergänzt
+die Datenschutzerklärung um Speicherung, lokale Ressourcen und Live-Abfragen in
+beiden Sprachfassungen, ohne den Original-Seitentext umzuschreiben.
