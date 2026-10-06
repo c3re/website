@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".menu-toggle");
     if (!header || !menu || !toggle) return;
 
-    const mobile = window.matchMedia("(max-width: 767px)");
+    const mobile = window.matchMedia("(max-width: 959px)");
     let compact = false;
     let scheduled = false;
 

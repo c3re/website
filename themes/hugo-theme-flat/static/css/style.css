@@ -270,11 +270,12 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 8px 24px;
+  gap: 6px 16px;
   transition: padding .16s ease-out, gap .16s ease-out;
 }
 
 .header-brand {
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -282,7 +283,12 @@ h3 {
   min-width: 0;
 }
 
-.header-settings {
+.header-actions {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   justify-self: end;
   min-width: 0;
   max-width: 100%;
@@ -402,7 +408,8 @@ h3 {
 }
 
 .header .menu {
-  grid-column: 1 / -1;
+  grid-column: 1;
+  grid-row: 2;
   min-width: 0;
   display: flex;
   flex-wrap: wrap;
@@ -512,38 +519,33 @@ h3 {
   min-width: 0;
 }
 
-.theme-switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  padding: 2px;
-  border: 1px solid var(--color-fg-tiny-line);
-  border-radius: 999px;
-  background-color: var(--color-bg-block);
-}
-
-.theme-switch button[data-set-theme] {
+.theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 44px;
   min-height: 44px;
   padding: 6px;
-  border: 0;
-  border-radius: 999px;
+  border: 1px solid var(--color-fg-tiny-line);
+  border-radius: 8px;
   background-color: transparent;
-  color: var(--color-fg-muted);
+  color: var(--color-fg-font-normal);
   font-size: 15px;
   line-height: 1;
 }
 
-.theme-switch button[data-set-theme]:hover {
+.theme-toggle:hover {
   color: var(--color-fg-strong);
+  background-color: var(--color-bg-block);
 }
 
-.theme-switch button[data-set-theme][aria-pressed="true"] {
-  background-color: var(--color-fg-strong);
-  color: var(--color-bg-content);
+.theme-icon-dark,
+html[data-theme="light"] .theme-icon-light {
+  display: none;
+}
+
+html[data-theme="light"] .theme-icon-dark {
+  display: block;
 }
 
 /* Floating accessibility tab */
@@ -1052,8 +1054,12 @@ svg.a11y-icon {
 /* Banner */
 .banner {
   position: relative;
-  width: 100%;
-  height: clamp(180px, 24vw, 340px);
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  height: clamp(180px, 23vw, 280px);
+  margin: 16px auto 0;
+  overflow: hidden;
+  border-radius: 10px;
   background: #000 url("/img/banner_unknown.jpg") center top / cover no-repeat;
 }
 
@@ -1063,14 +1069,6 @@ body.door_open .banner {
 
 body.door_closed .banner {
   background-image: url("/img/banner_closed.jpg");
-}
-
-.banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, var(--color-bg-page) 100%);
-  pointer-events: none;
 }
 
 .banner-inner {
@@ -2130,30 +2128,21 @@ html[data-theme="light"]:not([data-contrast="1"]) .social-links img {
   transform: none;
 }
 
-/* Mobile header */
-@media (max-width: 767px) {
+/* Collapse navigation before its long labels wrap on tablets. */
+@media (max-width: 959px) {
   .header-brand {
-    display: contents;
-  }
-
-  .site-title {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .header-settings {
+  .header-actions {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .menu-toggle {
+  .header .menu {
     grid-column: 1 / -1;
     grid-row: 2;
-    justify-self: end;
-  }
-
-  .header .menu {
-    grid-row: 3;
   }
 
   .site-subtitle {
@@ -2171,6 +2160,15 @@ html[data-theme="light"]:not([data-contrast="1"]) .social-links img {
   .header-wrapper {
     max-height: 100dvh;
     overflow-y: auto;
+  }
+
+  .a11y-tab,
+  .a11y-panel {
+    top: calc(var(--header-height, 66px) + 16px);
+  }
+
+  .a11y-panel {
+    max-height: calc(100dvh - var(--header-height, 66px) - 32px);
   }
 
   .header .sub-menu {
@@ -2214,22 +2212,13 @@ html[data-theme="light"]:not([data-contrast="1"]) .social-links img {
   .a11y-close,
   .a11y-size-controls button,
   .audio-button,
-  .theme-switch {
+  .theme-toggle {
     border-color: CanvasText;
   }
 
   .a11y-tab,
   .a11y-read {
     border: 1px solid ButtonText;
-  }
-
-  .theme-switch button[data-set-theme][aria-pressed="true"] {
-    forced-color-adjust: none;
-    border-color: Highlight;
-    outline: 2px solid Highlight;
-    outline-offset: 2px;
-    background-color: Highlight;
-    color: HighlightText;
   }
 
   .a11y-switch-track {

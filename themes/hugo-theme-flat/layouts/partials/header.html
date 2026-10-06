@@ -12,10 +12,6 @@
                 <span>c3RE</span>
                 <span class="site-subtitle">Chaostreff Recklinghausen</span>
             </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" hidden><span aria-hidden="true">☰</span> Menü</button>
-        </div>
-        <div class="header-settings">
-            {{ partial "preferences.html" . }}
         </div>
         <nav id="main-menu" class="menu" aria-label="Hauptmenü">
             <div class="menu-item"><a href="{{ "/" | relURL }}"{{ if .IsHome }} aria-current="page"{{ end }}><span class="menu-label">{{ partial "text.html" (dict "standard" "Home" "simple" "Start") }}</span></a></div>
@@ -32,6 +28,10 @@
                 </div>
             {{ end }}
         </nav>
+        <div class="header-actions">
+            {{ partial "preferences.html" . }}
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" hidden><span aria-hidden="true">☰</span> Menü</button>
+        </div>
     </div>
     {{ partial "audio-bar.html" . }}
 </header>

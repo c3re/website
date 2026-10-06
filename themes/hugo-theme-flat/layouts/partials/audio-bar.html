@@ -1,5 +1,5 @@
 {{/* Audio files are assigned per page and language in data/audio.toml. */}}
-{{ $sources := index (.Site.Data.audio.pages | default dict) .RelPermalink | default dict }}
+{{ $sources := index (hugo.Data.audio.pages | default dict) .RelPermalink | default dict }}
 <div id="audio-bar" class="audio-bar" data-state="idle" role="region" aria-label="Vorlese-Leiste" hidden>
     <div class="audio-inner">
         <span class="audio-dot" aria-hidden="true"></span>

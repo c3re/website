@@ -18,7 +18,7 @@ jobs:
       - name: Install minify
         run: go install github.com/tdewolff/minify/v2/cmd/minify@latest
       - name: Install hugo
-        run: go install github.com/gohugoio/hugo@v0.156.0
+        run: go install github.com/gohugoio/hugo@v0.161.1
       - name: Run make
         run: make
 
@@ -39,7 +39,7 @@ jobs:
           cache: npm
       - name: Install build tools
         run: |
-          go install github.com/gohugoio/hugo@v0.156.0
+          go install github.com/gohugoio/hugo@v0.161.1
           go install github.com/tdewolff/minify/v2/cmd/minify@latest
       - run: npm ci
       - run: npx playwright install --with-deps chromium

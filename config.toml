@@ -1,5 +1,5 @@
 baseURL = "https://www.c3re.de"
-languageCode = "de-de"
+locale = "de-DE"
 title = "c3RE"
 theme = "hugo-theme-flat"
 defaultContentLanguage = "de"

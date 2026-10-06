@@ -121,7 +121,10 @@
             const focused = document.activeElement;
             applyAttributes();
             document.querySelectorAll("[data-set-theme]").forEach(function (button) {
-                button.setAttribute("aria-pressed", String(button.dataset.setTheme === preferences.theme));
+                const target = preferences.theme === "dark" ? "light" : "dark";
+                button.dataset.setTheme = target;
+                button.setAttribute("aria-label", target === "light" ? "Helles Design" : "Dunkles Design");
+                button.title = target === "light" ? "Zum hellen Design wechseln" : "Zum dunklen Design wechseln";
             });
             document.querySelectorAll("[data-toggle-preference]").forEach(function (button) {
                 const name = button.dataset.togglePreference;
