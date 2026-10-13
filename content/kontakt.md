@@ -76,7 +76,7 @@ easy:
     Die Hackerhütte steht links.
     Sie steht in dem Bereich mit dem Zaun.
 
-    ### Mit Bus und Bahn {#anreise-mit-öffentlichen-verkehrsmitteln}
+    ### Mit dem Bus {#anreise-mit-öffentlichen-verkehrsmitteln}
 
     Bei der Hackerhütte ist die Bushaltestelle **Westcharweg**.
     Dort halten diese Buslinien:
@@ -92,7 +92,7 @@ easy:
     - Marl
     - Dorsten
 
-    Vom Hauptbahnhof Recklinghausen dauert die Fahrt etwa **7 Minuten**.
+    Vom Hauptbahnhof Recklinghausen dauert die Busfahrt etwa **7 Minuten**.
 
     Du suchst eine passende Verbindung?
     Nutze die [Fahrplanauskunft des VRR](https://www.vrr.de/fahrplan-mobilitaet/fahrplanauskunft/app/trip?formik=destination%3Dde%253A05562%253A3574&lng=de&trip=multiModalitySelected%3Dpt).

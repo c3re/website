@@ -74,10 +74,9 @@ easy:
     Das sind politische Fragen zum Internet.
     Zum Beispiel: Welche Rechte haben wir im Internet?
 
-    Die Geschichte unserer Räume beginnt in einer Bar.
-    Dort trafen sich ein Punker und ein Elektroingenieur.
+    Wie wir zu unseren Räumen kamen, klingt wie der Anfang eines Witzes:
+    „Ein Punker und ein Elektroingenieur kommen in eine Bar …“
     Ein Elektroingenieur arbeitet zum Beispiel an elektrischen Geräten.
-    Dieser Anfang klingt wie ein Witz.
 
     Heute haben wir eigene Räume in der [Hackerhütte](https://wiki.c3re.de/de/Chaostreff-Hackerhuette-c3RE/Hackerspace).
     Solche Räume heißen auch Hackerspace.

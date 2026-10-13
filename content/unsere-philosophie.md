@@ -77,7 +77,7 @@ easy:
     - Alle Menschen sollen Computer ohne Einschränkungen nutzen können.
       Das gilt auch für andere Dinge, mit denen man die Welt verstehen kann.
     - Alle Informationen sollen frei zugänglich sein.
-    - Vertraue Menschen mit Macht nicht blind.
+    - Misstraue Menschen mit Macht.
       Das gilt auch für Einrichtungen mit Macht.
       Macht soll auf viele Stellen verteilt sein.
       Das heißt Dezentralisierung.
@@ -90,7 +90,7 @@ easy:
       Mit Computern kann man schöne Dinge schaffen.
     - Computer können dein Leben besser machen.
     - Gehe sorgfältig mit den Daten anderer Menschen um.
-      Mache keinen Unsinn mit diesen Daten.
+      Mache sie nicht kaputt und bringe sie nicht durcheinander.
     - Nutze öffentliche Daten.
       Schütze private Daten.
       Private Daten sind persönliche Informationen über Menschen.

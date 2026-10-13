@@ -43,7 +43,8 @@ easy:
     Das heißt: Informationsfreiheit.
     Dafür setzen wir uns auch über Ländergrenzen hinweg ein.
 
-    Wir wollen elektronische Medien kritisch nutzen.
+    Wir fördern den kritischen Umgang mit elektronischen Medien.
+    Das heißt: Wir wollen, dass Menschen Medien bewusst nutzen.
     Dazu gehört zum Beispiel: Informationen im Internet hinterfragen.
 
     Wir beschäftigen uns auch mit elektronischer Kommunikation.
@@ -63,7 +64,9 @@ easy:
 
     Wir teilen Wissen über die Entwicklung dieser Technik.
     Bei Fragen zu Technik vertreten wir die Zivilgesellschaft.
-    Das bedeutet: Wir setzen uns als Verein für die Menschen ein.
+    Zivilgesellschaft sind Menschen, Vereine und Gruppen.
+    Sie engagieren sich selbst für die Gesellschaft.
+    Sie gehören nicht zum Staat und nicht zu Firmen.
 
     ## Diese Vorstellungen lehnen wir ab
 
@@ -108,7 +111,7 @@ easy:
 
     Diese Einstellungen und Handlungen sind mit einer Mitgliedschaft unvereinbar.
     Das gilt auch für Mitglieder von Gruppen mit solchen Einstellungen.
-    Auch solche Gruppen unterstützen passt nicht zu einer Mitgliedschaft.
+    Auch wer solche Gruppen unterstützt, kann nicht Mitglied sein.
 
     ## Woher unsere Erklärung kommt
 
