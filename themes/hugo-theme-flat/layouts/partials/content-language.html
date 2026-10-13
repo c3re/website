@@ -1,0 +1,10 @@
+{{/* Annotate known English passages in text nodes, not links or attributes. */}}
+{{- $result := "" -}}
+{{- range findRE `(?s)<[^>]*>|[^<]+` (string .) -}}
+    {{- $part := . -}}
+    {{- if not (hasPrefix $part "<") -}}
+        {{- $part = replaceRE `(?i)(Be excellent to each other!?|All Creatures (are )?Welcome|Goodby Windows!)` `<span lang="en">$1</span>` $part -}}
+    {{- end -}}
+    {{- $result = printf "%s%s" $result $part -}}
+{{- end -}}
+{{- return ($result | safeHTML) -}}

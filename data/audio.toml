@@ -1,0 +1,21 @@
+# Add the supplied recordings here, using the page's URL as the key.
+# Files live under static/audio/. No request is made until playback starts.
+#
+# [pages."/"]
+# standard = "/audio/startseite.mp3"
+# easy = "/audio/startseite-leicht.mp3"
+#
+# [pages."/kontakt/"]
+# standard = "/audio/kontakt.mp3"
+# easy = "/audio/kontakt-leicht.mp3"
+
+[pages]
+
+[pages."/"]
+standard = "/audio/standard/startseite.mp3"
+
+[pages."/unsere-philosophie/"]
+standard = "/audio/standard/philosophie.mp3"
+
+[pages."/unvereinbarkeitserklaerung/"]
+standard = "/audio/standard/unvereinbarkeitserklaerung.mp3"

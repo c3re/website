@@ -1,16 +1,21 @@
+{{- partial "source-note.html" . -}}
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark" data-language="standard" data-simple="false">
     <head>
         {{ partial "head.html" . }}
     </head>
 
-    <body>
+    <body class="door_unknown">
+        <a class="skip-link" href="#main-content">Zum Inhalt</a>
         {{ partial "header.html" . }}
-        <main class="main-wrapper">
-            <div class="main">
+        {{ partial "accessibility.html" . }}
+        {{ if not .Params.easter_egg }}{{ partial "banner.html" . }}{{ end }}
+        <div class="main-wrapper{{ if .Params.easter_egg }} egg-wrapper{{ end }}">
+            <main id="main-content" class="main" tabindex="-1">
                 {{ block "main" . }}{{ end }}
-            </div>
-            <div class="side">
+            </main>
+            {{ if not .Params.easter_egg }}
+            <aside class="side" aria-label="Termine, Öffnungszeiten und Kontakt">
                 {{/*{{ range .Site.Sections }}
                     {{ partial "side-recent.html" . }}
                 {{ end }}
@@ -18,11 +23,11 @@
                 {{ partial "side-tags.html" . }}
                 */}}
                 {{ partial "side-calendar.html" . }}
-                {{ partial "side-door-status.html" . }}
                 {{ partial "side-contact.html" . }}
 
-            </div>
-        </main>
+            </aside>
+            {{ end }}
+        </div>
         {{ partial "footer.html" . }}
         {{ partial "html-end.html" . }}
     </body>

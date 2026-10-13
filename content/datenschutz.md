@@ -7,7 +7,130 @@ weight: 50
 show_comments: false
 katex: false
 draft: false
+privacy_notes: true
 description: ""
+easy:
+  title: "So gehen wir mit deinen Daten um"
+  summary: "Hier erfährst du, welche Daten die Website erfasst und wie wir persönliche Daten schützen."
+  draft: true
+  content: |
+    ## Datenschutz {#datenschutzerklärung}
+
+    Persönliche Daten sind Informationen über einen Menschen.
+    Dazu gehören zum Beispiel Name und E-Mail-Adresse.
+    Uns ist der Schutz dieser Daten sehr wichtig.
+
+    Wir richten uns nach diesen Gesetzen:
+
+    - Bundesdatenschutzgesetz.
+      Die Abkürzung ist BDSG.
+    - Datenschutzgrundverordnung.
+      Die Abkürzung ist DSGVO.
+
+    Diese Gesetze regeln den Schutz persönlicher Daten.
+    Hier erklären wir, welche Daten wir erfassen.
+    Wir erklären auch, wofür wir diese Daten nutzen.
+
+    ## 1. Daten beim Besuch der Website
+
+    Die Website liegt auf einem Web-Server.
+    Das ist ein Computer, der die Website bereitstellt.
+
+    Du besuchst die Website mit einem Browser.
+    Der Browser ist ein Programm für Internetseiten.
+    Er fragt den Web-Server nach den Daten für die Seite.
+
+    Der Web-Server schreibt dabei automatisch ein Protokoll.
+    Die Dateien mit diesem Protokoll heißen Log-Files.
+
+    Darin stehen zum Beispiel diese Angaben:
+
+    - Welchen Browser nutzt du?
+      Welche Version nutzt du?
+      Die Version sagt, welche Ausgabe des Programms du hast.
+    - Welches Betriebssystem hat dein Gerät?
+      Das Betriebssystem sind die grundlegenden Programme auf deinem Gerät.
+    - Welche Seite hast du vorher besucht?
+      Diese Angabe heißt Referrer URL.
+      URL ist ein anderes Wort für Internetadresse.
+    - Welche IP-Adresse hat dein Gerät?
+      Das ist die Adresse für den Austausch von Daten im Internet.
+    - An welchem Datum kam die Anfrage?
+      Zu welcher Uhrzeit kam sie?
+    - Welche Datei hat dein Browser angefordert?
+      Gespeichert werden der Dateiname und die Internetadresse der Datei.
+
+    Diese Daten lassen sich keiner bestimmten Person zuordnen.
+    Wir sammeln sie nur für statistische Auswertungen.
+    Das können zum Beispiel Zählungen von Seitenaufrufen sein.
+
+    Wir geben die Protokolldaten nicht an andere weiter.
+    Das gilt für geschäftliche Zwecke.
+    Das gilt auch für andere Zwecke.
+
+    ## 2. So nutzen wir persönliche Angaben
+
+    Du kannst uns freiwillig persönliche Angaben mitteilen.
+    Zum Beispiel, wenn du uns eine Frage schickst.
+    Wir erfassen oder verarbeiten persönliche Angaben nur dann.
+
+    Du hast uns erlaubt, deine persönlichen Daten zu speichern?
+    Dann kannst du diese Erlaubnis schriftlich zurücknehmen.
+    Das geht zum Beispiel mit einer E-Mail.
+
+    Die Rücknahme gilt sofort.
+    Es gibt eine Ausnahme:
+    Wir brauchen die Daten noch, um ein Geschäft abzuwickeln.
+
+    Wir geben deine persönlichen Daten nicht an andere weiter.
+    Es gibt eine Ausnahme:
+    Ein Gesetz verpflichtet uns zur Weitergabe.
+
+    ## 3. Auskunft, Änderung und Löschung deiner Daten
+
+    Du kannst uns jederzeit schriftlich fragen:
+
+    - Speichert ihr persönliche Daten über mich?
+    - Welche Daten sind das?
+
+    Das kannst du nach geltendem Recht tun.
+    Wir antworten dir darauf umgehend.
+
+    ## 4. So schützen wir deine Daten
+
+    Du hast uns persönliche Daten gegeben?
+    Wir schützen diese Daten mit technischen Maßnahmen.
+    Wir legen auch Regeln für unsere Arbeitsabläufe fest.
+
+    So sollen Menschen ohne Erlaubnis nicht an deine Daten kommen.
+
+    Du möchtest uns sehr vertrauliche Informationen schicken?
+    Dann empfehlen wir dir einen Brief mit der Post.
+    Bei E-Mails können wir keinen vollständigen Schutz der Daten garantieren.
+
+    ## 5. Änderungen an dieser Erklärung
+
+    Wir überarbeiten diese Regeln zum Datenschutz von Zeit zu Zeit.
+    Bitte lies deshalb gelegentlich wieder hier nach.
+
+    So erfährst du, wie wir deine Daten schützen.
+    Du erfährst auch, wie wir die Inhalte der Website verbessern.
+
+    Wichtige Änderungen zeigen wir mit einem gut sichtbaren Hinweis an.
+    Der Hinweis steht auf der Website.
+    Das betrifft diese Änderungen:
+
+    - Wie sammeln wir die persönlichen Daten, die du uns gibst?
+    - Wie nutzen wir diese Daten?
+    - Wie geben wir diese Daten weiter?
+
+    Wer die Website nutzt, erklärt sich mit diesen Datenschutzregeln einverstanden.
+
+    ## Fragen zum Datenschutz
+
+    Du hast eine Frage zu diesen Regeln?
+    Schreib uns eine E-Mail.
+    Die Kontaktdaten stehen im [Impressum](/impressum).
 ---
 
 # Datenschutzerklärung

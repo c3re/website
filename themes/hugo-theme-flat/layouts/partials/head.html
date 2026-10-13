@@ -1,10 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
+{{/* Keep assets local and limit live connections to the two public c3RE services. */}}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://spaceapi.c3re.de https://ical2json.c3re.de; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
 <meta name="buildtime" content="{{ time.Now }}">
 <link rel="icon" type="image/png" href="{{ "img/fav.png" | relURL }}">
 {{ $title := .Site.Title -}}
-{{ if .Params.Title -}}
-    {{ $title = printf "%s | %s" .Params.Title $title -}}
+{{ with partial "page-title.html" . -}}
+    {{ $title = printf "%s | %s" . $title -}}
 {{ end -}}
 
 {{ $description := "" -}}
@@ -54,28 +57,27 @@
         onload="renderMathInElement(document.body);"></script>
 {{ end }}
 
-<style>
-    body{
-        background-color: #202124;
-        display: none;
-    }
-</style>
+{{/* Restore preferences before styles load to avoid a flash of the wrong theme. */}}
+<script src="{{ "js/preferences.js" | relURL }}"></script>
+<link rel="stylesheet" href="{{ "lib/icofont/icofont.min.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />
 
-<link rel="preload" as="style" href="{{ "lib/icofont/icofont.min.css" | relURL }}" />
-<link rel="preload" as="style" href="{{ "css/syntax.css" | relURL }}" />
-<link rel="preload" as="style" href="{{ "css/style.css" | relURL }}" />
-
+{{ if .Params.easter_egg }}
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="{{ "css/easter-eggs.css" | relURL }}" />
+{{ if eq .Params.easter_egg "terminal" }}<script defer src="{{ "js/terminal.js" | relURL }}"></script>{{ end }}
+{{ else }}
 <link rel="preload" as="image" href="{{ "img/banner_unknown.jpg" | relURL }}" />
-<link rel="preload" as="image" href="{{ "img/banner_open.jpg" | relURL }}" />
-<link rel="preload" as="image" href="{{ "img/banner_closed.jpg" | relURL }}" />
-<link rel="preload" as="image" href="{{ "doorstatus/open.png" | relURL }}" />
-<link rel="preload" as="image" href="{{ "doorstatus/closed.png" | relURL }}" />
+{{ end }}
 
 
 
-<script defer src="/js/jquery-3.7.1.min.js"></script>
-<script defer src="/js/href_handling.js"></script>
-<script defer src="/js/door-status.js"></script>
-<script defer src="/js/calendar.js"></script>
-
-<link rel="preload" fetchpriority="high" as="image" href="/img/banner.png" type="image/png">
+<script defer src="{{ "js/href_handling.js" | relURL }}"></script>
+<script defer src="{{ "js/header.js" | relURL }}"></script>
+<script defer src="{{ "js/audio.js" | relURL }}"></script>
+{{ if not .Params.easter_egg }}
+<script defer src="{{ "js/door-status.js" | relURL }}"></script>
+<script defer src="{{ "js/calendar.js" | relURL }}"></script>
+{{ end }}

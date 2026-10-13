@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="single">
+    <h1 class="title">Seite nicht gefunden</h1>
+    <div class="content">
+        <p>{{ partial "text.html" (dict "standard" "Unter dieser Adresse ist keine Seite vorhanden." "easy" "Diese Seite gibt es nicht.") }}</p>
+        <p><a href="{{ "/" | relURL }}">Zur Startseite</a></p>
+        <p><a href="{{ "seitenuebersicht/" | relURL }}">Alle Seiten ansehen</a></p>
+    </div>
+</section>
+{{ end }}

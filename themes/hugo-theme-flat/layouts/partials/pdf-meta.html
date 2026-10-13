@@ -1,0 +1,8 @@
+{{- $url := . -}}
+{{- if and (hasPrefix $url "/dl/") (eq (lower (path.Ext $url)) ".pdf") -}}
+    {{- $file := printf "static%s" $url -}}
+    {{- if fileExists $file -}}
+        {{- $size := math.Ceil (div (float (os.Stat $file).Size) 1024) -}}
+        <span class="download-meta">(PDF, {{ $size }} KiB)</span>
+    {{- end -}}
+{{- end -}}

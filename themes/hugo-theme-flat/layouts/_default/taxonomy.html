@@ -1,14 +1,12 @@
 {{ define "main" }}
-    <section id="tags">
-        {{ $data := .Data }}
-        {{ range $key, $value := .Data.Terms.ByCount }}
-            {{ if $value.Name}}
-                <span class="tag">
-                    <a href="{{ $value.Name | urlize }}">
-                        {{ $value.Name }} <span>({{ $value.Count }})</span>
-                    </a>
-                </span>
+    <section class="single">
+        <h1 class="title">{{ partial "page-title.html" . }}</h1>
+        <ul>
+            {{ range .Data.Terms.ByCount }}
+                <li><a href="{{ .Page.RelPermalink }}">{{ partial "text.html" (dict "standard" (.Page.Title | humanize) "simple" (cond (eq .Page.Title "news") "Neuigkeiten" (.Page.Title | humanize))) }} ({{ .Count }})</a></li>
+            {{ else }}
+                <li>Hier sind noch keine Themen eingetragen.</li>
             {{ end }}
-        {{ end }}
+        </ul>
     </section>
 {{ end }}

@@ -1,0 +1,25 @@
+{{/* Add current technical information without rewriting the original privacy text. */}}
+{{ if eq . "easy" }}
+    <section aria-labelledby="easy-technische-hinweise">
+        <h2 id="easy-technische-hinweise">So arbeitet diese Website</h2>
+        <p>Die Website-Software setzt keine Cookies.<br>Sie nutzt keine Werbe-Tracker und keine Besucher-Analyse.<br>Tracker sind Programme, die dein Verhalten verfolgen.</p>
+        <p>Du kannst die Darstellung selbst ändern.<br>Zum Beispiel die Farben, die Schriftgröße oder die Sprache.<br>Erst wenn du einen solchen Knopf benutzt, merkt sich dein Browser die Auswahl.<br>Die Auswahl wird nicht an uns gesendet.<br>Ein Link zu Leichter Sprache ändert nur die angezeigte Seite.</p>
+        <p>Deine Auswahl bleibt in deinem Browser gespeichert.<br>Du kannst sie wieder ändern.<br>„Zurücksetzen“ löscht die gespeicherten Lesehilfen.<br>Die gewählte helle oder dunkle Darstellung bleibt erhalten.<br>Wenn du die Website-Daten im Browser löschst, wird auch diese Auswahl gelöscht.</p>
+        <p>Schriften, Bilder und Aufnahmen kommen von dieser Website.<br>Aufnahmen werden erst beim Starten geladen.<br>Karten und soziale Netzwerke sind nur verlinkt.<br>Erst wenn du einen Link öffnest, besuchst du die andere Website.</p>
+        <p>Für aktuelle Anzeigen fragt dein Browser zwei c3RE-Dienste ab:</p>
+        <ul>
+            <li><code>spaceapi.c3re.de</code>: Öffnungsstatus und Temperatur, etwa alle 30 Sekunden.</li>
+            <li><code>ical2json.c3re.de</code>: Termine, etwa alle 15 Minuten.</li>
+        </ul>
+        <p>Diese Dienste erhalten dabei deine IP-Adresse.<br>Das ist technisch für die Verbindung nötig.<br>Eine IP-Adresse kann zu den persönlichen Daten gehören.<br>Die Abfragen senden keine Cookies oder Anmeldedaten mit.<br>Unter „Weitere Hilfen“ kannst du „Live-Anzeigen pausieren“ einschalten.<br>Dann stoppen die Abfragen.</p>
+    </section>
+{{ else }}
+    <section aria-labelledby="technische-hinweise">
+        <h2 id="technische-hinweise">Ergänzende Hinweise zur technischen Website</h2>
+        <p>Die Website-Software setzt keine Cookies und verwendet weder Werbe-Tracker noch eine clientseitige Besucheranalyse.</p>
+        <p>Erst nach Ihrer aktiven Auswahl speichert der Browser die jeweilige Darstellungseinstellung im Local Storage: Farbschema, Sprache, Schriftgröße, Kontrast, Leseschrift, reduzierte Bewegung, Link-Hervorhebung oder Pause der Live-Anzeigen. Gespeichert werden ausschließlich die gewählten Werte, keine Besucherkennung oder Nutzungshistorie. Diese Werte werden nicht an einen Server übertragen. Das Öffnen eines Links zu Leichter Sprache ändert nur die Darstellung der aufgerufenen Seite und speichert keine Sprachwahl.</p>
+        <p>Die Werte bleiben bis zur Änderung, zum Zurücksetzen oder zum Löschen der Website-Daten im Browser gespeichert. „Zurücksetzen“ entfernt die gespeicherten Lesehilfen einschließlich der früheren Sprachwahl. Das bewusst gewählte Farbschema bleibt erhalten; es lässt sich ebenfalls durch Löschen der Website-Daten entfernen.</p>
+        <p>Schriften, Bilder und Audioaufnahmen werden von dieser Website bereitgestellt. Eine Aufnahme wird erst nach dem Starten angefordert. Karten und soziale Netzwerke sind ausschließlich verlinkt und werden erst durch Öffnen des jeweiligen Links aufgerufen.</p>
+        <p>Für die Live-Anzeigen fragt der Browser die öffentlichen Dienste <code>spaceapi.c3re.de</code> für Öffnungsstatus und Temperatur etwa alle 30 Sekunden sowie <code>ical2json.c3re.de</code> für Termine etwa alle 15 Minuten ab. Dabei wird technisch bedingt die IP-Adresse verarbeitet; eine IP-Adresse kann personenbezogen sein. Die Abfragen übertragen keine Cookies, Anmeldedaten, Darstellungseinstellungen oder Referrer-Angaben und übernehmen keine Antwort-Cookies. „Live-Anzeigen pausieren“ unter „Weitere Hilfen“ beendet diese Abfragen.</p>
+    </section>
+{{ end }}
