@@ -13,7 +13,7 @@
     "required": ["DEMO_USERNAME", "DEMO_PASSWORD"]
   },
   "build": {
-    "command": "make BASEURL=https://c3re.sagorski.org check"
+    "command": "make BASEURL=https://c3re.de check"
   },
   "assets": {
     "directory": "./public",
@@ -24,7 +24,7 @@
   },
   "routes": [
     {
-      "pattern": "c3re.sagorski.org",
+      "pattern": "c3re.de",
       "custom_domain": true
     }
   ]
