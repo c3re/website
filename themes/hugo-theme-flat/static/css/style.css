@@ -1138,6 +1138,19 @@ body.door_closed .banner {
   overflow-wrap: anywhere;
 }
 
+.banner-status-heatmap {
+  max-width: 100%;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: var(--color-header);
+  color: var(--color-fg-hyperlink);
+  font-family: var(--fonts-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
 .status-dot {
   flex: 0 0 8px;
   width: 8px;
