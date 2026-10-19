@@ -9,7 +9,7 @@ const body = text => text.replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/, "").tr
 
 for (const file of originals) {
     test(`Originaltext bleibt erhalten: ${file}`, async () => {
-        const original = execFileSync("git", ["show", `dd22591:content/${file}`], { encoding: "utf8" });
+        const original = execFileSync("git", ["show", `33278b4:content/${file}`], { encoding: "utf8" });
         const current = await readFile(new URL(`../content/${file}`, import.meta.url), "utf8");
         assert.equal(body(current), body(original));
         assert.match(current, /\neasy:\n/);
