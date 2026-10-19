@@ -92,9 +92,9 @@ easy:
     Das heißt: spenden.
     Wir nehmen gerne Spenden auf diesem Konto an:
 
-    Konto / IBAN: **DE22 4016 4528 0260 2961 00**\
-    BIC: **GENODEM1LHN**\
-    Bank: **Volksbank Südmünsterland-Mitte e.G.**
+    Konto / IBAN: **DE66 4286 1387 0260 2961 00**\
+    BIC: **GENODEM1BOB**\
+    Bank: **Volksbank Westmünsterland eG**
 
     IBAN ist die internationale Kontonummer.
     BIC ist die internationale Kennung der Bank.

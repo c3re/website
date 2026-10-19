@@ -22,3 +22,6 @@ dist
 # Local Cloudflare state and credentials
 /.wrangler/
 /.dev.vars*
+
+# Von make geladene Werkzeuge (Hugo)
+/.tools/
