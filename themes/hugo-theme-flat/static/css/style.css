@@ -2128,15 +2128,6 @@ html[data-theme="light"]:not([data-contrast="1"]) .social-links img {
   border: 0;
 }
 
-.language-notice {
-  padding: 12px;
-  border-radius: 6px;
-  background-color: var(--color-bg-block);
-  color: var(--color-fg-font-normal);
-  font-size: .875rem;
-  line-height: 1.5;
-}
-
 .skip-link {
   position: fixed;
   top: 8px;

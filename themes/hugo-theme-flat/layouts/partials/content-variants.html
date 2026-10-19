@@ -12,7 +12,6 @@
             {{ if eq $language "easy" }}
                 {{/* Preserve the short, deliberately separated lines of the draft. */}}
                 {{ $markdown = replaceRE `([^\n])\n` "$1  \n" $markdown }}
-                <p class="language-notice">Entwurf in Leichter Sprache. Dieser Text wurde noch nicht von einer Prüfgruppe geprüft.</p>
             {{ end }}
             {{ $content := $.RenderString (dict "display" "block") $markdown }}
             {{ $content = replaceRE `id="([^"]+)"` (printf `id="%s-$1"` $language) $content }}
