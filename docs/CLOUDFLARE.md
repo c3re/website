@@ -1,6 +1,6 @@
 # Vorschau auf Cloudflare Workers
 
-- Adresse: https://c3re.sagorski.org
+- Adresse: https://c3re.de
 - Worker: `c3re-website`
 - Konfiguration: `wrangler.jsonc`
 - Live-Stand: Workers Static Assets mit `worker/index.mjs` und HTTP-Basic-Auth
@@ -127,7 +127,7 @@ tdewolff/minify. Auf macOS sind beide über Homebrew verfügbar:
 
 ```sh
 brew install hugo minify
-make BASEURL=https://c3re.sagorski.org check
+make BASEURL=https://c3re.de check
 ```
 
 Die Adresse wird nur für diesen Build überschrieben. Die allgemeine
@@ -142,18 +142,18 @@ Die Erstveröffentlichung am 27.09.2026 erfolgte über Cloudflare MCP:
 3. Die von Cloudflare angeforderten Dateien mit dem kurzlebigen Upload-Token
    an die Asset-Upload-API übertragen.
 4. Die Asset-Version mit dem Abschluss-Token über MCP veröffentlichen.
-5. `c3re.sagorski.org` als Custom Domain mit dem Worker verbinden.
+5. `c3re.de` als Custom Domain mit dem Worker verbinden.
 
 Es wurden keine API-Schlüssel im Repository gespeichert. Cloudflare verwaltet
 DNS und das HTTPS-Zertifikat für die Custom Domain.
 
-Die bestehende Weiterleitungsregel der Zone für `*.sagorski.org` enthält eine
-Ausnahme `http.host ne "c3re.sagorski.org"`, damit diese Vorschau erreichbar ist.
-Die Ausnahme für `champagne-tycoon.sagorski.org` bleibt ebenfalls bestehen.
-Diese Zonenregel wird separat von `wrangler.jsonc` verwaltet.
+Zonenregeln wie Weiterleitungen und Configuration Rules gehören zur Zone
+`c3re.de` und werden separat von `wrangler.jsonc` verwaltet. Bei einer
+Weiterleitungsregel muss sichergestellt sein, dass `c3re.de` selbst nicht
+darunter fällt.
 
 Eine zusätzliche Configuration Rule deaktiviert Web Analytics/RUM und Zaraz
-ausschließlich für `c3re.sagorski.org`.
+ausschließlich für `c3re.de`.
 
 ## Prüfung und bestehender Bot-Schutz
 
@@ -164,12 +164,13 @@ Leichte Sprache sowie echte Kalender- und Öffnungsdaten. 11 Inhaltstests,
 Nach Übernahme der Configuration Rule lud der Live-Browser keine externen
 Analyse-Skripte und meldete keine fehlgeschlagenen Netzwerkanfragen.
 
-Auf der bestehenden Zone `sagorski.org` sind Bot Fight Mode, JavaScript Detections
-und AI Labyrinth aktiviert. Cloudflare ergänzt daher Sicherheitscode und kann
-das Cookie `cf_clearance` setzen; im Live-Test trat dies auf. Die lokale
-Datenschutzprüfung ist somit kein Nachweis eines vollständig cookiefreien
-Cloudflare-Betriebs. Die domainweiten Sicherheitsfunktionen wurden durch dieses
-Deployment nicht abgeschaltet. Bot Fight Mode unterstützt laut
+Bei der Erstveröffentlichung waren auf der damaligen Zone Bot Fight Mode,
+JavaScript Detections und AI Labyrinth aktiviert. Cloudflare ergänzt dann
+Sicherheitscode und kann das Cookie `cf_clearance` setzen; im Live-Test trat
+dies auf. Welche dieser Funktionen auf der Zone `c3re.de` aktiv sind, ist nach
+dem Umzug neu zu prüfen. Die lokale Datenschutzprüfung ist kein Nachweis eines
+vollständig cookiefreien Cloudflare-Betriebs. Die domainweiten
+Sicherheitsfunktionen werden durch das Deployment nicht abgeschaltet. Bot Fight Mode unterstützt laut
 [Cloudflare-Dokumentation](https://developers.cloudflare.com/bots/get-started/bot-fight-mode/#limitations)
 keine Ausnahme über WAF- oder Page Rules für eine einzelne Subdomain.
 
