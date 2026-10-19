@@ -22,8 +22,11 @@ liegen als Markdown in `content/`, das Aussehen steckt im Theme
 
 ## Lokal bauen
 
-Benötigt werden [Hugo](https://gohugo.io/installation/) (die CI nutzt
-v0.161.1) und [minify](https://github.com/tdewolff/minify).
+Benötigt wird [minify](https://github.com/tdewolff/minify). Das Theme braucht
+mindestens Hugo 0.161.1. Ist auf dem System kein oder ein älteres
+[Hugo](https://gohugo.io/installation/) installiert, lädt `make` das
+Release-Binary selbst nach `.tools/` (dafür werden `wget` oder `curl` und `tar`
+gebraucht). Mit `make HUGO_VERSION=…` lässt sich die Version ändern.
 
 ```sh
 make            # baut die Seite nach public/ und minimiert sie
