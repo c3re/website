@@ -56,5 +56,4 @@ veröffentlicht und für GitHub gesichert. Der Menüpunkt Downloads bleibt daher
 in der Demo entfernt; seine bisherige Seitenadresse ist weiterhin verfügbar.
 
 Die aktive Cloudflare-Version ist `cc7c3731-f629-465d-a388-c8d72facd6af`.
-Der Passwortschutz und die bisherigen Zugangsdaten bleiben bestehen. Details
-und die Grenzen der Live-Prüfung stehen in `docs/CLOUDFLARE.md`.
+Der Passwortschutz und die bisherigen Zugangsdaten bleiben bestehen.
