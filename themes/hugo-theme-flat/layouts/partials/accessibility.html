@@ -1,0 +1,44 @@
+<button id="a11y-toggle" class="a11y-tab" type="button" aria-expanded="false" aria-controls="a11y-panel" aria-label="Barrierefreiheit" title="Barrierefreiheit" hidden>
+    {{ partial "a11y-icon.html" "access" }}
+    <span id="a11y-count" class="a11y-count" aria-hidden="true" hidden></span>
+</button>
+<div id="a11y-panel" class="a11y-panel" role="dialog" aria-labelledby="a11y-title" tabindex="-1" hidden>
+    <div class="a11y-heading">
+        <h2 id="a11y-title">Barrierefreiheit</h2>
+        <button id="preferences-reset" class="a11y-reset" type="button"><span aria-hidden="true">↺</span> Zurücksetzen</button>
+    </div>
+    <button id="easy-language" class="a11y-row" type="button" role="switch" aria-checked="false" data-toggle-preference="language">
+        <span class="a11y-row-label"><span class="a11y-icon">{{ partial "a11y-icon.html" "language" }}</span><span class="a11y-row-copy"><span>Leichte Sprache</span><small>Kurze Sätze, ein Gedanke pro Zeile</small></span></span>
+        <span class="a11y-switch-track" aria-hidden="true"><span class="a11y-switch-knob"></span></span>
+    </button>
+    <div class="a11y-row">
+        <span class="a11y-row-label"><span class="a11y-icon" aria-hidden="true"><small>A</small>A</span><span>Schriftgröße</span></span>
+        <div class="a11y-size-controls" role="group" aria-label="Schriftgröße">
+            <button id="font-size-down" type="button" aria-label="Schrift kleiner">A−</button>
+            <output id="font-size-value" aria-live="polite">100 %</output>
+            <button id="font-size-up" type="button" aria-label="Schrift größer">A+</button>
+        </div>
+    </div>
+    <button class="a11y-row" type="button" role="switch" aria-checked="false" data-toggle-preference="contrast">
+        <span class="a11y-row-label"><span class="a11y-icon">{{ partial "a11y-icon.html" "contrast" }}</span><span class="a11y-row-copy"><span>Hoher Kontrast</span></span></span>
+        <span class="a11y-switch-track" aria-hidden="true"><span class="a11y-switch-knob"></span></span>
+    </button>
+    <button class="a11y-row" type="button" role="switch" aria-checked="false" data-toggle-preference="font">
+        <span class="a11y-row-label"><span class="a11y-icon a11y-icon-dys" aria-hidden="true">Aa</span><span class="a11y-row-copy"><span>Lesefreundliche Schrift</span><small>OpenDyslexic</small></span></span>
+        <span class="a11y-switch-track" aria-hidden="true"><span class="a11y-switch-knob"></span></span>
+    </button>
+    <button id="audio-start" class="a11y-read" type="button" aria-describedby="audio-note" disabled>{{ partial "a11y-icon.html" "speaker" }}<span id="audio-start-label">Seite vorlesen</span></button>
+    <p id="audio-note" class="a11y-note">Die Audiodatei für diese Seite wird später ergänzt.</p>
+    <details class="a11y-more">
+        <summary>Weitere Hilfen</summary>
+        {{ range slice (dict "key" "motion" "label" "Animationen aus") (dict "key" "links" "label" "Links hervorheben") (dict "key" "livePaused" "label" "Live-Anzeigen pausieren") }}
+            <button class="a11y-row" type="button" role="switch" aria-checked="false" data-toggle-preference="{{ .key }}">
+                <span class="a11y-row-copy"><span>{{ .label }}</span></span>
+                <span class="a11y-switch-track" aria-hidden="true"><span class="a11y-switch-knob"></span></span>
+            </button>
+        {{ end }}
+        <p class="a11y-note">Reduzierte Bewegung im Betriebssystem wird immer berücksichtigt.</p>
+    </details>
+    <p class="a11y-storage">Nur deine gewählte Darstellung wird lokal gespeichert. <a href="{{ "datenschutz/#technische-hinweise" | relURL }}">Mehr zum Datenschutz</a></p>
+</div>
+<p id="preferences-status" class="language-status" role="status" aria-live="polite" aria-atomic="true"></p>

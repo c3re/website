@@ -1,0 +1,8 @@
+{{/* Keep original Markdown intact while nesting its headings below the page title. */}}
+{{- $content := .Content -}}
+{{- if findRE `<h1[ >]` $content -}}
+    {{- range seq 5 -1 1 -}}
+        {{- $content = replaceRE (printf `<(/?)h%d([ >])` .) (printf `<${1}h%d${2}` (add . 1)) $content -}}
+    {{- end -}}
+{{- end -}}
+{{- return (partial "content-language.html" $content) -}}

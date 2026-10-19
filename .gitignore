@@ -12,3 +12,13 @@ hugo.linux
 # Temporary lock file while building
 /.hugo_build.lock
 dist
+
+# Development-only accessibility checks
+/node_modules/
+/test-results/
+/playwright-report/
+/a11y-reports/
+
+# Local Cloudflare state and credentials
+/.wrangler/
+/.dev.vars*

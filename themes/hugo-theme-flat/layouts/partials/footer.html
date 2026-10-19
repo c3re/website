@@ -1,35 +1,25 @@
 <footer class="footer">
-    <div class="footer-row">
-        {{ range .Site.Sections }}
-            {{ $section := . }}
-            {{ with .OutputFormats.Get "rss" }}
-                <a class="footer-item" href="{{ .Permalink }}">
-                    Feed of {{ $section.Section | humanize }}
-                    <i class="icofont-rss"></i>
-                </a>
-            {{ end }}
-        {{ end }}
-
-        {{ if not (or .IsHome .IsSection) }}
-            {{ $term := . }}
-            {{ with .OutputFormats.Get "rss" }}
-                <a class="footer-item" href="{{ .Permalink }}">
-                    Feed of "{{ $term.Title }}"
-                    <i class="icofont-rss"></i>
-                </a>
-            {{ end }}
-        {{ end }}
-    </div>
-
-    {{ range .Site.Params.footer_rows }}
-        <div class="footer-row">
-            {{ range .items }}
-                {{ with .pre }}
-                    <span class="footer-item">{{ . | safeHTML }}</span>
-                {{ else }}
-                    <a class="footer-item" href="{{ .url }}">{{ .name }}</a>
+    <div class="footer-inner">
+        {{ range $index, $row := .Site.Params.footer_rows }}
+            <div class="footer-row">
+                {{ range $row.items }}
+                    {{ if .pre }}
+                        <span class="footer-label"><span data-language="standard" lang="en">{{ .pre }}</span><span data-language="easy">{{ .simple | default .pre }}</span></span>
+                    {{ else }}
+                        <a class="footer-item" href="{{ .url | relURL }}">{{ partial "text.html" (dict "standard" .name "simple" .simple) }}{{ with partial "pdf-meta.html" .url }} {{ . }}{{ end }}{{ if hasPrefix .url "https://" }} <span aria-hidden="true">↗</span>{{ end }}</a>
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-        </div>
-    {{ end }}
+                {{ if eq $index 0 }}
+                    {{ range $.Site.Sections }}
+                        {{ with .OutputFormats.Get "rss" }}
+                            <a class="footer-item" href="{{ .RelPermalink }}">{{ partial "text.html" (dict "standard" "News-Feed" "simple" "Neuigkeiten abonnieren (RSS)") }} <i class="icofont-rss" aria-hidden="true"></i></a>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+        <nav class="footer-row footer-discoveries" aria-label="Kleine Entdeckungen">
+            <a class="footer-terminal" href="{{ "terminal/" | relURL }}" aria-label="Terminal öffnen"><span aria-hidden="true">[ &gt;_ ]</span></a>
+        </nav>
+    </div>
 </footer>

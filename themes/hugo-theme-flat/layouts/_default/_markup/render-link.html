@@ -1,0 +1,4 @@
+{{ $url := .Destination }}
+{{/* A legacy news article stores this external address without its scheme. */}}
+{{ if eq $url "di.day" }}{{ $url = "https://di.day" }}{{ end }}
+<a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}{{ with partial "pdf-meta.html" $url }} {{ . }}{{ end }}</a>

@@ -1,6 +1,7 @@
 {{ $pag := $.Paginator }}
 
-<nav class="pagination">
+{{ if gt $pag.TotalPages 1 }}
+<nav class="pagination" aria-label="Weitere Seiten">
 
     {{ $size := 2 }}
     {{ $current := $pag.PageNumber}}
@@ -20,12 +21,13 @@
             {{ $prev = .PageNumber }}
 
             {{ if eq .PageNumber $current }}
-                <a class="enabled current" href="{{ .URL }}">{{ .PageNumber }}</a>
+                <a class="enabled current" href="{{ .URL }}" aria-current="page" aria-label="Seite {{ .PageNumber }}">{{ .PageNumber }}</a>
             {{ else }}
-                <a class="enabled" href="{{ .URL }}">{{ .PageNumber }}</a>
+                <a class="enabled" href="{{ .URL }}" aria-label="Seite {{ .PageNumber }}">{{ .PageNumber }}</a>
             {{ end }}
 
         {{ end }}
     {{ end }}
 
 </nav>
+{{ end }}

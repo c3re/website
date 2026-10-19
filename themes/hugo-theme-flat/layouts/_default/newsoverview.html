@@ -1,40 +1,14 @@
 {{ define "main" }}
 
-<div class="max-wrapper">
-    <div id="list-page">
-        {{ $pages := where .Site.RegularPages "Type" "eq" "news" }}
-        {{ $paginator := .Paginate $pages }}
-        {{ range $paginator.Pages }}
-            <section class="list-item">
-                <h1 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-
-                <div class="tips">
-                    <div class="date">
-                        <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
-                    </div>
-
-                    {{ with .Params.Tags }}
-                        <div class="tags">
-                            <span>Tags:</span>
-                            {{ range first 5 . }}
-                                <a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-                            {{ end }}
-                        </div>
-                    {{ end }}
-                </div>
-
-                <div class="summary">
-                    {{ with .Description }}
-                        {{ . }}
-                    {{ else }}
-                        {{ .Summary }}
-                    {{ end }}
-                </div>
-            </section>
-        {{ end }}
-
-    </div>
-    {{ partial "pagination.html" . }}
-</div>
+<section class="single">
+    <h1 class="title">{{ partial "text.html" (dict "standard" (partial "page-title.html" .) "easy" .Params.easy.title) }}</h1>
+    {{ partial "content-variants.html" . }}
+</section>
+{{ $pages := (where .Site.RegularPages "Type" "news").ByPublishDate.Reverse }}
+{{ $paginator := .Paginate $pages }}
+{{ range $paginator.Pages }}
+    {{ partial "news-card.html" . }}
+{{ end }}
+{{ partial "pagination.html" . }}
 
 {{ end }}

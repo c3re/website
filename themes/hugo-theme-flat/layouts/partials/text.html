@@ -1,0 +1,7 @@
+{{/* Share one language selection for content and interface labels. */}}
+{{- $easy := .easy | default .simple | default .standard -}}
+{{- if ne .standard $easy -}}
+    <span data-language="standard">{{ .standard }}</span><span data-language="easy">{{ $easy }}</span>
+{{- else -}}
+    {{ .standard }}
+{{- end -}}

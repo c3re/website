@@ -1,16 +1,13 @@
-<div class="side-calendar">
-    <h2>Termine</h2>
-    <br>
-    <a href="https://klaut.c3re.de/apps/calendar/p/A7sGSxRJdzsHBJea">Zum Kalender</a>
-    <br>
-    <br>
-
-    <ul id="calendar" class="loading">
-
-        <li class="loading">Loading...</li>
-    </ul>
-
-
-
-</div>
-
+<section class="side-calendar" aria-labelledby="calendar-heading">
+    <div class="side-heading">
+        <h2 id="calendar-heading">Termine</h2>
+        <a href="https://klaut.c3re.de/apps/calendar/p/A7sGSxRJdzsHBJea">{{ partial "text.html" (dict "standard" "Zum Kalender" "simple" "Alle Termine ansehen") }} <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <p id="calendar-status" role="status" aria-live="polite">
+        Termine findest du im verlinkten Kalender.
+    </p>
+    <ul id="calendar" aria-busy="false"></ul>
+    <p class="live-note">{{ partial "text.html" (dict "standard" "Live-Aktualisierung pausiert. Die Termine können veraltet sein." "easy" "Die Termine werden gerade nicht erneuert. Bitte prüfe sie im Kalender.") }}</p>
+    <p id="calendar-copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript><p>Bitte &ouml;ffne den Kalender &uuml;ber den Link oben. Ohne JavaScript werden hier keine Termine geladen.</p></noscript>
+</section>

@@ -1,41 +1,24 @@
 {{ define "main" }}
 
-<section class="single">
-    <h1 class="title">{{ .Title }}</h1>
-{{/*
-    <div class="tip">
-        <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006/01/02" }}</time>
-        <span class="split">·</span>
-        <span> {{ .WordCount }} words </span>
-        <span class="split">·</span>
-        <span>
-            {{ .ReadingTime }} minutes to read
-        </span>
-    </div>
-    */}}
+<article class="single{{ if eq .File.ContentBaseName "kontakt" }} contact-page{{ end }}">
+    <h1 class="title">{{ partial "text.html" (dict "standard" .Title "simple" .Params.simple.title "easy" .Params.easy.title) }}</h1>
+    {{ if eq .Type "news" }}
+        <p class="news-meta"><time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "02.01.2006" }}</time></p>
+    {{ end }}
+    {{ with .Params.tags }}
+        <div class="taxonomies">
+            {{ partial "text.html" (dict "standard" "Schlagwörter:" "simple" "Themen:") }}
+            {{ range . }}
+                <a href="{{ "tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
+            {{ end }}
+        </div>
+    {{ end }}
+    {{ partial "content-variants.html" . }}
 
-    <div class="taxonomies">
-
-
-        {{ with .Params.tags }}
-            <div>
-                Tags:
-                {{ range . }}
-                    <a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-                {{ end }}
-            </div>
-        {{ end }}
-    </div>
-
-
-    <div class="content">
-        {{ .Content }}
-    </div>
-
-    {{ with and .Site.Params.remark42 .Params.show_comments }}
+    {{ if and .Site.Params.remark42 .Params.show_comments }}
         <hr />
         {{ partial "comment.html" . }}
     {{ end }}
-</section>
+</article>
 
 {{ end }}

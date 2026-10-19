@@ -1,0 +1,168 @@
+/* c3RE Wiki.js Theme (Wiki.js 2.x, Vuetify)
+ * Farben und Schriften wie www.c3re.de (themes/hugo-theme-flat/static/css/style.css).
+ * Einbau: Administration → Theme → "CSS Override". Siehe docs/wiki/README.md.
+ * Dunkel = Wiki.js-Dark-Mode (.theme--dark), hell = .theme--light.
+ */
+
+/* Schriften von der Hauptseite. Falls der Browser sie nicht laden darf,
+   greifen System-Schriften. */
+@font-face {
+  font-family: "Noto Sans"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("https://www.c3re.de/fonts/noto-sans-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono"; font-style: normal; font-display: swap; font-weight: 400;
+  src: url("https://www.c3re.de/fonts/space-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Mono"; font-style: normal; font-display: swap; font-weight: 700;
+  src: url("https://www.c3re.de/fonts/space-mono-latin-700-normal.woff2") format("woff2");
+}
+
+:root {
+  --c3-font: "Noto Sans", system-ui, Arial, sans-serif;
+  --c3-mono: "Space Mono", "DejaVu Sans Mono", Consolas, monospace;
+}
+
+/* Dunkel (Standard, wie die Webseite) */
+.theme--dark.v-application, .v-application.theme--dark {
+  --c3-page: #202124;
+  --c3-content: #262628;
+  --c3-block: #2b2b2b;
+  --c3-deep: #1b1c1f;
+  --c3-border: #303136;
+  --c3-text: #c2c2b6;
+  --c3-strong: #ecebe4;
+  --c3-muted: #979288;
+  --c3-link: #62de9e;
+  --c3-link-hover: #3ecb50;
+  --c3-accent-soft: rgba(98, 222, 158, .12);
+  --c3-accent-line: rgba(98, 222, 158, .45);
+  --c3-danger: #f0605f;
+}
+/* Hell */
+.theme--light.v-application, .v-application.theme--light {
+  --c3-page: #ebebeb;
+  --c3-content: #f6f6f4;
+  --c3-block: #ebebe9;
+  --c3-deep: #e3e3e1;
+  --c3-border: #e0e0de;
+  --c3-text: #4e403e;
+  --c3-strong: #2b2422;
+  --c3-muted: #696460;
+  --c3-link: #1d743a;
+  --c3-link-hover: #166030;
+  --c3-accent-soft: rgba(31, 122, 61, .1);
+  --c3-accent-line: rgba(31, 122, 61, .45);
+  --c3-danger: #c0392b;
+}
+
+.v-application, .v-application [class*="text-"], .v-application .v-btn,
+.v-application .v-list-item__title, .v-application .headline {
+  font-family: var(--c3-font) !important;
+}
+.v-application {
+  background-color: var(--c3-page) !important;
+  color: var(--c3-text);
+}
+
+/* Kopfzeile und Navigation */
+.v-application .nav-header, .v-application .v-app-bar, .v-application .v-toolbar {
+  background: var(--c3-page) !important;
+  color: var(--c3-strong) !important;
+  border-bottom: 1px solid var(--c3-border);
+  box-shadow: none !important;
+}
+.v-application .v-navigation-drawer, .v-application .v-navigation-drawer .v-list {
+  background: var(--c3-content) !important;
+  border-right: 1px solid var(--c3-border);
+}
+.v-application .v-navigation-drawer .v-list-item { color: var(--c3-text) !important; }
+.v-application .v-navigation-drawer .v-list-item--active,
+.v-application .v-navigation-drawer .v-list-item:hover {
+  background: var(--c3-accent-soft) !important;
+  color: var(--c3-link) !important;
+}
+.v-application .v-icon { color: inherit; }
+
+/* Seiteninhalt */
+.v-application .page-col-content, .v-application .v-card, .v-application .v-sheet,
+.v-application .v-sheet.v-card {
+  background: var(--c3-content) !important;
+  color: var(--c3-text);
+  border-radius: 6px;
+  box-shadow: none !important;
+}
+.v-application .v-card { border: 1px solid var(--c3-border); }
+.v-application .page-col-sd, .v-application .v-footer {
+  background: var(--c3-page) !important;
+  color: var(--c3-muted) !important;
+  border-top: 1px solid var(--c3-border);
+}
+
+.contents { color: var(--c3-text); line-height: 1.6; }
+.contents h1, .contents h2, .contents h3, .contents h4, .contents h5, .contents h6 {
+  color: var(--c3-strong);
+  font-family: var(--c3-font);
+  border-bottom-color: var(--c3-border);
+}
+.contents h1 { font-weight: 700; }
+.contents a, .v-application a { color: var(--c3-link); }
+.contents a:hover, .v-application a:hover { color: var(--c3-link-hover); }
+.contents a:focus-visible, .v-application a:focus-visible,
+.v-application .v-btn:focus-visible, .v-application button:focus-visible {
+  outline: 2px solid var(--c3-link);
+  outline-offset: 3px;
+}
+.contents blockquote {
+  background: var(--c3-block);
+  border-left: 4px solid var(--c3-accent-line);
+  color: var(--c3-muted);
+}
+.contents hr { background: var(--c3-border); }
+.contents table.table-striped thead th { background: var(--c3-deep); color: var(--c3-strong); }
+.contents table td, .contents table th { border-color: var(--c3-border); }
+.contents table.table-striped tbody tr:nth-child(odd) td { background: var(--c3-block); }
+
+/* Code */
+.contents code, .contents pre, .contents kbd {
+  font-family: var(--c3-mono);
+  background: var(--c3-deep);
+  color: var(--c3-strong);
+  border: 1px solid var(--c3-border);
+  border-radius: 4px;
+}
+.contents pre > code { border: 0; }
+
+/* Hinweisboxen */
+.contents blockquote.is-info    { border-left-color: var(--c3-link); }
+.contents blockquote.is-danger  { border-left-color: var(--c3-danger); }
+
+/* Buttons und Felder */
+.v-application .v-btn.primary, .v-application .v-btn.v-btn--has-bg.primary {
+  background: var(--c3-link) !important;
+  color: var(--c3-page) !important;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.v-application .v-btn { text-transform: none; letter-spacing: 0; }
+.v-application .v-input input, .v-application .v-input textarea,
+.v-application .v-text-field--outlined fieldset {
+  color: var(--c3-strong);
+  border-color: var(--c3-border);
+}
+.v-application .v-text-field--solo .v-input__slot, .v-application .v-text-field--filled .v-input__slot {
+  background: var(--c3-block) !important;
+}
+
+/* Tag-Chips */
+.v-application .v-chip { background: var(--c3-block) !important; color: var(--c3-text) !important; border: 1px solid var(--c3-border); }
+
+/* Weniger Bewegung respektieren */
+@media (prefers-reduced-motion: reduce) {
+  .v-application *, .v-application *::before, .v-application *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

@@ -1,0 +1,60 @@
+{{ define "main" }}
+<article class="egg-page egg-{{ .Params.easter_egg }}">
+    <h1 class="title">{{ partial "text.html" (dict "standard" .Title "easy" .Params.easy.title) }}</h1>
+    {{ if eq .Params.easter_egg "teapot" }}
+        <figure class="teapot-figure">
+            <pre aria-hidden="true">      (  )
+       )(
+     .____.
+    /      \___
+   |  418   ___)
+    \______/</pre>
+            <figcaption lang="en">I'm a teapot.</figcaption>
+        </figure>
+    {{ end }}
+    {{ partial "content-variants.html" . }}
+    {{ if eq .Params.easter_egg "terminal" }}
+        <section class="terminal-shell" aria-label="Spielterminal">
+            <div class="terminal-heading"><span>visitor@hackerhuette:~</span><span>lokal</span></div>
+            <div id="terminal-transcript" class="terminal-transcript" role="region" aria-label="Bisherige Befehle und Antworten" tabindex="0">
+                <p>c3RE / <span lang="en">All Creatures Welcome.</span></p>
+                <p>Tippe <code>help</code>. Neugier ist kein Fehler.</p>
+                <ol id="terminal-history"></ol>
+            </div>
+            <form id="terminal-form" hidden autocomplete="off">
+                <label for="terminal-command">Befehl</label>
+                <div class="terminal-entry">
+                    <span aria-hidden="true">$</span>
+                    <input id="terminal-command" type="text" maxlength="160" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="terminal-help">
+                    <button class="egg-button" type="submit">Ausführen</button>
+                </div>
+                <p id="terminal-help" class="egg-hint">Enter führt aus. Pfeil hoch und runter holen deine letzten Befehle. Mit <code>clear</code> leerst du den Verlauf.</p>
+                <div class="egg-controls" aria-label="Befehle ausprobieren">
+                    {{ range slice "help" "ls" "mate" }}<button class="egg-button" type="button" data-command="{{ . }}" aria-label="Befehl {{ . }} ausführen">{{ . }}</button>{{ end }}
+                </div>
+            </form>
+            <p id="terminal-status" class="language-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
+        <noscript><p>Für die Befehlseingabe brauchst du JavaScript. Die Links im Verzeichnis funktionieren auch ohne.</p></noscript>
+        <details class="terminal-directory content">
+            <summary>Verzeichnis ohne Befehle öffnen</summary>
+            <ul id="terminal-directory">
+                <li><a data-route="home" href="{{ "/" | relURL }}">Startseite</a></li>
+                <li><a data-route="philosophie" href="{{ "unsere-philosophie/" | relURL }}">Philosophie</a></li>
+                <li><a data-route="kontakt" href="{{ "kontakt/" | relURL }}">Kontakt</a></li>
+                <li><a data-route="teapot" href="{{ "418/" | relURL }}">/418/</a></li>
+                <li><a data-route="null" href="{{ "dev/null/" | relURL }}">/dev/null/</a></li>
+                <li><a data-route="cookies" href="{{ "cookies.txt" | relURL }}">/cookies.txt</a></li>
+            </ul>
+        </details>
+    {{ end }}
+    <nav class="egg-exits content" aria-label="Zurück zur Website">
+        {{ if eq .Params.easter_egg "null" }}
+            <a href="{{ "/" | relURL }}" aria-label="cd /: zurück zur Startseite"><code>cd /</code></a>
+        {{ else }}
+            <a href="{{ "/" | relURL }}">Zur Startseite</a>
+        {{ end }}
+        {{ if ne .Params.easter_egg "terminal" }}<a href="{{ "terminal/" | relURL }}">Zum Terminal</a>{{ end }}
+    </nav>
+</article>
+{{ end }}
