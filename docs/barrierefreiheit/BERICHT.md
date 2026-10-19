@@ -8,7 +8,7 @@ Rechtsrahmen: freiwilliges WCAG-2.2-AA-Ziel. Feedback wie bestätigt ausschließ
 
 Die technischen Basisprobleme aus dem Audit wurden weiter bearbeitet und durch
 eine dauerhafte Testsuite abgesichert. Die **elf bisherigen Markdown-Textkörper
-bleiben unverändert** gegenüber `dd22591` (Dateiende-Whitespace ausgenommen).
+bleiben unverändert** gegenüber `33278b4` (Dateiende-Whitespace ausgenommen).
 Semantische Auszeichnungen und Metadaten ergänzt das Theme bei der Ausgabe.
 
 **Keine uneingeschränkte Konformitätsbehauptung:** Tests mit echten Screenreadern,
@@ -59,7 +59,7 @@ npm run test:a11y
 npm run audit:lighthouse
 ```
 
-Die Git-Historie muss `dd22591` enthalten. Der CI-Checkout lädt dafür die vollständige
+Die Git-Historie muss `33278b4` enthalten. Der CI-Checkout lädt dafür die vollständige
 Historie. `test:a11y` baut die Website und startet seinen eigenen lokalen Testserver.
 Der Testserver ist Entwicklungswerkzeug, kein neuer Produktionsdienst.
 

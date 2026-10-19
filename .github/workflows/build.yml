@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # Content regression tests compare the original texts with dd22591.
+          # Content regression tests compare the original texts with 33278b4.
           fetch-depth: 0
       - uses: actions/setup-go@v5
         with:

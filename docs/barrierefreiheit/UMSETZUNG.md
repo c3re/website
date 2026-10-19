@@ -12,7 +12,7 @@ WCAG-Abnahme. Die Kriterienmatrix und Prüfergebnisse stehen in [BERICHT.md](BER
   kurz beim Laden; reduzierte Bewegung wird berücksichtigt.
 - Dunkel bleibt nach erneuter ausdrücklicher Bestätigung der Standard.
   Eine gespeicherte manuelle Auswahl hat Vorrang, nicht die Systemeinstellung.
-- Die normale Textfassung stammt wieder aus dem ursprünglichen Stand `dd22591`.
+- Die normale Textfassung stammt wieder aus dem ursprünglichen Stand `33278b4`.
   Nur eine getrennte Leichte-Sprache-Fassung wird ergänzt.
 - Keine Browserstimme: Vorlesen verwendet die freigegebenen Audiodateien.
   Die bereits vorhandene Aufnahme unter `static/audio/einfache-sprache/` bleibt
@@ -52,7 +52,7 @@ WCAG-Abnahme. Die Kriterienmatrix und Prüfergebnisse stehen in [BERICHT.md](BER
 
 Alle elf Markdown-Dateien enthalten den unveränderten normalen Text und einen
 zusätzlichen `easy`-Block im Frontmatter. Die zwischenzeitlichen `simple`-Blöcke
-wurden entfernt. Der Vergleich aller normalen Textkörper gegen `dd22591` besteht,
+wurden entfernt. Der Vergleich aller normalen Textkörper gegen `33278b4` besteht,
 wobei Leerzeichen/Zeilenumbrüche am Dateiende beim automatischen Vergleich
 ausgenommen sind. Veraltete Aussagen und historische Links wurden dabei nicht
 eigenmächtig redaktionell korrigiert.
@@ -149,7 +149,7 @@ npm run audit:lighthouse
 ```
 
 Voraussetzungen sind Hugo 0.156.0, `minify`, Node.js 22 und die vollständige
-Git-Historie für den Originaltextvergleich gegen `dd22591`. `npm run test:a11y`
+Git-Historie für den Originaltextvergleich gegen `33278b4`. `npm run test:a11y`
 baut selbst und startet den lokalen Testserver.
 
 Geprüft werden alle ausgelieferten HTML-Seiten, beide Sprachfassungen, beide Themes,
