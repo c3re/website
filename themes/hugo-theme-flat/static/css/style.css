@@ -49,6 +49,47 @@ html[data-theme="light"] {
   color-scheme: light;
 }
 
+/* CCC colors: 40C3 styleguide (https://events.ccc.de/congress/2026/infos/styleguide/, CC0) */
+html[data-theme="ccc"] {
+  --ccc-dark: #001300;
+  --ccc-neutral: #ebedf0;
+  --ccc-primary: #75b44b;
+  --ccc-accent: #ffbc40;
+  --color-bg-page: #001300;
+  --color-bg-content: #041b04;
+  --color-bg-block: #0a280a;
+  --color-bg-deep: #000a00;
+  --color-border: #1f4a1f;
+  --color-fg-tiny-line: #2d5f2d;
+  --color-fg-font-normal: #ebedf0;
+  --color-fg-strong: #ffffff;
+  --color-fg-muted: #a3bfa0;
+  --color-fg-hyperlink: #75b44b;
+  --color-fg-hyperlink-hover: #ffbc40;
+  --color-accent-soft: rgba(117, 180, 75, .16);
+  --color-accent-line: rgba(117, 180, 75, .55);
+  --color-danger: #ea6f82;
+  --color-danger-line: rgba(234, 111, 130, .55);
+  --color-header: #001300;
+  --fonts-sans-en: "Hack", "DejaVu Sans Mono", "Consolas";
+  --fonts-mono-en: "Hack", "DejaVu Sans Mono", "Consolas", "Courier";
+  --fonts-display: "Jersey 10", "Hack", monospace;
+  color-scheme: dark;
+}
+
+/* Pixel display font for headings; sized up because Jersey 10 is small. */
+html[data-theme="ccc"] :is(.single .title, .content h1, .content h2, .content h3, .side h2, .side-heading h2, .site-title) {
+  font-family: var(--fonts-display);
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+
+html[data-theme="ccc"] :is(.single .title, .content h1) { font-size: clamp(2.25rem, 5vw, 3rem); }
+html[data-theme="ccc"] .content h2 { font-size: 1.875rem; }
+html[data-theme="ccc"] .content h3 { font-size: 1.5rem; font-weight: 400; }
+html[data-theme="ccc"] .site-title { font-size: 24px; font-weight: 400; }
+html[data-theme="ccc"] :is(.side h2, .side-heading h2) { font-size: 1.5rem; font-weight: 400; }
+
 /* High contrast colors */
 html[data-contrast="1"] {
   --color-bg-page: #000;
@@ -553,12 +594,16 @@ h3 {
   background-color: var(--color-bg-block);
 }
 
+/* The icon shows the design the button switches to: dark → light → CCC → dark. */
+.theme-icon-light,
 .theme-icon-dark,
-html[data-theme="light"] .theme-icon-light {
+.theme-icon-ccc {
   display: none;
 }
 
-html[data-theme="light"] .theme-icon-dark {
+html:not([data-theme="light"]):not([data-theme="ccc"]) .theme-icon-light,
+html[data-theme="light"] .theme-icon-ccc,
+html[data-theme="ccc"] .theme-icon-dark {
   display: block;
 }
 

@@ -1,6 +1,13 @@
 (function () {
     const root = document.documentElement;
     const keys = { theme: "c3re-theme", language: "c3re-lang", size: "c3re-fs", contrast: "c3re-contrast", font: "c3re-font", motion: "c3re-motion", links: "c3re-links", livePaused: "c3re-live-paused" };
+    // Button order: dark → light → CCC (40C3 styleguide) → dark.
+    const nextTheme = { dark: "light", light: "ccc", ccc: "dark" };
+    const themes = {
+        dark: { label: "Dunkles Design", title: "Zum dunklen Design wechseln", message: "Dunkles Design eingeschaltet." },
+        light: { label: "Helles Design", title: "Zum hellen Design wechseln", message: "Helles Design eingeschaltet." },
+        ccc: { label: "CCC-Design", title: "Zum CCC-Design (40C3) wechseln", message: "CCC-Design eingeschaltet." }
+    };
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const increasedContrast = window.matchMedia("(prefers-contrast: more)");
 
@@ -25,7 +32,7 @@
         const size = Number(load(keys.size));
         return {
             // Explicit project choice: never infer the default theme from the OS.
-            theme: load(keys.theme) === "light" ? "light" : "dark",
+            theme: ["light", "ccc"].includes(load(keys.theme)) ? load(keys.theme) : "dark",
             language: language === "leicht" || (language === null && load("c3re-simple") === "1") ? "easy" : "standard",
             size: [100, 125, 150].includes(size) ? size : 100,
             contrast: load(keys.contrast) === null ? increasedContrast.matches : load(keys.contrast) === "1",
@@ -121,10 +128,10 @@
             const focused = document.activeElement;
             applyAttributes();
             document.querySelectorAll("[data-set-theme]").forEach(function (button) {
-                const target = preferences.theme === "dark" ? "light" : "dark";
+                const target = nextTheme[preferences.theme];
                 button.dataset.setTheme = target;
-                button.setAttribute("aria-label", target === "light" ? "Helles Design" : "Dunkles Design");
-                button.title = target === "light" ? "Zum hellen Design wechseln" : "Zum dunklen Design wechseln";
+                button.setAttribute("aria-label", themes[target].label);
+                button.title = themes[target].title;
             });
             document.querySelectorAll("[data-toggle-preference]").forEach(function (button) {
                 const name = button.dataset.togglePreference;
@@ -174,7 +181,7 @@
 
         document.querySelectorAll("[data-set-theme]").forEach(function (button) {
             button.addEventListener("click", function () {
-                change("theme", button.dataset.setTheme, button.dataset.setTheme === "light" ? "Helles Design eingeschaltet." : "Dunkles Design eingeschaltet.");
+                change("theme", button.dataset.setTheme, (themes[button.dataset.setTheme] || themes.dark).message);
             });
         });
         document.querySelectorAll("[data-toggle-preference]").forEach(function (button) {
