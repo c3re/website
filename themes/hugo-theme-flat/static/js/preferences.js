@@ -1,7 +1,7 @@
 (function () {
     const root = document.documentElement;
     const keys = { theme: "c3re-theme", language: "c3re-lang", size: "c3re-fs", contrast: "c3re-contrast", font: "c3re-font", motion: "c3re-motion", links: "c3re-links", livePaused: "c3re-live-paused" };
-    // Button order: dark → light → CCC (40C3 styleguide) → dark.
+    // CCC (40C3 styleguide) is the default. Button order: CCC → dark → light → CCC.
     const nextTheme = { dark: "light", light: "ccc", ccc: "dark" };
     const themes = {
         dark: { label: "Dunkles Design", title: "Zum dunklen Design wechseln", message: "Dunkles Design eingeschaltet." },
@@ -31,8 +31,8 @@
         const language = load(keys.language);
         const size = Number(load(keys.size));
         return {
-            // Explicit project choice: never infer the default theme from the OS.
-            theme: ["light", "ccc"].includes(load(keys.theme)) ? load(keys.theme) : "dark",
+            // Explicit project choice: the CCC design is the default; never infer the theme from the OS.
+            theme: ["dark", "light"].includes(load(keys.theme)) ? load(keys.theme) : "ccc",
             language: language === "leicht" || (language === null && load("c3re-simple") === "1") ? "easy" : "standard",
             size: [100, 125, 150].includes(size) ? size : 100,
             contrast: load(keys.contrast) === null ? increasedContrast.matches : load(keys.contrast) === "1",

@@ -71,6 +71,7 @@ test("shared language links do not save a preference, including hash changes", a
 test("only chosen settings persist; reset forgets reading aids and legacy storage", async ({ page }) => {
     await mockServices(page);
     await page.goto("/");
+    await page.getByRole("button", { name: "Dunkles Design", exact: true }).click();
     await page.getByRole("button", { name: "Helles Design", exact: true }).click();
     await page.locator("#a11y-toggle").click();
     await page.locator("#easy-language").click();

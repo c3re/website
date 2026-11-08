@@ -78,7 +78,7 @@ html[data-theme="ccc"] {
 }
 
 /* Pixel display font for headings; sized up because Jersey 10 is small. */
-html[data-theme="ccc"] :is(.single .title, .content h1, .content h2, .content h3, .side h2, .side-heading h2, .site-title) {
+html[data-theme="ccc"]:not([data-font="dys"]) :is(.single .title, .content h1, .content h2, .content h3, .side h2, .side-heading h2, .site-title) {
   font-family: var(--fonts-display);
   font-weight: 400;
   letter-spacing: .02em;
@@ -89,6 +89,62 @@ html[data-theme="ccc"] .content h2 { font-size: 1.875rem; }
 html[data-theme="ccc"] .content h3 { font-size: 1.5rem; font-weight: 400; }
 html[data-theme="ccc"] .site-title { font-size: 24px; font-weight: 400; }
 html[data-theme="ccc"] :is(.side h2, .side-heading h2) { font-size: 1.5rem; font-weight: 400; }
+
+/* CCC header and menu: pixel font, green frame, inverted hover (colors via variables so high contrast still wins). */
+html[data-theme="ccc"] .header-wrapper {
+  background-color: var(--color-header);
+  border-bottom: 2px solid var(--color-fg-hyperlink);
+}
+
+html[data-theme="ccc"]:not([data-font="dys"]) .header .menu-item,
+html[data-theme="ccc"]:not([data-font="dys"]) .menu-toggle {
+  font-family: var(--fonts-display);
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+
+html[data-theme="ccc"] .header .menu-item { font-size: 22px; }
+html[data-theme="ccc"] .menu-toggle { font-size: 20px; }
+
+html[data-theme="ccc"] .header .menu-item > a,
+html[data-theme="ccc"] .menu-toggle,
+html[data-theme="ccc"] .theme-toggle {
+  border-radius: 2px;
+}
+
+html[data-theme="ccc"] .header .menu-item > a:hover,
+html[data-theme="ccc"] .header .menu-item > a:focus-visible,
+html[data-theme="ccc"] .menu-toggle:hover,
+html[data-theme="ccc"] .theme-toggle:hover {
+  background-color: var(--color-fg-hyperlink);
+  color: var(--color-bg-page);
+}
+
+html[data-theme="ccc"] .header .menu-item > a[aria-current="page"] {
+  color: var(--color-fg-hyperlink);
+}
+
+html[data-theme="ccc"] .header .menu-item > a[aria-current="page"]:hover,
+html[data-theme="ccc"] .header .menu-item > a[aria-current="page"]:focus-visible {
+  color: var(--color-bg-page);
+}
+
+html[data-theme="ccc"] .header .menu-item > a[aria-current="page"]::after {
+  height: 3px;
+  border-radius: 0;
+}
+
+html[data-theme="ccc"] .menu-toggle,
+html[data-theme="ccc"] .theme-toggle {
+  border: 2px solid var(--color-fg-hyperlink);
+  color: var(--color-fg-hyperlink);
+}
+
+html[data-theme="ccc"] .header .sub-menu {
+  background-color: var(--color-bg-page);
+  border: 2px solid var(--color-fg-hyperlink);
+  border-radius: 2px;
+}
 
 /* High contrast colors */
 html[data-contrast="1"] {
@@ -594,7 +650,7 @@ h3 {
   background-color: var(--color-bg-block);
 }
 
-/* The icon shows the design the button switches to: dark → light → CCC → dark. */
+/* The icon shows the design the button switches to: CCC → dark → light → CCC. */
 .theme-icon-light,
 .theme-icon-dark,
 .theme-icon-ccc {
