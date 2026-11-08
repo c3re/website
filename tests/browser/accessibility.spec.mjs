@@ -7,6 +7,8 @@ const tags = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
 const variants = [
     { name: "dark", values: { "c3re-theme": "dark" } },
     { name: "light", values: { "c3re-theme": "light" } },
+    { name: "ccc", values: { "c3re-theme": "ccc" } },
+    { name: "easy-ccc", values: { "c3re-lang": "leicht", "c3re-theme": "ccc" } },
     { name: "high-contrast", values: { "c3re-contrast": "1" } },
     { name: "150-percent", values: { "c3re-fs": "150" } },
     { name: "easy-dark", values: { "c3re-lang": "leicht" } },
