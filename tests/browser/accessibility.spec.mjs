@@ -11,7 +11,7 @@ const variants = [
     { name: "easy-ccc", values: { "c3re-lang": "leicht", "c3re-theme": "ccc" } },
     { name: "high-contrast", values: { "c3re-contrast": "1" } },
     { name: "150-percent", values: { "c3re-fs": "150" } },
-    { name: "easy-dark", values: { "c3re-lang": "leicht" } },
+    { name: "easy-dark", values: { "c3re-lang": "leicht", "c3re-theme": "dark" } },
     { name: "easy-light", values: { "c3re-lang": "leicht", "c3re-theme": "light" } },
     { name: "combined", values: { "c3re-lang": "leicht", "c3re-fs": "150", "c3re-contrast": "1", "c3re-font": "dys", "c3re-links": "1" } }
 ];
@@ -55,7 +55,7 @@ for (const width of [1440, 320]) {
     }
 }
 
-for (const theme of ["dark", "light"]) {
+for (const theme of ["ccc", "dark", "light"]) {
     test(`panel controls ${theme}`, async ({ page }) => {
         await preferences(page, { "c3re-theme": theme });
         await mockServices(page);

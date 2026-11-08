@@ -24,8 +24,8 @@ Offen, technisch, gemeinschaftlich. Die gestalterische Referenz ist der Export
 
 - Die bereitgestellte Gestaltung in das vorhandene Hugo-Theme übertragen.
 - Bestehende Seitenadressen, Inhalte und lokale Bilder weiterverwenden.
-- Dunkles Design als Standard, unabhängig von den Systemeinstellungen.
-- Helles Design und Leichte Sprache bewusst wählbar und lokal gespeichert.
+- CCC-Design (40C3-Styleguide) als Standard, unabhängig von den Systemeinstellungen.
+- Dunkles und helles Design sowie Leichte Sprache bewusst wählbar und lokal gespeichert.
 - Originaltexte erhalten; vereinfachte Fassungen getrennt als Entwürfe pflegen.
 - Live-Daten nur anzeigen, wenn sie verfügbar sind; Ausfälle verständlich melden.
 - Betrieb ohne Cookie-Banner: keine Werbung, Besucheranalyse, Identifikatoren oder
