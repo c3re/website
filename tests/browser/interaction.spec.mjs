@@ -3,26 +3,27 @@ import { publishedPages, mockServices, preferences, waitForPageFeatures } from "
 
 const pages = await publishedPages();
 
-test("design button cycles dark, light and CCC and remembers the choice", async ({ page }) => {
+test("CCC default, button cycles CCC, dark, light and remembers the choice", async ({ page }) => {
     await mockServices(page);
     await page.goto("/");
     const html = page.locator("html");
+    await expect(html).toHaveAttribute("data-theme", "ccc");
+    await expect(html).toHaveCSS("background-color", "rgb(0, 19, 0)");
+    await page.getByRole("button", { name: "Dunkles Design", exact: true }).click();
     await expect(html).toHaveAttribute("data-theme", "dark");
     await page.getByRole("button", { name: "Helles Design", exact: true }).click();
     await expect(html).toHaveAttribute("data-theme", "light");
+    await page.reload();
+    await expect(html).toHaveAttribute("data-theme", "light");
     await page.getByRole("button", { name: "CCC-Design", exact: true }).click();
     await expect(html).toHaveAttribute("data-theme", "ccc");
-    await expect(html).toHaveCSS("background-color", "rgb(0, 19, 0)");
-    await page.reload();
-    await expect(html).toHaveAttribute("data-theme", "ccc");
-    await page.getByRole("button", { name: "Dunkles Design", exact: true }).click();
-    await expect(html).toHaveAttribute("data-theme", "dark");
 });
 
-test("dark default, persistence, panel keyboard controls and reset", async ({ page }) => {
+test("CCC default, persistence, panel keyboard controls and reset", async ({ page }) => {
     await mockServices(page);
     await page.goto("/");
-    await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "ccc");
+    await page.getByRole("button", { name: "Dunkles Design", exact: true }).click();
     await page.getByRole("button", { name: "Helles Design", exact: true }).click();
     await page.locator("#a11y-toggle").focus();
     await page.keyboard.press("Enter");
