@@ -33,7 +33,7 @@ Darstellung dieser Seite und überschreiben keine dauerhaft gewählte Sprache.
 
 | Schlüssel | Gespeicherter Wert / ausdrücklich gewählte Funktion |
 | --- | --- |
-| `c3re-theme` | `dark` / `light`, Farbschema |
+| `c3re-theme` | `dark` / `light` / `ccc`, Farbschema (`ccc` = 40C3-Design) |
 | `c3re-lang` | `std` / `leicht`, Textfassung |
 | `c3re-fs` | `100` / `125` / `150`, Schriftgröße |
 | `c3re-contrast` | `0` / `1`, Kontrast |
